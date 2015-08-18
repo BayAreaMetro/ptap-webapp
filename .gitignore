@@ -1,0 +1,12 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.public/.sass-cache/*
+public/.sass-cache/*
+/public/.sass-cache/*
+.sass-cache/*
+node_modules/*
+*.log
+public/downloads/*.xlsx
