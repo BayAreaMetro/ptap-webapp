@@ -27,7 +27,7 @@ module.exports = function(app) {
     var env = app.get('env');
 
     // view engine setup
-    app.set('views', path.join(__dirname, 'views'));
+    app.set('views', path.join(__dirname, './../views'));
     app.set('view engine', 'ejs');
 
     // Enables CORS

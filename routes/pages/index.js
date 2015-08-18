@@ -7,7 +7,7 @@ console.log('getting pages');
 //Define Index Page with authentication parameter
 router.get('/', function (req, res) {
     
-        res.render('index');
+        res.render('pages/index');
 });
 
 module.exports = router;
