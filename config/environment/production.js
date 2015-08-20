@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('loading production database');
+
 // Production specific configuration
 // =================================
 module.exports = {
