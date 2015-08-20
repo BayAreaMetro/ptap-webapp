@@ -67,7 +67,7 @@ var ReportSchema = new Schema({
     pdc_localcontribution: String,
     publicworksdirector: {
         fullname: String,
-        title: Number,
+        title: String,
         contactnumber: String
     },
     applicationdate: String

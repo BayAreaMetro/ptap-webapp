@@ -21,11 +21,15 @@ exports.index = function(req, res) {
  * Creates a new user
  */
 exports.create = function(req, res, next) {
-	console.log(req.body.street_name);
-	console.log('running insert');
+    console.log(req.body.street_name);
+    console.log('running insert');
     var newReport = new Report(req.body);
     console.log(newReport);
-
+    newReport.publicworksdirector = {
+        'fullname': 'Michael Ziyambi',
+        'title': 'GIS Analyst',
+        'contactnumber': '510-817-3210'
+    };
     newReport.save(function(err, report) {
         if (err) return console.error(err);
         res.json(report);
