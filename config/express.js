@@ -73,7 +73,7 @@ module.exports = function(app) {
     app.use(bodyParser.urlencoded());
     app.use(cookieParser());
     app.use(express.static(path.join(__dirname, 'public')));
-
+    app.use('/bower', express.static('bower_components'));
     // Persist sessions with mongoStore
     // We need to enable sessions for passport twitter because its an oauth 1.0 strategy
     // app.use(session({

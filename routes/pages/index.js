@@ -10,5 +10,11 @@ router.get('/', function (req, res) {
         res.render('pages/index');
 });
 
+/* GET reports page. */
+router.get('/reports', function (req, res) {
+    
+        res.render('pages/reports');
+});
+
 
 module.exports = router;
