@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 
 
 var ReportSchema = new Schema({
+	uuid: String,
     jurisdiction: String,
     street_address: String,
     street_address2: String,
