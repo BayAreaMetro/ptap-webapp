@@ -12,6 +12,7 @@
 var _ = require('lodash');
 var Report = require('./report.model');
 var uuid = require('node-uuid');
+var sendgrid = require('sendgrid')('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');
 
 /**
  * Get list of reports
@@ -30,6 +31,7 @@ exports.index = function(req, res) {
 exports.create = function(req, res, next) {
     console.log('running create report');
     var newReport = new Report(req.body);
+    var emailConfirmation = req.body.emailconfirmation;
     newReport.publicworksdirector = {
         'fullname': 'Michael Ziyambi',
         'title': 'GIS Analyst',
@@ -38,7 +40,33 @@ exports.create = function(req, res, next) {
     newReport.uuid = uuid.v1();
     newReport.save(function(err, report) {
         if (err) return console.error(err);
-        res.json(report);
+
+        if (emailConfirmation === 'yes') {
+            //Send Confirmation email if user has selected option
+            var email = new sendgrid.Email();
+            email.addTo('mziyambi@mtc.ca.gov');
+            email.subject = "Send with templates app";
+            email.from = 'gfrausto@mtc.ca.gov';
+            email.text = 'Hi there!';
+            email.html = 'Thank you for submitting your application. Please save this email or print a copy for your records!<br><br> If you have any questions of concerns, please contact Christina Hohorst at chohorst@mtc.ca.gov';
+
+            // add filter settings one at a time
+            email.addFilter('templates', 'enable', 1);
+            email.addFilter('templates', 'template_id', '2e7ce831-0891-47d8-bbd8-c63cf0e90755');
+
+            sendgrid.send(email, function(err, json) {
+                if (err) {
+                    return console.error(err);
+                }
+                console.log(json);
+            });
+            res.json(report);
+        } else {
+            res.json(report);
+        }
+        //end if
+
+
     });
 };
 
