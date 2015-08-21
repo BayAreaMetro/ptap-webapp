@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
+//Set up Report Schema
 var ReportSchema = new Schema({
 	uuid: String,
     jurisdiction: String,
@@ -75,6 +75,6 @@ var ReportSchema = new Schema({
 
 });
 
-
+//Add schema to a mongoose model
 
 module.exports = mongoose.model('Report', ReportSchema);

@@ -11,3 +11,4 @@ node_modules/*
 *.log
 public/downloads/*.xlsx
 client/bower_components/*
+bower_components/*
