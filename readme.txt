@@ -1,9 +1,11 @@
 NodeJS Template
 
 1. Installed Libraries
-	MSSQL -- SQL Server driver
-	MongoJS -- MongoDB driver
+	Mongoose -- MongoDB driver for Schemas/Models
 	Compression -- Gzip compression of server content
+	Node UUID - Generate global IDs
+	Bower - Client library manager
+	Sendgrid - Email client
 
 
 2. Middleware
@@ -13,12 +15,14 @@ NodeJS Template
 	EJS -- Embedded Javascript (in the /views directory)
 	HTML -- HTML files can be placed in the /public directory
 
-4. Main.js
-	Renamed from default app.js for Elastic Beanstalk compatibility
+4. App.js
+	Main application file 
 
 5. Default port configuration
 	Default is 3000. But also reads server.address().port in case port is different. 
 	This is best setup for Elastic Beanstalk. 
 
 6. Run application
-	npm start
+	npm install
+	bower install
+	nodemon app.js (if required, npm install -g nodemon)
