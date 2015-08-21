@@ -10,4 +10,4 @@ public/.sass-cache/*
 node_modules/*
 *.log
 public/downloads/*.xlsx
-bower_components/*
+client/bower_components/*
