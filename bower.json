@@ -1,0 +1,20 @@
+{
+  "name": "ptap-webapp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MetropolitanTransportationCommission/ptap-webapp",
+  "description": "None",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "datatables": "~1.10.8",
+    "bootstrap": "~3.3.5"
+  }
+}
