@@ -5,7 +5,6 @@
 'use strict';
 
 var errors = require('./components/errors');
-console.log(' top level routes');
 
 module.exports = function (app) {
 
