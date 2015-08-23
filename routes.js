@@ -1,7 +1,7 @@
 /**
  * Main application routes
  */
-
+/*jslint node: true */
 'use strict';
 
 var errors = require('./components/errors');
