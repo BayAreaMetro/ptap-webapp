@@ -1,7 +1,7 @@
 /**
  * Error responses
  */
-
+/*jslint node: true */
 'use strict';
 
 module.exports[404] = function pageNotFound(req, res) {

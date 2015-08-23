@@ -1,7 +1,8 @@
 /**
  * Main application file
  */
-
+/*jslint node: true */
+'use strict';
 // Set default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 

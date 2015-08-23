@@ -1,3 +1,4 @@
+/*jslint node: true */
 'use strict';
 var express = require('express');
 var controller = require('./report.controller');

@@ -7,7 +7,7 @@
  * GET      /report/remove/:id   ->  destroy
  */
 
-
+/*jslint node: true */
 'use strict';
 var _ = require('lodash');
 var Report = require('./report.model');
