@@ -1,0 +1,28 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "_util";
+//@import "_bootswatch";
+@import "_bootstrap.min";
+@import "_bootstrap-theme.min";
+@import "_tiles";
+
+//Landing
+#viewport{
+	section{
+		margin: {
+			top: 350px;
+		}
+		.logo-wrapper{
+			h2{
+				font-size: 80px;
+			}
+			.enter-site{
+		
+			}	
+		}
+	}
+}
