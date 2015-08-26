@@ -1,5 +1,4 @@
 /*jslint node: true */
-
 'use strict';
 
 console.log('loading dev database');

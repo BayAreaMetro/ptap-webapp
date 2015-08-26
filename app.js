@@ -21,12 +21,8 @@ mongoose.connect(config.mongo.uri, config.mongo.options);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(callback) {
-    // yay!
     console.log('connected');
 });
-
-
-
 
 var app = express();
 var server = require('http').createServer(app);

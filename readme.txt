@@ -20,7 +20,6 @@ NodeJS Template
 
 5. Default port configuration
 	Default is 3000. But also reads server.address().port in case port is different. 
-	This is best setup for Elastic Beanstalk. 
 	Run application at http://localhost:3000
 
 6. Run application

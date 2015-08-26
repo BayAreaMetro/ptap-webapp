@@ -9,7 +9,6 @@
  * GET      /report/remove/:id   ->  destroy
  */
 
-
 'use strict';
 var _ = require('lodash');
 var Report = require('./report.model');

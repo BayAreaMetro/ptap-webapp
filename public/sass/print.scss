@@ -1,0 +1,25 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+//Show
+.page-header{
+	margin: 0;
+}
+.table{
+	margin: 0;
+}
+//Hidden
+.page-header-vmt{
+	display: none;
+	text-align: center;
+	//margin-top: 50px;
+}
+#basemaps-wrapper{
+	display: none;
+}
+.print-hide{
+	display: none !important;
+}
+.print-display{
+	margin-top: 500px;
+}
