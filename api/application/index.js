@@ -2,7 +2,7 @@
 
 'use strict';
 var express = require('express');
-var controller = require('./report.controller');
+var controller = require('./application.controller');
 var config = require('../../config/environment');
 
 var router = express.Router();

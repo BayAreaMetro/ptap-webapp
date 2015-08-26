@@ -14,7 +14,7 @@ module.exports = function (app) {
     app.use('/', require('./routes/pages'));
 
     // Reports
-    app.use('/api/report', require('./api/report'));
+    app.use('/api/application', require('./api/application'));
 
      // Jurisdictions
     app.use('/api/jurisdiction', require('./api/jurisdiction'));
@@ -32,6 +32,7 @@ module.exports = function (app) {
     app.route('/*')
         .get(function (req, res) {
             console.log('any other route');
-            res.sendfile(app.get('appPath') + '/index.html');
+          //  res.sendfile(app.get('appPath') + '/index.html');
+            res.render('pages/index');
         });
 };

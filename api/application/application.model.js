@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 //Set up Report Schema
-var ReportSchema = new Schema({
+var ApplicationSchema = new Schema({
 	uuid: String,
     jurisdiction: String,
     street_address: String,
@@ -79,4 +79,4 @@ var ReportSchema = new Schema({
 
 //Add schema to a mongoose model
 
-module.exports = mongoose.model('Report', ReportSchema);
+module.exports = mongoose.model('Application', ApplicationSchema);
