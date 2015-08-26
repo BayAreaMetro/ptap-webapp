@@ -1,3 +1,5 @@
+/*jslint node: true */
+
 'use strict';
 
 console.log('loading production database');

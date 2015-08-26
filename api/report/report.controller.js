@@ -1,3 +1,5 @@
+/*jslint node: true */
+
 /**
  * Using Rails-like standard naming convention for endpoints.
  * GET      /report              ->  index

@@ -1,3 +1,5 @@
+/*jslint node: true */
+
 'use strict';
 
 var path = require('path');
@@ -26,7 +28,7 @@ var all = {
 
   // Secret for session, you will want to change this and make it an environment variable
   secrets: {
-    session: 'chipper-secret'
+    session: 'ptap-secret'
   },
 
   // List of user roles

@@ -1,3 +1,5 @@
+/*jslint node: true */
+
 /**
  * Main application routes
  */
@@ -13,6 +15,9 @@ module.exports = function (app) {
 
     // Reports
     app.use('/api/report', require('./api/report'));
+
+     // Jurisdictions
+    app.use('/api/jurisdiction', require('./api/jurisdiction'));
 
    
 
