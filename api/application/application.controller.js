@@ -7,6 +7,7 @@
  * GET      /application/:id          ->  show specific application
  * POST     /application/:id          ->  update
  * GET      /application/remove/:id   ->  destroy
+ * GET      /application/download     ->  download as excel file
  */
 
 'use strict';
@@ -14,6 +15,9 @@ var _ = require('lodash');
 var Application = require('./application.model');
 var uuid = require('node-uuid');
 var sendgrid = require('sendgrid')('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');
+var json2xls = require('json2xls');
+var fs = require('fs');
+var path = require('path');
 
 /**
  * Get list of applications
@@ -103,6 +107,21 @@ exports.destroy = function(req, res, next) {
     });
 };
 
+/**
+ * Download list of applications
+ */
+exports.download = function(req, res) {
+
+    Application.find({},function(err, applications) {
+        if (err) return res.send(500, err);
+        var test = JSON.stringify(applications);
+        var xls = json2xls(JSON.parse(test));
+        var currentDate = new Date();
+        var file = 'data_' + currentDate.getHours() + '_' + currentDate.getMinutes() + '_' + currentDate.getSeconds() + '.xlsx';
+        fs.writeFileSync(path.join(__dirname, '../../public') + '/downloads/' + file, xls, 'binary');
+        res.json(200, applications);
+    });
+};
 
 
 

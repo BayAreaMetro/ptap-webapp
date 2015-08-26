@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 
 //Set up Report Schema
 var ApplicationSchema = new Schema({
-	uuid: String,
+    uuid: String,
     jurisdiction: String,
     street_address: String,
     street_address2: String,
@@ -68,11 +68,9 @@ var ApplicationSchema = new Schema({
     npt_localcontribution: String,
     pdc_totalprojectcost: String,
     pdc_localcontribution: String,
-    publicworksdirector: {
-        fullname: String,
-        title: String,
-        contactnumber: String
-    },
+    publicworksdirector_fullname: String,
+    publicworksdirector_title: String,
+    publicworksdirector_contactnumber: String,
     applicationdate: String
 
 });

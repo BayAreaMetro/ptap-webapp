@@ -12,3 +12,5 @@ node_modules/*
 public/downloads/*.xlsx
 client/bower_components/*
 bower_components/*
+data/*
+downloads/*
