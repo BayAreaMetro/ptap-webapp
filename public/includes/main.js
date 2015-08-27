@@ -1,7 +1,3 @@
-$('#divlist h5').click(function() {
-    $(this).find("i.glyphicon").toggleClass("glyphicon-minus-sign glyphicon-plus-sign");
-});
-
 (function() {
 
     var app = {
@@ -9,7 +5,8 @@ $('#divlist h5').click(function() {
         init: function() {
             //Launch accordion
             app.accordion();
-            console.log("Workks");
+            //Submit current Form
+            app.findAndSubmit();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -51,7 +48,23 @@ $('#divlist h5').click(function() {
             $("#btn-submit5").click(function() {
                 $.post('/api/application/update5/' + projectid, $('#form-section5').serialize());
             });
+        },
+        findAndSubmit: function(){
+			$(".submit-button").click(function(e){
+				
+				e.preventDefault();
+				//Get Attr
+				var submitAttr = $(this).attr('data'),
+					formId = document.getElementById(submitAttr),
+					selection = $(formId).serialize();
+				console.log(selection);
+				
+				//submit form
+				$.post('/api/application/update3b/' + projectid, $(formId).serialize());
+			});
+
         }
     };
     app.init();
 })();
+
