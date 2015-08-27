@@ -61,6 +61,10 @@
                 url: "/api/jurisdiction",
                 success: function(result) {
                     app.Jurisdictions = result;
+                    
+                    //Testing Custom Drop Downs
+                    app.dropDown(result);
+                    console.log(results);
                 }
             });
         },
@@ -101,7 +105,16 @@
                     $('#last_major_inspection').val(vals[i]['Certification Date']);
                 }
             }
-        }
+        },
+        dropDown: function(data){
+	        var sourceArr = [];
+	
+	        for (var i = 0; i < data.length; i++) {
+	            sourceArr.push(data[i].value, data[i].text);
+	            console.log(data[i].value, data[i].text);
+	            $("#drop-test").append('<option data-number=' + data[i].value +'>'+ data[i].text + '</option>');
+	        }
+	    }
     };
     app.init();
 })();
