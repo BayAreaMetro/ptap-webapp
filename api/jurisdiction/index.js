@@ -10,6 +10,7 @@ var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/name', controller.name);
+router.get('/data/:name', controller.name);
 
 
 module.exports = router;

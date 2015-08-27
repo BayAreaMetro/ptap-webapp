@@ -5,8 +5,10 @@
         init: function() {
             //Launch accordion
             app.accordion();
-            //Submit current Form
-            app.findAndSubmit();
+            app.projectid = uuid.v1();
+            app.kendoElements();
+            app.findAndSubmit(); //Submit current Form
+            app.loadJurisdictions();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -18,53 +20,88 @@
                 contentAnimSpeed: 100
             });
         },
-        submitForms: function() {
-            var projectid = uuid.v1();
+        findAndSubmit: function() {
+            $(".submit-button").click(function(e) {
 
-            $("#btn-submit1").click(function() {
-                $.post('/api/application/' + projectid, $('#form-section1').serialize());
+                e.preventDefault();
+                //Get Attr
+                var submitAttr = $(this).attr('data'),
+                    formId = document.getElementById(submitAttr),
+                    selection = $(formId).serialize();
+                console.log(submitAttr);
+                console.log(selection);
+
+                //submit form
+                $.post('/api/application' + submitAttr + app.projectid, $(formId).serialize());
+
             });
 
-            $("#btn-submit2").click(function() {
-                $.post('/api/application/update2/' + projectid, $('#form-section2').serialize());
-            });
+        },
+        kendoElements: function() {
+            function onselect(e) {
 
-            $("#btn-submit3a").click(function() {
-                $.post('/api/application/update3a/' + projectid, $('#form-section3a').serialize());
-            });
+            }
 
-            $("#btn-submit3b").click(function() {
-                $.post('/api/application/update3b/' + projectid, $('#form-section3b').serialize());
+            $("#jurisdiction").kendoDropDownList({
+                dataTextField: "Jurisdiction",
+                dataValueField: "Jurisdiction",
+                dataSource: {
+                    transport: {
+                        read: {
+                            dataType: "json",
+                            url: "/api/jurisdiction/name",
+                        }
+                    }
+                },
+                select: app.onselect
             });
-
-            $("#btn-submit3c").click(function() {
-                $.post('/api/application/update3c/' + projectid, $('#form-section3c').serialize());
-            });
-
-            $("#btn-submit4").click(function() {
-                $.post('/api/application/update4/' + projectid, $('#form-section4').serialize());
-            });
-
-            $("#btn-submit5").click(function() {
-                $.post('/api/application/update5/' + projectid, $('#form-section5').serialize());
+        },
+        loadJurisdictions: function() {
+            $.ajax({
+                url: "/api/jurisdiction",
+                success: function(result) {
+                    app.Jurisdictions = result;
+                }
             });
         },
         findAndSubmit: function(){
-			$(".submit-button").click(function(e){
-				
-				e.preventDefault();
+
+	        //submit class on all buttons
+			$(".submit-button").click(function(){
+
+				//Gloabl
+				app.parseForm = $(this).attr('data');
+
 				//Get Attr
 				var submitAttr = $(this).attr('data'),
 					formId = document.getElementById(submitAttr),
 					selection = $(formId).serialize();
-				console.log(selection);
-				
-				//submit form
-				//$.post('/api/application/update3b/' + projectid, $(formId).serialize());
-			});
 
+				//submit form
+				app.validate(formId);
+				//$.post('/api/application/update3b/' + projectid, $(formId).serialize());
+
+				//Testing
+				console.log(selection);
+			});
+        },
+        validate: function(currentForm){
+
+			//Pass current form id and then validate
+	        $(currentForm).parsley().validate();
+	    },
+        onselect: function(e) {
+            var dataItem = this.dataItem(e.item);
+            var vals = app.Jurisdictions;
+            var lookupVal = dataItem.Jurisdiction;
+            for (var i = vals.length - 1; i >= 0; i--) {
+                if (vals[i].Jurisdiction === lookupVal) {
+                    //Autopopulate values
+                    $('#network_centerlinemiles').val(vals[i]['Total Centerline Miles']);
+                    $('#last_major_inspection').val(vals[i]['Certification Date']);
+                }
+            }
         }
     };
     app.init();
 })();
-

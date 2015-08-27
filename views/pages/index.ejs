@@ -12,43 +12,43 @@
 			
 			<!-- Page 1-->
 			<!-- Contact Info -->
-			<form class="form-horizontal" id="form-1" method="post" action="">
+			<form class="form-horizontal" id="/" method="post" action="">
 				<fieldset>
-					<legend>Legend</legend>
+					<legend>Form 1</legend>
 					<div class="form-group">
 						<label for="jurisdiction" class="col-lg-2 control-label">Jurisdiction</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="jurisdiction">
+							<input type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="jurisdiction" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="street_address" class="col-lg-2 control-label">Street Address</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="street_address" name="street_address" placeholder="street-address">
+							<input type="text" class="form-control" id="street_address" name="street_address" placeholder="street-address" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="street_address2" class="col-lg-2 control-label">Address Line 2</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="street_address2" name="street_address2" placeholder="E.g. Suite Floor">
+							<input type="text" class="form-control" id="street_address2" name="street_address2" placeholder="E.g. Suite Floor" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="city" class="col-lg-2 control-label">City</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="city" name="city" placeholder="City">
+							<input type="text" class="form-control" id="city" name="city" placeholder="City" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="state" class="col-lg-2 control-label">State</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="state" name="state" placeholder="State">
+							<input type="text" class="form-control" id="state" name="state" placeholder="State" data-parsley-maxlength="2" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="zip" class="col-lg-2 control-label">Zip</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="zip" name="zip" placeholder="zip">
+							<input type="text" class="form-control" id="zip" name="zip" placeholder="zip" data-parsley-type="digits" data-parsley-required>
 						</div>
 					</div>
 					
@@ -56,37 +56,37 @@
 					<div class="form-group">
 						<label for="primary_title" class="col-lg-2 control-label">Title</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="primary_title" name="primary_title" placeholder="Title">
+							<input type="text" class="form-control" id="primary_title" name="primary_title" placeholder="Title" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="primary_firstname" class="col-lg-2 control-label">First Name</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="primary_firstname" name="primary_firstname" placeholder="First Name">
+							<input type="text" class="form-control" id="primary_firstname" name="primary_firstname" placeholder="First Name" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="primary_lastname" class="col-lg-2 control-label">Last Name</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="primary_lastname" name="primary_lastname" placeholder="Last Name">
+							<input type="text" class="form-control" id="primary_lastname" name="primary_lastname" placeholder="Last Name" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="primary_position" class="col-lg-2 control-label">Position</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="primary_position" name="primary_position" placeholder="Position">
+							<input type="text" class="form-control" id="primary_position" name="primary_position" placeholder="Position" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="primary_phone" class="col-lg-2 control-label">Phone</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="primary_phone" name="primary_phone" placeholder="Phone Number">
+							<input type="text" class="form-control" id="primary_phone" name="primary_phone" placeholder="Phone Number" data-parsley-type="digits" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="primary_email" class="col-lg-2 control-label">Phone</label>
+						<label for="primary_email" class="col-lg-2 control-label">Email</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="E-mail">
+							<input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="E-mail" data-parsley-type="email" data-parsley-required>
 						</div>
 					</div>
 					
@@ -94,37 +94,37 @@
 					<div class="form-group">
 						<label for="streetsaver_title" class="col-lg-2 control-label">Title</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="streetsaver_title" name="streetsaver_title" placeholder="Title">
+							<input type="text" class="form-control" id="streetsaver_title" name="streetsaver_title" placeholder="Title" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="streetsaver_firstname" class="col-lg-2 control-label">First Name</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="streetsaver_firstname" name="streetsaver_firstname" placeholder="First Name">
+							<input type="text" class="form-control" id="streetsaver_firstname" name="streetsaver_firstname" placeholder="First Name" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="streetsaver_lastname" class="col-lg-2 control-label">Last Name</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="streetsaver_lastname" name="streetsaver_lastname" placeholder="Last Name">
+							<input type="text" class="form-control" id="streetsaver_lastname" name="streetsaver_lastname" placeholder="Last Name" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="streetsaver_position" class="col-lg-2 control-label">Position</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="streetsaver_position" name="streetsaver_position" placeholder="Position">
+							<input type="text" class="form-control" id="streetsaver_position" name="streetsaver_position" placeholder="Position" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="streetsaver_phone" class="col-lg-2 control-label">Phone</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="streetsaver_phone" name="streetsaver_phone" placeholder="Phone">
+							<input type="text" class="form-control" id="streetsaver_phone" name="streetsaver_phone" placeholder="Phone" data-parsley-type="digits" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="streetsaver_email" class="col-lg-2 control-label">Email</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="streetsaver_email" name="streetsaver_email" placeholder="Email">
+							<input type="text" class="form-control" id="streetsaver_email" name="streetsaver_email" placeholder="Email" data-parsley-type="email" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -148,7 +148,7 @@
 						<label class="col-lg-2 control-label">Attended Training</label>
 						<div class="col-lg-6">
 							<button class="btn btn-default">Cancel</button>
-							<button class="btn btn-success submit-button" type="submit" data="form-1">Submit</button>
+							<button class="btn btn-success submit-button" type="submit" data="/">Submit</button>
 						</div>
 					</div>
 				</fieldset>
@@ -156,31 +156,31 @@
 			
 			<!-- Page 2 -->
 			<!-- Pavement Manage -->
-			<form class="form-horizontal" id="form-2" method="post" action="">
+			 <form class="form-horizontal" id="/update2/" method="post" action="">
 				<fieldset>
-					<legend>Legend</legend>
+					<legend>Form 2</legend>
 					<div class="form-group">
 						<label for="last_user_meeting" class="col-lg-2 control-label">Last Meeting</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?">
+							<input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="last_major_inspection" class="col-lg-2 control-label">MTC Inspection</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="last_major_inspection" name="last_major_inspection" placeholder="Last Major MTC Inspection">
+							<input type="text" class="form-control" id="last_major_inspection" name="last_major_inspection" placeholder="Last Major MTC Inspection" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="pms_consultants" class="col-lg-2 control-label">PMS Consultants</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pms_consultants" name="pms_consultants" placeholder="PMS Consultants">
+							<input type="text" class="form-control" id="pms_consultants" name="pms_consultants" placeholder="PMS Consultants" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="digitalmap_format" class="col-lg-2 control-label">List Map Format</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="digitalmap_format" name="digitalmap_format" placeholder="GIS, PDF, JPEG">
+							<input type="text" class="form-control" id="digitalmap_format" name="digitalmap_format" placeholder="GIS, PDF, JPEG" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -210,55 +210,55 @@
 						<label class="col-lg-2 control-label">Attended Training</label>
 						<div class="col-lg-6">
 							<button class="btn btn-default">Cancel</button>
-							<button class="btn btn-success submit-button" type="submit" data="form-2">Submit</button>
+							<button class="btn btn-success submit-button" type="submit" data="/update2/">Submit</button>
 						</div>
 					</div>
 				</fieldset>
 			</form>
 			
 			<!-- Page 3A -->
-			<form class="form-horizontal" id="form-3" method="post" action="">
+			<form class="form-horizontal" id="/update3c/" method="post" action="">
 				<fieldset>
-					<legend>Legend</legend>
+					<legend>Form 3</legend>
 					<!-- PMS Projects -->
 					<div class="form-group">
 						<label for="network_centerlinemiles" class="col-lg-2 control-label">Network Center Lines Miles</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="network_centerlinemiles" name="network_centerlinemiles" placeholder="Network Center Lines Miles">
+							<input type="text" class="form-control" id="network_centerlinemiles" name="network_centerlinemiles" placeholder="Network Center Lines Miles" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="network_totalpercentage" class="col-lg-2 control-label">Total Percentage</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="network_totalpercentage" name="network_totalpercentage" placeholder="Total %">
+							<input type="text" class="form-control" id="network_totalpercentage" name="network_totalpercentage" placeholder="Total %"  data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="network_milesforsurvey" class="col-lg-2 control-label">Miles for Survey</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="network_milesforsurvey" name="network_milesforsurvey" placeholder="Miles for Survey">
+							<input type="text" class="form-control" id="network_milesforsurvey" name="network_milesforsurvey" placeholder="Miles for Survey" data-parsley-type="number"  data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="network_milesremaining" class="col-lg-2 control-label">Miles Remaining</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining">
+							<input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="network_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="network_additionalfunds" name="network_additionalfunds" placeholder="Additional funds">
+							<input type="text" class="form-control" id="network_additionalfunds" name="network_additionalfunds" placeholder="Additional funds"  data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="network_percentadditionalfunds" class="col-lg-2 control-label">Percentage Of Additional funds</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" placeholder="Percentage Of Additional funds">
+							<input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" placeholder="Percentage Of Additional funds"  data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPassword" class="col-lg-2 control-label">Password</label>
+						<label for="arterials" class="col-lg-2 control-label">?</label>
 						<div class="col-lg-6">
 							<div class="checkbox">
 								<label>
@@ -279,7 +279,7 @@
 					<div class="form-group">
 						<label for="other_description" class="col-lg-2 control-label">Other description</label>
 						<div class="col-lg-8">
-							<textarea type="text" class="form-control" id="other_description" name="other_description" placeholder="include any special circumstances such as changes to CL mile total"></textarea>
+							<textarea type="text" class="form-control" id="other_description" name="other_description" placeholder="include any special circumstances such as changes to CL mile total" data-parsley-required></textarea>
 						</div>
 					</div>
 					
@@ -287,7 +287,7 @@
 					<div class="form-group">
 						<label for="option2_projectdescription" class="col-lg-2 control-label">Project description</label>
 						<div class="col-lg-8">
-							<textarea type="text" class="form-control" id="option2_projectdescription" name="option2_projectdescription" placeholder="Project description"></textarea>
+							<textarea type="text" class="form-control" id="option2_projectdescription" name="option2_projectdescription" placeholder="Project description" data-parsley-required></textarea>
 						</div>
 					</div>
 					
@@ -295,13 +295,13 @@
 					<div class="form-group">
 						<label for="option3_projectdescription" class="col-lg-2 control-label">Project description</label>
 						<div class="col-lg-8">
-							<textarea type="text" class="form-control" id="option3_projectdescription" name="option3_projectdescription" placeholder="Project description"></textarea>
+							<textarea type="text" class="form-control" id="option3_projectdescription" name="option3_projectdescription" placeholder="Project description" data-parsley-required></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="option3_anticipatedconstructiondate" class="col-lg-2 control-label">Anticipated Construction Start Date</label>
 						<div class="col-lg-8">
-							<textarea type="text" class="form-control" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="Date"></textarea>
+							<textarea type="text" class="form-control" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="Date" data-parsley-required></textarea>
 						</div>
 					</div>
 					<div class="form-group">
@@ -342,109 +342,109 @@
 						<label class="col-lg-2 control-label">Attended Training</label>
 						<div class="col-lg-6">
 							<button class="btn btn-default">Cancel</button>
-							<button class="btn btn-success submit-button" type="submit" data="form-3">Submit</button>
+							<button class="btn btn-success submit-button" type="submit" data="/update3c/">Submit</button>
 						</div>
 					</div>
 				</fieldset>
 			</form>
 			
 			<!-- Page 4 -->
-			<form class="form-horizontal" id="form-4" method="post" action="">
+			 <form class="form-horizontal" id="/update4/" method="post" action="">
 				<fieldset>
-					<legend>Legend</legend>
+					<legend>Form 4</legend>
 					<div class="form-group">
 						<label for="pms_grantamount" class="col-lg-2 control-label">Grant Amount</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pms_grantamount" name="pms_grantamount" placeholder="">
+							<input type="text" class="form-control" id="pms_grantamount" name="pms_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="pms_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pms_localcontribution" name="pms_localcontribution" placeholder="Local Contribution">
+							<input type="text" class="form-control" id="pms_localcontribution" name="pms_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="pms_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pms_additionalfunds" name="pms_additionalfunds" placeholder="Additional funds">
+							<input type="text" class="form-control" id="pms_additionalfunds" name="pms_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="pms_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pms_totalprojectcost" name="pms_totalprojectcost" placeholder="Additional funds">
+							<input type="text" class="form-control" id="pms_totalprojectcost" name="pms_totalprojectcost" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="npt_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost">
+							<input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="npt_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="npt_localcontribution" name="npt_localcontribution" placeholder="Local Contribution">
+							<input type="text" class="form-control" id="npt_localcontribution" name="npt_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="pdc_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost">
+							<input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="pdc_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="pdc_localcontribution" name="pdc_localcontribution" placeholder="Local Contribution">
+							<input type="text" class="form-control" id="pdc_localcontribution" name="pdc_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Attended Training</label>
 						<div class="col-lg-6">
 							<button class="btn btn-default">Cancel</button>
-							<button class="btn btn-success submit-button" type="submit" data="form-4">Submit</button>
+							<button class="btn btn-success submit-button" type="submit" data="/update4/">Submit</button>
 						</div>
 					</div>
 				</fieldset>
 			</form>
 			
 			<!-- Page 5 -->
-			<form class="form-horizontal" id="form-5" method="post" action="">
+			<form class="form-horizontal" id="/update5/" method="post" action="">
 				<fieldset>
-					<legend>Legend</legend>
+					<legend>Form 5</legend>
 					
 					<!-- Signature -->
 					<div class="form-group">
 						<label for="publicworksdirector_fullname" class="col-lg-2 control-label">Full Name</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="publicworksdirector_fullname" name="publicworksdirector_fullname" placeholder="Full Name">
+							<input type="text" class="form-control" id="publicworksdirector_fullname" name="publicworksdirector_fullname" placeholder="Full Name" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="publicworksdirector_title" class="col-lg-2 control-label">Title</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="publicworksdirector_title" name="publicworksdirector_title" placeholder="e.g. Public Works Director">
+							<input type="text" class="form-control" id="publicworksdirector_title" name="publicworksdirector_title" placeholder="e.g. Public Works Director" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="publicworksdirector_contactnumber" class="col-lg-2 control-label">Contact Number</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="publicworksdirector_contactnumber" name="publicworksdirector_contactnumber" placeholder="Phone Number">
+							<input type="text" class="form-control" id="publicworksdirector_contactnumber" name="publicworksdirector_contactnumber" placeholder="Phone Number" data-parsley-type="number" data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="applicationdate" class="col-lg-2 control-label">Application Date</label>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" id="applicationdate" name="applicationdate" placeholder="Date">
+							<input type="text" class="form-control" id="applicationdate" name="applicationdate" placeholder="Date"  data-parsley-required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Attended Training</label>
 						<div class="col-lg-6">
 							<button class="btn btn-default">Cancel</button>
-							<button class="btn btn-success submit-button" type="submit" data="form-5">Submit</button>
+							<button class="btn btn-success submit-button" type="submit" data="/update5/">Submit</button>
 						</div>
 					</div>
 				</fieldset>
@@ -684,7 +684,11 @@
     <script src="includes/vendor/jquery.easing.1.3.js"></script>
     <!-- 	<script src="includes/vendor/jquery.mousewheel.js"></script> -->
     <script src="includes/vendor/jquery.vaccordion.js"></script>
+    <script src="includes/vendor/uuid.js"></script>
+    <script src="//kendo.cdn.telerik.com/2015.2.805/js/kendo.all.min.js"></script>
+    <script src="bower/parsleyjs/dist/parsley.min.js"></script>
     <script src="includes/main.js"></script>
+
 </body>
 
 </html>

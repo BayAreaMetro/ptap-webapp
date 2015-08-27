@@ -26,7 +26,24 @@ exports.index = function(req, res) {
  */
 exports.name = function(req, res) {
 
-    Jurisdiction.find({}, { '_id': 0, 'Jurisdiction' :1}, function(err, jurisdictions) {
+    Jurisdiction.find({}, {
+        '_id': 0,
+        'Jurisdiction': 1
+    }, function(err, jurisdictions) {
+        if (err) return res.send(500, err);
+        res.json(200, jurisdictions);
+    });
+};
+
+/**
+ * Get jurisdiction information
+ */
+exports.info = function(req, res) {
+    var name = req.params.name;
+
+    Jurisdiction.find({
+        'Jurisdiction': name
+    }, function(err, jurisdictions) {
         if (err) return res.send(500, err);
         res.json(200, jurisdictions);
     });
