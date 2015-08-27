@@ -31,17 +31,13 @@ exports.index = function(req, res) {
 };
 
 /**
- * Creates a new application
+ * Creates a new application (Section 1)
  */
 exports.create = function(req, res, next) {
     console.log('running create application');
     var newapplication = new Application(req.body);
     var emailConfirmation = req.body.emailconfirmation;
-    newapplication.publicworksdirector = {
-        'fullname': 'Michael Ziyambi',
-        'title': 'GIS Analyst',
-        'contactnumber': '510-817-3210'
-    };
+
     newapplication.uuid = uuid.v1();
     newapplication.save(function(err, application) {
         if (err) return console.error(err);
@@ -75,16 +71,22 @@ exports.create = function(req, res, next) {
     });
 };
 
+
+
 /**
- * Update a application
+ * Update application section 2
  */
-exports.update = function(req, res, next) {
+exports.update2 = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
     Application.findByIdAndUpdate(id, {
         $set: {
-            street_address: req.body.street_address
+            last_user_meeting: req.body.last_user_meeting,
+            last_major_inspection: req.body.last_major_inspection,
+            pms_consultants: req.body.pms_consultants,
+            digitalmap_format: req.body.digitalmap_format,
+            linked_basemap: req.body.linked_basemap
         }
     }, function(err, application) {
         if (err) return handleError(err);
@@ -94,6 +96,123 @@ exports.update = function(req, res, next) {
 
 };
 
+/**
+ * Update application section 3a
+ */
+exports.update3a = function(req, res, next) {
+    console.log('running update application');
+    var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
+    console.log(id);
+    Application.findByIdAndUpdate(id, {
+        $set: {
+            network_centerlinemiles: req.body.network_centerlinemiles,
+            network_totalpercentage: req.body.network_totalpercentage,
+            network_milesforsurvey: req.body.network_milesforsurvey,
+            network_milesremaining: req.body.network_milesremaining,
+            network_additionalfunds: req.body.network_additionalfunds,
+            network_percentadditionalfunds: req.body.network_percentadditionalfunds,
+            arterials: req.body.arterials,
+            collectors: req.body.collectors,
+            residentials: req.body.residentials,
+            other: req.body.other,
+            other_description: req.body.other_description
+        }
+    }, function(err, application) {
+        if (err) return handleError(err);
+        res.send(application);
+    });
+
+
+};
+
+/**
+ * Update application section 3b
+ */
+exports.update3b = function(req, res, next) {
+    console.log('running update application');
+    var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
+    console.log(id);
+    Application.findByIdAndUpdate(id, {
+        $set: {
+            option2_projectdescription: req.body.option2_projectdescription
+        }
+    }, function(err, application) {
+        if (err) return handleError(err);
+        res.send(application);
+    });
+
+
+};
+
+/**
+ * Update application section 3c
+ */
+exports.update3c = function(req, res, next) {
+    console.log('running update application');
+    var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
+    console.log(id);
+    Application.findByIdAndUpdate(id, {
+        $set: {
+            option3_projectdescription: req.body.option3_projectdescription,
+            option3_anticipatedconstructiondate: req.body.option3_anticipatedconstructiondate,
+            option3_federalaideligible: req.body.option3_federalaideligible,
+            option3_constructionfullyfunded: req.body.option3_constructionfullyfunded
+        }
+    }, function(err, application) {
+        if (err) return handleError(err);
+        res.send(application);
+    });
+
+
+};
+
+/**
+ * Update application section 4
+ */
+exports.update4 = function(req, res, next) {
+    console.log('running update application');
+    var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
+    console.log(id);
+    Application.findByIdAndUpdate(id, {
+        $set: {
+            pms_grantamount: req.body.pms_grantamount,
+            pms_localcontribution: req.body.pms_localcontribution,
+            pms_additionalfunds: req.body.pms_additionalfunds,
+            pms_totalprojectcost: req.body.pms_totalprojectcost,
+            npt_totalprojectcost: req.body.npt_totalprojectcost,
+            npt_localcontribution: req.body.npt_localcontribution,
+            pdc_totalprojectcost: req.body.pdc_totalprojectcost,
+            pdc_localcontribution: req.body.pdc_localcontribution
+        }
+    }, function(err, application) {
+        if (err) return handleError(err);
+        res.send(application);
+    });
+
+
+};
+
+/**
+ * Update application section 5
+ */
+exports.update5 = function(req, res, next) {
+    console.log('running update application');
+    var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
+    console.log(id);
+    Application.findByIdAndUpdate(id, {
+        $set: {
+            publicworksdirector_fullname: req.body.publicworksdirector_fullname,
+            publicworksdirector_title: req.body.publicworksdirector_title,
+            publicworksdirector_contactnumber: req.body.publicworksdirector_contactnumber,
+            applicationdate: new Date()
+        }
+    }, function(err, application) {
+        if (err) return handleError(err);
+        res.send(application);
+    });
+
+
+};
 
 /**
  * Delete a application
@@ -112,7 +231,7 @@ exports.destroy = function(req, res, next) {
  */
 exports.download = function(req, res) {
 
-    Application.find({},function(err, applications) {
+    Application.find({}, function(err, applications) {
         if (err) return res.send(500, err);
         var test = JSON.stringify(applications);
         var xls = json2xls(JSON.parse(test));
