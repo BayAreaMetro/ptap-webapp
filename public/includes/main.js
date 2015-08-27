@@ -60,7 +60,7 @@
 				console.log(selection);
 				
 				//submit form
-				$.post('/api/application/update3b/' + projectid, $(formId).serialize());
+				//$.post('/api/application/update3b/' + projectid, $(formId).serialize());
 			});
 
         }
