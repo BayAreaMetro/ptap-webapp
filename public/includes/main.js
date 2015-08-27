@@ -62,7 +62,7 @@
 				console.log(selection);
 				
 				//submit form
-				$.post('/api/application/' + app.projectid, $(formId).serialize());
+				$.post('/api/application' + submitAttr + app.projectid, $(formId).serialize());
 
 			});
 
