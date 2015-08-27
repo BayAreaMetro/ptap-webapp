@@ -6,6 +6,7 @@
             //Launch accordion
             app.accordion();
             //Submit current Form
+            app.projectid = uuid.v1();
             app.findAndSubmit();
         },
         accordion: function() {
@@ -57,10 +58,12 @@
 				var submitAttr = $(this).attr('data'),
 					formId = document.getElementById(submitAttr),
 					selection = $(formId).serialize();
+					console.log(submitAttr);
 				console.log(selection);
 				
 				//submit form
-				//$.post('/api/application/update3b/' + projectid, $(formId).serialize());
+				$.post('/api/application/' + app.projectid, $(formId).serialize());
+
 			});
 
         }
