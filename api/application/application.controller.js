@@ -35,10 +35,11 @@ exports.index = function(req, res) {
  */
 exports.create = function(req, res, next) {
     console.log('running create application');
+    console.log(req.body);
     var newapplication = new Application(req.body);
     var emailConfirmation = req.body.emailconfirmation;
 
-    newapplication.uuid = uuid.v1();
+    newapplication.uuid = req.params.id;
     newapplication.save(function(err, application) {
         if (err) return console.error(err);
 
@@ -80,7 +81,9 @@ exports.update2 = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
-    Application.findByIdAndUpdate(id, {
+    Application.findOneAndUpdate({
+        uuid: id
+    }, {
         $set: {
             last_user_meeting: req.body.last_user_meeting,
             last_major_inspection: req.body.last_major_inspection,
@@ -88,6 +91,8 @@ exports.update2 = function(req, res, next) {
             digitalmap_format: req.body.digitalmap_format,
             linked_basemap: req.body.linked_basemap
         }
+    }, {
+        upsert: true
     }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
@@ -103,7 +108,9 @@ exports.update3a = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
-    Application.findByIdAndUpdate(id, {
+    Application.findOneAndUpdate({
+        uuid: id
+    }, {
         $set: {
             network_centerlinemiles: req.body.network_centerlinemiles,
             network_totalpercentage: req.body.network_totalpercentage,
@@ -117,6 +124,8 @@ exports.update3a = function(req, res, next) {
             other: req.body.other,
             other_description: req.body.other_description
         }
+    }, {
+        upsert: true
     }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
@@ -132,10 +141,14 @@ exports.update3b = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
-    Application.findByIdAndUpdate(id, {
+    Application.findOneAndUpdate({
+        uuid: id
+    }, {
         $set: {
             option2_projectdescription: req.body.option2_projectdescription
         }
+    }, {
+        upsert: true
     }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
@@ -151,13 +164,17 @@ exports.update3c = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
-    Application.findByIdAndUpdate(id, {
+    Application.findOneAndUpdate({
+        uuid: id
+    }, {
         $set: {
             option3_projectdescription: req.body.option3_projectdescription,
             option3_anticipatedconstructiondate: req.body.option3_anticipatedconstructiondate,
             option3_federalaideligible: req.body.option3_federalaideligible,
             option3_constructionfullyfunded: req.body.option3_constructionfullyfunded
         }
+    }, {
+        upsert: true
     }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
@@ -173,7 +190,9 @@ exports.update4 = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
-    Application.findByIdAndUpdate(id, {
+    Application.findOneAndUpdate({
+        uuid: id
+    }, {
         $set: {
             pms_grantamount: req.body.pms_grantamount,
             pms_localcontribution: req.body.pms_localcontribution,
@@ -184,6 +203,8 @@ exports.update4 = function(req, res, next) {
             pdc_totalprojectcost: req.body.pdc_totalprojectcost,
             pdc_localcontribution: req.body.pdc_localcontribution
         }
+    }, {
+        upsert: true
     }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
@@ -199,13 +220,17 @@ exports.update5 = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
-    Application.findByIdAndUpdate(id, {
+    Application.findOneAndUpdate({
+        uuid: id
+    }, {
         $set: {
             publicworksdirector_fullname: req.body.publicworksdirector_fullname,
             publicworksdirector_title: req.body.publicworksdirector_title,
             publicworksdirector_contactnumber: req.body.publicworksdirector_contactnumber,
             applicationdate: new Date()
         }
+    }, {
+        upsert: true
     }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
@@ -220,7 +245,9 @@ exports.update5 = function(req, res, next) {
 exports.destroy = function(req, res, next) {
     console.log('running delete application');
     var id = req.params.id; //format is localhost:3000/api/application/remove/xxxx-xxxx-xxxxx
-    Application.findByIdAndRemove(id, function(err, application) {
+    Application.findByIdAndRemove({
+        uuid: id
+    }, function(err, application) {
         if (err) return handleError(err);
         res.send(application);
     });
