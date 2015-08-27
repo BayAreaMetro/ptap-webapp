@@ -8,7 +8,7 @@ var config = require('../../config/environment');
 var router = express.Router();
 
 router.get('/', controller.index);
-router.post('/', controller.create);
+router.post('/:id', controller.create);
 router.post('/update2/:id', controller.update2);
 router.post('/update3a/:id', controller.update3a);
 router.post('/update3b/:id', controller.update3b);
