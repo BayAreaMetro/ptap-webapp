@@ -9,6 +9,7 @@
             app.kendoElements();
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
+            app.change();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -64,7 +65,7 @@
                     
                     //Testing Custom Drop Downs
                     app.dropDown(result);
-                    console.log(results);
+                    console.log(result);
                 }
             });
         },
@@ -110,10 +111,40 @@
 	        var sourceArr = [];
 	
 	        for (var i = 0; i < data.length; i++) {
-	            sourceArr.push(data[i].value, data[i].text);
-	            console.log(data[i].value, data[i].text);
-	            $("#drop-test").append('<option data-number=' + data[i].value +'>'+ data[i].text + '</option>');
+	            sourceArr.push(data[i].Jurisdiction);
+	            //$("#drop-test").append('<option>' + data[i].Jurisdiction + '</option>');
+	            $("#drop-test").append('<option data-date=' + data[i]['Certification Date'] +' data-miles=' + data[i]['Total Centerline Miles'] +'>'+ data[i].Jurisdiction + '</option>');
+	            //console.log(data[i].Jurisdiction);
 	        }
+	    },
+	    change: function(){
+		    $("#drop-test").change(function(){
+			    //declaring varibles here and initializing after. 
+			    var currentJurisdiction, dataMiles, dataDate;
+			    
+			    //Value of Input
+			   	currentJurisdiction = $(this).val();
+			   	
+			   	//Filter data attributes - date
+			    dataDate = $('#drop-test option').filter(function() {
+	                return this.value == currentJurisdiction;
+	            }).data('date');
+	            
+	            //Filter data attributes - miles
+	            dataMiles = $('#drop-test option').filter(function() {
+	                return this.value == currentJurisdiction;
+	            }).data('miles');
+	            
+	            //Populate on change
+	            app.autoPopulateValues(dataDate, dataMiles);
+	            
+	            //testing
+	            console.log(dataDate, dataMiles);
+		    });
+	    },
+	    autoPopulateValues: function(date, miles){
+		    $("#last_major_inspection").val(date);
+		    $("#network_centerlinemiles").val(miles);
 	    }
     };
     app.init();
