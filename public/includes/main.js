@@ -25,6 +25,10 @@
             $(".submit-button").click(function(e) {
 
                 e.preventDefault();
+
+                //Gloabl
+                app.parseForm = $(this).attr('data');
+
                 //Get Attr
                 var submitAttr = $(this).attr('data'),
                     formId = document.getElementById(submitAttr),
@@ -33,6 +37,7 @@
                 console.log(selection);
 
                 //submit form
+                app.validate(formId);
                 $.post('/api/application' + submitAttr + app.projectid, $(formId).serialize());
 
             });
@@ -68,27 +73,6 @@
                     console.log(result);
                 }
             });
-        },
-        findAndSubmit: function(){
-
-	        //submit class on all buttons
-			$(".submit-button").click(function(){
-
-				//Gloabl
-				app.parseForm = $(this).attr('data');
-
-				//Get Attr
-				var submitAttr = $(this).attr('data'),
-					formId = document.getElementById(submitAttr),
-					selection = $(formId).serialize();
-
-				//submit form
-				app.validate(formId);
-				//$.post('/api/application/update3b/' + projectid, $(formId).serialize());
-
-				//Testing
-				console.log(selection);
-			});
         },
         validate: function(currentForm){
 
