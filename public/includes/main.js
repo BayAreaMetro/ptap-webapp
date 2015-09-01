@@ -6,7 +6,7 @@
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
-            app.kendoElements();
+          // app.kendoElements();
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
             app.change();
@@ -96,13 +96,13 @@
 
             for (var i = 0; i < data.length; i++) {
                 sourceArr.push(data[i].Jurisdiction);
-                //$("#drop-test").append('<option>' + data[i].Jurisdiction + '</option>');
-                $("#drop-test").append('<option data-date=' + data[i]['Certification Date'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
+                //$("#jurisdiction").append('<option>' + data[i].Jurisdiction + '</option>');
+                $("#jurisdiction").append('<option data-date=' + data[i]['Certification Date'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
                 //console.log(data[i].Jurisdiction);
             }
         },
         change: function() {
-            $("#drop-test").change(function() {
+            $("#jurisdiction").change(function() {
                 //declaring varibles here and initializing after. 
                 var currentJurisdiction, dataMiles, dataDate;
 
@@ -110,12 +110,12 @@
                 currentJurisdiction = $(this).val();
 
                 //Filter data attributes - date
-                dataDate = $('#drop-test option').filter(function() {
+                dataDate = $('#jurisdiction option').filter(function() {
                     return this.value == currentJurisdiction;
                 }).data('date');
 
                 //Filter data attributes - miles
-                dataMiles = $('#drop-test option').filter(function() {
+                dataMiles = $('#jurisdiction option').filter(function() {
                     return this.value == currentJurisdiction;
                 }).data('miles');
 
