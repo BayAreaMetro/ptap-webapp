@@ -78,7 +78,7 @@ exports.create = function(req, res, next) {
  * Update application section 2
  */
 exports.update2 = function(req, res, next) {
-    console.log('running update application');
+    console.log('running update application 2');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
     Application.findOneAndUpdate({
@@ -105,9 +105,10 @@ exports.update2 = function(req, res, next) {
  * Update application section 3a
  */
 exports.update3a = function(req, res, next) {
-    console.log('running update application');
+    console.log('running update application 3a');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
+    console.log(req.body);
     Application.findOneAndUpdate({
         uuid: id
     }, {
@@ -138,7 +139,8 @@ exports.update3a = function(req, res, next) {
  * Update application section 3b
  */
 exports.update3b = function(req, res, next) {
-    console.log('running update application');
+    console.log('running update application 3b');
+    console.log(req.body);
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
     Application.findOneAndUpdate({
@@ -164,6 +166,7 @@ exports.update3c = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
+    console.log(req.body);
     Application.findOneAndUpdate({
         uuid: id
     }, {
@@ -190,6 +193,7 @@ exports.update4 = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
+    console.log(req.body);
     Application.findOneAndUpdate({
         uuid: id
     }, {
@@ -220,6 +224,7 @@ exports.update5 = function(req, res, next) {
     console.log('running update application');
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
+    console.log(req.body);
     Application.findOneAndUpdate({
         uuid: id
     }, {
