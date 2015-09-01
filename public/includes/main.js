@@ -67,18 +67,18 @@
                 url: "/api/jurisdiction",
                 success: function(result) {
                     app.Jurisdictions = result;
-                    
+
                     //Testing Custom Drop Downs
                     app.dropDown(result);
-                    console.log(result);
+                    // console.log(result);
                 }
             });
         },
-        validate: function(currentForm){
+        validate: function(currentForm) {
 
-			//Pass current form id and then validate
-	        $(currentForm).parsley().validate();
-	    },
+            //Pass current form id and then validate
+            $(currentForm).parsley().validate();
+        },
         onselect: function(e) {
             var dataItem = this.dataItem(e.item);
             var vals = app.Jurisdictions;
@@ -91,45 +91,71 @@
                 }
             }
         },
-        dropDown: function(data){
-	        var sourceArr = [];
-	
-	        for (var i = 0; i < data.length; i++) {
-	            sourceArr.push(data[i].Jurisdiction);
-	            //$("#drop-test").append('<option>' + data[i].Jurisdiction + '</option>');
-	            $("#drop-test").append('<option data-date=' + data[i]['Certification Date'] +' data-miles=' + data[i]['Total Centerline Miles'] +'>'+ data[i].Jurisdiction + '</option>');
-	            //console.log(data[i].Jurisdiction);
-	        }
-	    },
-	    change: function(){
-		    $("#drop-test").change(function(){
-			    //declaring varibles here and initializing after. 
-			    var currentJurisdiction, dataMiles, dataDate;
-			    
-			    //Value of Input
-			   	currentJurisdiction = $(this).val();
-			   	
-			   	//Filter data attributes - date
-			    dataDate = $('#drop-test option').filter(function() {
-	                return this.value == currentJurisdiction;
-	            }).data('date');
-	            
-	            //Filter data attributes - miles
-	            dataMiles = $('#drop-test option').filter(function() {
-	                return this.value == currentJurisdiction;
-	            }).data('miles');
-	            
-	            //Populate on change
-	            app.autoPopulateValues(dataDate, dataMiles);
-	            
-	            //testing
-	            console.log(dataDate, dataMiles);
-		    });
-	    },
-	    autoPopulateValues: function(date, miles){
-		    $("#last_major_inspection").val(date);
-		    $("#network_centerlinemiles").val(miles);
-	    }
+        dropDown: function(data) {
+            var sourceArr = [];
+
+            for (var i = 0; i < data.length; i++) {
+                sourceArr.push(data[i].Jurisdiction);
+                //$("#drop-test").append('<option>' + data[i].Jurisdiction + '</option>');
+                $("#drop-test").append('<option data-date=' + data[i]['Certification Date'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
+                //console.log(data[i].Jurisdiction);
+            }
+        },
+        change: function() {
+            $("#drop-test").change(function() {
+                //declaring varibles here and initializing after. 
+                var currentJurisdiction, dataMiles, dataDate;
+
+                //Value of Input
+                currentJurisdiction = $(this).val();
+
+                //Filter data attributes - date
+                dataDate = $('#drop-test option').filter(function() {
+                    return this.value == currentJurisdiction;
+                }).data('date');
+
+                //Filter data attributes - miles
+                dataMiles = $('#drop-test option').filter(function() {
+                    return this.value == currentJurisdiction;
+                }).data('miles');
+
+                //Populate on change
+                app.autoPopulateValues(dataDate, dataMiles);
+
+                //testing
+                console.log(dataDate, dataMiles);
+            });
+        },
+        autoPopulateValues: function(date, miles) {
+            var pmsGrantAmount = miles * 300,
+                networkTotalPercentage = 100 - (100 * (miles - 333.33) / miles),
+                networkMilesRemaining = miles - 333.33,
+                pmsLocalContribution = pmsGrantAmount * 0.2,
+                pmsTotalProjectCost;
+
+            if (miles <= 50) {
+                $("#pms_grantamount").val(15000);
+                $("#network_totalpercentage").val(100);
+                $("#network_milesforsurvey").val(miles);
+                $("#network_milesremaining").val(0);
+                $("#pms_localcontribution").val(pmsLocalContribution);
+            } else if (miles > 50 && miles <= 333.33) {
+                $("#pms_grantamount").val(pmsGrantAmount);
+                $("#network_totalpercentage").val(100);
+                $("#network_milesforsurvey").val(miles);
+                $("#network_milesremaining").val(0);
+                $("#pms_localcontribution").val(pmsLocalContribution);
+            } else {
+                $("#pms_grantamount").val(100000);
+                $("#network_totalpercentage").val(networkTotalPercentage);
+                $("#network_milesforsurvey").val(333.33);
+                $("#network_milesremaining").val(networkMilesRemaining);
+                $("#pms_localcontribution").val(20000);
+
+            }
+            $("#last_major_inspection").val(date);
+            $("#network_centerlinemiles").val(miles);
+        }
     };
     app.init();
 })();
