@@ -6,10 +6,11 @@
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
-          // app.kendoElements();
+            // app.kendoElements();
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
             app.change();
+            app.additionalFunds();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -155,6 +156,11 @@
             }
             $("#last_major_inspection").val(date);
             $("#network_centerlinemiles").val(miles);
+        },
+        additionalFunds: function() {
+            $("#network_additionalfunds").change(function() {
+                console.log('this input changed');
+            });
         }
     };
     app.init();
