@@ -160,7 +160,7 @@
                 var totalMiles = $("#network_centerlinemiles").val();
                 var milesRemaining = app.networkMilesRemaining;
                 var percentNetwork = $("#network_totalpercentage").val();
-                var additonalFunds = $(this).val();
+                var additonalFunds = parseFloat($(this).val());
                 var additionalMilesFunded = additonalFunds / 300;
                 var newRemainingMiles = milesRemaining - additionalMilesFunded;
                 var newPercentageNetwork = (100 * (totalMiles - newRemainingMiles) / totalMiles) + percentNetwork;
@@ -170,7 +170,13 @@
                 //Set network miles remaining after additional funds
                 newRemainingMiles = app.checkInputLimits(newRemainingMiles, 'network_milesremaining');
                 $("#network_milesremaining").val(newRemainingMiles);
+                //Set additional funds in section 4 summary
+                console.log('additional funds' + additonalFunds);
+                $("#pms_additionalfunds").val(additonalFunds);
 
+                //Set total project cost in section 4 summary
+                var pmsTotalProjectCost = parseFloat($("#pms_additionalfunds").val())  + parseFloat($("#pms_grantamount").val());
+                $("#pms_totalprojectcost").val(pmsTotalProjectCost);
             });
 
 
