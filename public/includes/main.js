@@ -37,10 +37,11 @@
                 console.log(submitAttr);
                 console.log(selection);
 
-                //submit form
+                //Validate form
                 app.validate(formId);
-                $.post('/api/application' + submitAttr + app.projectid, $(formId).serialize());
-
+                
+                //Submit form
+				app.post(formId, submitAttr, app.projectId);
             });
 
         },
@@ -251,9 +252,13 @@
                 .val('')
                 .removeAttr('checked')
                 .removeAttr('selected');
-        }
-
-
+        },
+		post: function(form, attr, projectId){
+			$(form).parsley().on('form:success', function() {
+				$.post('/api/application' + attr + projectId, $(form).serialize());
+				console.log('pass');
+			});
+		}
     };
     app.init();
 })();
