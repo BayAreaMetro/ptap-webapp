@@ -128,6 +128,7 @@
             });
         },
         autoPopulateValues: function(date, miles) {
+            app.resetForms();
             var pmsGrantAmount = miles * 300,
                 networkTotalPercentage = 100 - (100 * (miles - 333.33) / miles),
                 networkMilesRemaining = miles - 333.33,
@@ -175,7 +176,7 @@
                 $("#pms_additionalfunds").val(additonalFunds);
 
                 //Set total project cost in section 4 summary
-                var pmsTotalProjectCost = parseFloat($("#pms_additionalfunds").val())  + parseFloat($("#pms_grantamount").val());
+                var pmsTotalProjectCost = parseFloat($("#pms_additionalfunds").val()) + parseFloat($("#pms_grantamount").val());
                 $("#pms_totalprojectcost").val(pmsTotalProjectCost);
             });
 
@@ -229,7 +230,17 @@
             }
 
 
+        },
+        resetForms: function() {
+            //Reset all inputs except dropdown list
+            $(':input', '.form-reset')
+                .not(':button, :submit, :reset, :hidden, #jurisdiction')
+                .val('')
+                .removeAttr('checked')
+                .removeAttr('selected');
         }
+
+
     };
     app.init();
 })();
