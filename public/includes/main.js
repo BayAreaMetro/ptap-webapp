@@ -132,35 +132,97 @@
                 networkTotalPercentage = 100 - (100 * (miles - 333.33) / miles),
                 networkMilesRemaining = miles - 333.33,
                 pmsLocalContribution = pmsGrantAmount * 0.2,
-                pmsTotalProjectCost;
+                pmsTotalProjectCost,
+                networkMilesForSurvey;
+            //Set Grant amount (max 100k, min 15k)
+            pmsGrantAmount = app.checkInputLimits(pmsGrantAmount, 'pms_grantamount');
+            $("#pms_grantamount").val(pmsGrantAmount);
+            //Set percentage of network covered by grant amount
+            networkTotalPercentage = app.checkInputLimits(networkTotalPercentage, 'percentage');
+            $("#network_totalpercentage").val(networkTotalPercentage);
+            //Set miles remaining after grant amount used
+            app.networkMilesRemaining = app.checkInputLimits(networkMilesRemaining, 'network_milesremaining');
+            $("#network_milesremaining").val(networkMilesRemaining);
 
-            if (miles <= 50) {
-                $("#pms_grantamount").val(15000);
-                $("#network_totalpercentage").val(100);
-                $("#network_milesforsurvey").val(miles);
-                $("#network_milesremaining").val(0);
-                $("#pms_localcontribution").val(pmsLocalContribution);
-            } else if (miles > 50 && miles <= 333.33) {
-                $("#pms_grantamount").val(pmsGrantAmount);
-                $("#network_totalpercentage").val(100);
-                $("#network_milesforsurvey").val(miles);
-                $("#network_milesremaining").val(0);
-                $("#pms_localcontribution").val(pmsLocalContribution);
-            } else {
-                $("#pms_grantamount").val(100000);
-                $("#network_totalpercentage").val(networkTotalPercentage);
-                $("#network_milesforsurvey").val(333.33);
-                $("#network_milesremaining").val(networkMilesRemaining);
-                $("#pms_localcontribution").val(20000);
+            //Set miles that will be surveyed with grant amount (max 333.33)
+            networkMilesForSurvey = app.checkInputLimits(miles, 'network_milesforsurvey');
+            $("#network_milesforsurvey").val(networkMilesForSurvey);
+            //Set local contribution (20% of grant amount)
+            pmsLocalContribution = app.checkInputLimits(pmsLocalContribution, 'pms_localcontribution');
+            $("#pms_localcontribution").val(pmsLocalContribution);
 
-            }
+            //Last inpspection date and total miles from json Array
             $("#last_major_inspection").val(date);
             $("#network_centerlinemiles").val(miles);
         },
         additionalFunds: function() {
-            $("#network_additionalfunds").change(function() {
-                console.log('this input changed');
+            $("#network_additionalfunds").on('input', function() {
+                var totalMiles = $("#network_centerlinemiles").val();
+                var milesRemaining = app.networkMilesRemaining;
+                var percentNetwork = $("#network_totalpercentage").val();
+                var additonalFunds = $(this).val();
+                var additionalMilesFunded = additonalFunds / 300;
+                var newRemainingMiles = milesRemaining - additionalMilesFunded;
+                var newPercentageNetwork = (100 * (totalMiles - newRemainingMiles) / totalMiles) + percentNetwork;
+                //Set Percentage of Network covered by grant plus additional funds
+                newPercentageNetwork = app.checkInputLimits(newPercentageNetwork, 'percentage');
+                $("#network_percentadditionalfunds").val(newPercentageNetwork);
+                //Set network miles remaining after additional funds
+                newRemainingMiles = app.checkInputLimits(newRemainingMiles, 'network_milesremaining');
+                $("#network_milesremaining").val(newRemainingMiles);
+
             });
+
+
+        },
+        checkInputLimits: function(value, field) {
+            value = parseFloat(value);
+            console.log(value);
+            console.log(field);
+
+            switch (field) {
+                case 'percentage':
+                    if (value <= 0) {
+                        return 0;
+                    } else if (value > 0 && value <= 100) {
+                        return value;
+                    } else {
+                        return 100;
+                    }
+                    break;
+                case 'pms_grantamount':
+                    if (value <= 15000) {
+                        return 15000;
+                    } else if (value > 15000 && value <= 100000) {
+                        return value;
+                    } else {
+                        return 100000;
+                    }
+                    break;
+                case 'network_milesremaining':
+                    if (value <= 0) {
+                        return 0;
+                    } else {
+                        return value;
+                    }
+                    break;
+                case 'network_milesforsurvey':
+                    if (value <= 333.33) {
+                        return value;
+                    } else {
+                        return 333.33;
+                    }
+                    break;
+                case 'pms_localcontribution':
+                    if (value <= 333.33) {
+                        return value;
+                    } else {
+                        return 20000;
+                    }
+                    break;
+            }
+
+
         }
     };
     app.init();
