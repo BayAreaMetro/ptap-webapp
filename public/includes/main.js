@@ -165,6 +165,10 @@
                 var additionalMilesFunded = additonalFunds / 300;
                 var newRemainingMiles = milesRemaining - additionalMilesFunded;
                 var newPercentageNetwork = (100 * (totalMiles - newRemainingMiles) / totalMiles) + percentNetwork;
+
+                //Check if additional funds is empty
+                additonalFunds = app.checkInputLimits(additonalFunds, 'additional_funds');
+                $("#network_percentadditionalfunds").val(additonalFunds);
                 //Set Percentage of Network covered by grant plus additional funds
                 newPercentageNetwork = app.checkInputLimits(newPercentageNetwork, 'percentage');
                 $("#network_percentadditionalfunds").val(newPercentageNetwork);
@@ -207,7 +211,7 @@
                     }
                     break;
                 case 'network_milesremaining':
-                    if (value <= 0) {
+                    if (value <= 0 || isNaN(value) === true) {
                         return 0;
                     } else {
                         return value;
@@ -225,6 +229,15 @@
                         return value;
                     } else {
                         return 20000;
+                    }
+                    break;
+                case 'additional_funds':
+                    if (value <= 0) {
+                        return 0;
+                    } else if (isNaN(value) === true) {
+                        return 0;
+                    } else {
+                        return value;
                     }
                     break;
             }
