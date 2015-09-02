@@ -142,7 +142,7 @@
             $("#network_totalpercentage").val(networkTotalPercentage);
             //Set miles remaining after grant amount used
             app.networkMilesRemaining = app.checkInputLimits(networkMilesRemaining, 'network_milesremaining');
-            $("#network_milesremaining").val(networkMilesRemaining);
+            $("#network_milesremaining").val(app.networkMilesRemaining);
 
             //Set miles that will be surveyed with grant amount (max 333.33)
             networkMilesForSurvey = app.checkInputLimits(miles, 'network_milesforsurvey');
