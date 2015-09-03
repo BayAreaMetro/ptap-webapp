@@ -40,6 +40,7 @@ exports.create = function(req, res, next) {
     var emailConfirmation = req.body.emailconfirmation;
 
     newapplication.uuid = req.params.id;
+    console.log(req.params.id);
     newapplication.save(function(err, application) {
         if (err) return console.error(err);
 
@@ -123,7 +124,8 @@ exports.update3a = function(req, res, next) {
             collectors: req.body.collectors,
             residentials: req.body.residentials,
             other: req.body.other,
-            other_description: req.body.other_description
+            other_description: req.body.other_description,
+            option1: 'yes'
         }
     }, {
         upsert: true
@@ -147,7 +149,19 @@ exports.update3b = function(req, res, next) {
         uuid: id
     }, {
         $set: {
-            option2_projectdescription: req.body.option2_projectdescription
+            option2_projectdescription: req.body.option2_projectdescription,
+            option2_estimatedcost: req.body.option2_estimatedcost,
+            option2_additionalfunds: req.body.option2_additionalfunds,
+            signs: req.body.signs,
+            stormdrains: req.body.stormdrains,
+            curbs: req.body.curbs,
+            gutters: req.body.gutters,
+            sidewalks: req.body.sidewalks,
+            trafficsignals: req.body.trafficsignals,
+            streetlights: req.body.streetlights,
+            otherasset: req.body.otherasset,
+            option2_otherassetdescription: req.body.option2_otherassetdescription,
+            option2: 'yes'
         }
     }, {
         upsert: true
@@ -174,7 +188,8 @@ exports.update3c = function(req, res, next) {
             option3_projectdescription: req.body.option3_projectdescription,
             option3_anticipatedconstructiondate: req.body.option3_anticipatedconstructiondate,
             option3_federalaideligible: req.body.option3_federalaideligible,
-            option3_constructionfullyfunded: req.body.option3_constructionfullyfunded
+            option3_constructionfullyfunded: req.body.option3_constructionfullyfunded,
+            option3: 'yes'
         }
     }, {
         upsert: true

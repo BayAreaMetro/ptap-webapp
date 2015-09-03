@@ -6,6 +6,7 @@
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
+            console.log(app.projectid);
             // app.kendoElements();
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
@@ -38,10 +39,10 @@
                 console.log(selection);
 
                 //Validate form
-                app.validate(formId);
-                
+                app.validate(formId, submitAttr);
+
                 //Submit form
-				app.post(formId, submitAttr, app.projectId);
+               // app.post(formId, submitAttr, app.projectId);
             });
 
         },
@@ -76,10 +77,11 @@
                 }
             });
         },
-        validate: function(currentForm) {
+        validate: function(currentForm, submitAttr) {
 
             //Pass current form id and then validate
             $(currentForm).parsley().validate();
+            app.post(currentForm, submitAttr, app.projectId);
         },
         onselect: function(e) {
             var dataItem = this.dataItem(e.item);
@@ -253,12 +255,13 @@
                 .removeAttr('checked')
                 .removeAttr('selected');
         },
-		post: function(form, attr, projectId){
-			$(form).parsley().on('form:success', function() {
-				$.post('/api/application' + attr + projectId, $(form).serialize());
-				console.log('pass');
-			});
-		}
+        post: function(form, attr, projectId) {
+            console.log(app.projectid);
+            $(form).parsley().on('form:success', function() {
+                $.post('/api/application' + attr + app.projectid, $(form).serialize());
+                console.log('pass');
+            });
+        }
     };
     app.init();
 })();

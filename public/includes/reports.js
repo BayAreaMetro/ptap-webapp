@@ -15,7 +15,7 @@ var PTAP = {
             // tableTools: {
             //     "sSwfPath": "../swf/copy_csv_xls_pdf.swf"
             // },
-            "sAjaxSource": "/api/report",
+            "sAjaxSource": "/api/application",
             "sAjaxDataProp": "",
             "bProcessing": true,
             "aoColumns": [{

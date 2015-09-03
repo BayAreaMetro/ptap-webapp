@@ -35,27 +35,77 @@ var ApplicationSchema = new Schema({
     pms_consultants: String,
     digitalmap_format: String,
     linked_basemap: String,
-    option1: String,
-    option2: String,
-    option3: String,
+    option1: {
+        type: String,
+        default: 'no'
+    },
+    option2: {
+        type: String,
+        default: 'no'
+    },
+    option3: {
+        type: String,
+        default: 'no'
+    },
     network_centerlinemiles: String,
     network_totalpercentage: String,
-    network_milesforsurvey: {
-        type: String,
-        default: 'user'
-    },
+    network_milesforsurvey: String,
     network_milesremaining: String,
     network_additionalfunds: String,
     network_percentadditionalfunds: String,
-    arterials: String,
+    arterials: {
+        type: String,
+        default: 'no'
+    },
     collectors: {
         type: String,
-        default: 'user'
+        default: 'no'
     },
-    residentials: String,
-    other: String,
+    residentials: {
+        type: String,
+        default: 'no'
+    },
+    other: {
+        type: String,
+        default: 'no'
+    },
     other_description: String,
     option2_projectdescription: String,
+    option2_estimatedcost: String,
+    option2_additionalfunds: String,
+    signs: {
+        type: String,
+        default: 'no'
+    },
+    stormdrains: {
+        type: String,
+        default: 'no'
+    },
+    curbs: {
+        type: String,
+        default: 'no'
+    },
+    gutters: {
+        type: String,
+        default: 'no'
+    },
+    sidewalks: {
+        type: String,
+        default: 'no'
+    },
+    trafficsignals: {
+        type: String,
+        default: 'no'
+    },
+    streetlights: {
+        type: String,
+        default: 'no'
+    },
+    otherasset: {
+        type: String,
+        default: 'no'
+    },
+    option2_otherassetdescription: String,
     option3_projectdescription: String,
     option3_anticipatedconstructiondate: String,
     option3_federalaideligible: String,
