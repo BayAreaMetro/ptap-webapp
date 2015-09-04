@@ -11,7 +11,8 @@
             app.change();
             app.additionalFunds();
             app.checkProjectOptions();
-            app.attendedTraining();
+            app.radioButtonsCheck();
+            app.loadtestvalues();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -80,7 +81,7 @@
         validate: function(currentForm, submitAttr) {
 
             //Pass current form id and then validate
-            $(currentForm).parsley().validate();
+            // $(currentForm).parsley().validate();
             app.post(currentForm, submitAttr, app.projectId);
         },
         onselect: function(e) {
@@ -91,7 +92,7 @@
                 if (vals[i].Jurisdiction === lookupVal) {
                     //Autopopulate values
                     $('#network_centerlinemiles').val(vals[i]['Total Centerline Miles']);
-                    $('#last_major_inspection').val(vals[i]['Certification Date']);
+                    $('#last_major_inspection').val(vals[i]['Last Major Inspection']);
                 }
             }
         },
@@ -101,7 +102,7 @@
             for (var i = 0; i < data.length; i++) {
                 sourceArr.push(data[i].Jurisdiction);
                 //$("#jurisdiction").append('<option>' + data[i].Jurisdiction + '</option>');
-                $("#jurisdiction").append('<option data-date=' + data[i]['Certification Date'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
+                $("#jurisdiction").append('<option data-date=' + data[i]['Last Major Inspection'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
                 //console.log(data[i].Jurisdiction);
             }
         },
@@ -122,6 +123,9 @@
                 dataMiles = $('#jurisdiction option').filter(function() {
                     return this.value == currentJurisdiction;
                 }).data('miles');
+
+                //Set miles globally
+                app.centerLineMiles = dataMiles;
 
                 //Populate on change
                 app.autoPopulateValues(dataDate, dataMiles);
@@ -164,6 +168,7 @@
             $("#network_centerlinemiles").val(miles);
         },
         additionalFunds: function() {
+            //Option 1 Additional Funds Input
             $("#network_additionalfunds").on('input', function() {
                 var totalMiles = $("#network_centerlinemiles").val();
                 var milesRemaining = app.networkMilesRemaining;
@@ -194,6 +199,25 @@
                 $("#pms_totalprojectcost").val(pmsTotalProjectCost);
             });
 
+            //Option 2 Additional Funds Input
+            $("#option2_additionalfunds").on('input', function() {
+                var option2AdditionalFunds = $(this).val();
+                var option2LocalContribution = (app.centerLineMiles * 300) * 0.2;
+                option2AdditionalFunds = app.checkInputLimits(option2AdditionalFunds, 'additional_funds');
+                $("#npt_additionalfunds").val(option2AdditionalFunds);
+                $("#npt_localcontribution").val(option2LocalContribution);
+
+            });
+
+            //Option 3 Additional Funds Input
+            $("#option3_additionalfunds").on('input', function() {
+                var option3AdditionalFunds = $(this).val();
+                var option3LocalContribution = (app.centerLineMiles * 300) * 0.2;
+                option3AdditionalFunds = app.checkInputLimits(option3AdditionalFunds, 'additional_funds');
+                $("#pdc_additionalfunds").val(option3AdditionalFunds);
+                $("#pdc_localcontribution").val(option3LocalContribution);
+
+            });
 
         },
         checkInputLimits: function(value, field) {
@@ -235,7 +259,7 @@
                     }
                     break;
                 case 'pms_localcontribution':
-                    if (value <= 333.33) {
+                    if (value <= 20000) {
                         return value;
                     } else {
                         return 20000;
@@ -264,32 +288,71 @@
         },
         post: function(form, attr, projectId) {
             console.log(app.projectid);
-            $(form).parsley().on('form:success', function() {
-                $.post('/api/application' + attr + app.projectid, $(form).serialize());
-                console.log('pass');
-            });
+            console.log(form);
+            console.log('checking post');
+            if (attr === 'section1') {
+                url = '/api/application/' + app.projectid;
+            } else {
+                url = '/api/application/' + attr + "/" + app.projectid;
+            }
+            console.log(url);
+            console.log($(form).parsley().isValid());
+
+            var isvalid = $(form).parsley().isValid();
+            if (isvalid === true) {
+                $.post(url, $(form).serialize());
+            } else {
+                $(form).parsley().validate();
+            }
+            // $(form).submit(function(e) {
+            //     e.preventDefault();
+            //     if ($(this).parsley().isValid()) {
+            //         $.post(url, $(form).serialize());
+            //     } else {
+            //         alert('not valid');
+            //     }
+            // });
+            // $(form).parsley().on('form:success', function() {
+            //     $.post(url, $(form).serialize());
+            //     console.log('pass');
+            // });
         },
         checkProjectOptions: function() {
             $('.check-projects').click(function() {
                 var options = $(this).attr('data');
                 var checked = $(this).prop('checked');
+                var totalcost = app.centerLineMiles * 300;
+
+                totalcost = app.checkInputLimits(totalcost, 'pms_grantamount');
 
                 if (options === 'npa' && checked === true) {
                     $('#update3b').removeClass('hidden');
+                    console.log('whats the total cost');
+                    console.log(totalcost);
+                    //Autopopulate fields
+                    $("#option2_estimatedcost").val(parseFloat(totalcost));
+                    $("#npt_totalprojectcost").val(parseFloat(totalcost));
+
                 } else if (options === 'pdp' && checked === true) {
                     $('#update3c').removeClass('hidden');
+                    //Autopopulate fields
+                    $("#option3_estimatedcost").val(parseFloat(totalcost));
+                    $("#pdc_totalprojectcost").val(parseFloat(totalcost));
+
                 } else if (options === 'npa' && checked === false) {
                     $('#update3b').addClass('hidden');
                 } else if (options === 'pdp' && checked === false) {
                     $('#update3c').addClass('hidden');
+
                 } else if (options === 'pms' && checked === true) {
                     $('#update3a').removeClass('hidden');
+
                 } else if (options === 'pms' && checked === false) {
                     $('#update3a').addClass('hidden');
                 }
             });
         },
-        attendedTraining: function() {
+        radioButtonsCheck: function() {
             $(".training-radio").change(function() {
                 var val = $(this).val();
                 if (val === "yes") {
@@ -298,6 +361,37 @@
                     $('.training-check').addClass('hidden');
                 }
             });
+
+            $(".additionalfunds-radio").change(function() {
+                var val = $(this).val();
+                console.log(val);
+                if (val === "yes") {
+                    $('.additionalfunds-check').removeClass('hidden');
+                } else {
+                    $('.additionalfunds-check').addClass('hidden');
+                }
+            });
+        },
+        loadtestvalues: function() {
+            $("#street_address").val("101 8th st");
+            $("#street_address2").val("4");
+            $("#city").val("oakland");
+            $("#state").val("ca");
+            $("#zip").val(94607);
+            $("#primary_title").val("None");
+            $("#primary_firstname").val("John");
+            $("#primary_lastname").val("Smith");
+            $("#primary_position").val("GIS");
+            $("#primary_phone").val(55555555);
+            $("#primary_email").val("john@mtc.ca.gov");
+
+            $("#streetsaver_firstname").val("John");
+            $("#streetsaver_lastname").val("Smith");
+            $("#streetsaver_position").val("None");
+            $("#streetsaver_phone").val(55555555);
+            $("#streetsaver_email").val("john@mtc.ca.gov");
+            $("#last_user_meeting").val("None");
+
         }
     };
     app.init();
