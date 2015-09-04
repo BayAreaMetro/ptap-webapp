@@ -11,11 +11,9 @@
             <section class="col-lg-12">
                 <!-- Page 1-->
                 <!-- Contact Info -->
-                <form class="form-horizontal" id="" method="post" action="">
+                <form class="form-horizontal" id="section1" method="post" action="">
                     <fieldset>
                         <legend>Form 1</legend>
-                        <!-- ProjectID -->
-                        <input type="hidden" id="projectid" name="projectid">
                         <div class="form-group">
                             <label for="jurisdiction" class="col-lg-2 control-label">Jurisdiction</label>
                             <div class="col-lg-6">
@@ -151,7 +149,7 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="section1">Submit</button>
                             </div>
                         </div>
                     </fieldset>
@@ -159,8 +157,6 @@
                 <!-- Page 2 -->
                 <!-- Pavement Manage -->
                 <form class="form-horizontal form-reset" id="update2" method="post" action="">
-                    <!-- ProjectID -->
-                    <input type="hidden" id="projectid" name="projectid">
                     <fieldset>
                         <legend>Form 2</legend>
                         <div class="form-group">
@@ -205,7 +201,7 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/update2/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update2">Submit</button>
                             </div>
                         </div>
                     </fieldset>
@@ -231,8 +227,6 @@
                 </form>
                 <!-- Page 3A -->
                 <form class="form-horizontal form-reset hidden" id="update3a" method="post" action="">
-                    <!-- ProjectID -->
-                    <input type="hidden" id="projectid" name="projectid">
                     <fieldset>
                         <legend>Pavement Management System (PMS) Project</legend>
                         <!-- PMS Projects -->
@@ -260,7 +254,7 @@
                                 <input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
-                        <div class="form-group">
+                         <div class="form-group">
                             <label class="col-lg-2 control-label">Additional Funds?</label>
                             <div class="col-lg-6">
                                 <div class="radio">
@@ -316,15 +310,13 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/update3a/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update3a">Submit</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!-- Page 3B -->
                 <form class="form-horizontal form-reset project-options hidden" id="update3b" method="post" action="">
-                    <!-- ProjectID -->
-                    <input type="hidden" id="projectid" name="projectid">
                     <fieldset>
                         <legend>Non-Pavement Asset Management Projects</legend>
                         <div class="form-group">
@@ -386,15 +378,13 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/update3b/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update3b">Submit</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!-- Page 3C -->
                 <form class="form-horizontal form-reset project-options hidden" id="update3c" method="post" action="">
-                    <!-- ProjectID -->
-                    <input type="hidden" id="projectid" name="projectid">
                     <fieldset>
                         <legend>Pavement Design Projects - Develop Plans, Specifications & Cost Estimates (PS&E)</legend>
                         <div class="form-group">
@@ -409,7 +399,7 @@
                                 <textarea type="text" class="form-control" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="Date" data-parsley-required></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
+                         <div class="form-group">
                             <label for="option3_estimatedcost" class="col-lg-2 control-label">Total Estimated Cost</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="option3_estimatedcost" name="option3_estimatedcost" placeholder="Total" data-parsley-type="number" data-parsley-required>
@@ -455,15 +445,13 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/update3c/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update3c">Submit</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!-- Page 4 -->
                 <form class="form-horizontal form-reset" id="update4" method="post" action="">
-                    <!-- ProjectID -->
-                    <input type="hidden" id="projectid" name="projectid">
                     <fieldset>
                         <legend>Project Budget</legend>
                         <div class="form-group">
@@ -496,7 +484,7 @@
                                 <input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
-                        <div class="form-group">
+                          <div class="form-group">
                             <label for="npt_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="npt_additionalfunds" name="npt_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
@@ -514,7 +502,7 @@
                                 <input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
-                        <div class="form-group">
+                          <div class="form-group">
                             <label for="pdc_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="pdc_additionalfunds" name="pdc_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
@@ -530,15 +518,13 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/update4/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update4">Submit</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!-- Page 5 -->
                 <form class="form-horizontal form-reset" id="update5" method="post" action="">
-                    <!-- ProjectID -->
-                    <input type="hidden" id="projectid" name="projectid">
                     <fieldset>
                         <legend>SIGNATURE</legend>
                         <!-- Signature -->
@@ -570,7 +556,7 @@
                             <label class="col-lg-2 control-label">Next</label>
                             <div class="col-lg-6">
                                 <button class="btn btn-default">Cancel</button>
-                                <button class="btn btn-success submit-button" type="submit" data="/update5/">Submit</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update5">Submit</button>
                             </div>
                         </div>
                     </fieldset>

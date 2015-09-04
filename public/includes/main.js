@@ -6,13 +6,13 @@
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
-            $('#projectid').val(app.projectid);
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
             app.change();
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
+            app.loadtestvalues();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -81,7 +81,7 @@
         validate: function(currentForm, submitAttr) {
 
             //Pass current form id and then validate
-            $(currentForm).parsley().validate();
+            // $(currentForm).parsley().validate();
             app.post(currentForm, submitAttr, app.projectId);
         },
         onselect: function(e) {
@@ -288,10 +288,34 @@
         },
         post: function(form, attr, projectId) {
             console.log(app.projectid);
-            $(form).parsley().on('form:success', function() {
-                $.post('/api/application' + attr + app.projectid, $(form).serialize());
-                console.log('pass');
-            });
+            console.log(form);
+            console.log('checking post');
+            if (attr === 'section1') {
+                url = '/api/application/' + app.projectid;
+            } else {
+                url = '/api/application/' + attr + "/" + app.projectid;
+            }
+            console.log(url);
+            console.log($(form).parsley().isValid());
+
+            var isvalid = $(form).parsley().isValid();
+            if (isvalid === true) {
+                $.post(url, $(form).serialize());
+            } else {
+                $(form).parsley().validate();
+            }
+            // $(form).submit(function(e) {
+            //     e.preventDefault();
+            //     if ($(this).parsley().isValid()) {
+            //         $.post(url, $(form).serialize());
+            //     } else {
+            //         alert('not valid');
+            //     }
+            // });
+            // $(form).parsley().on('form:success', function() {
+            //     $.post(url, $(form).serialize());
+            //     console.log('pass');
+            // });
         },
         checkProjectOptions: function() {
             $('.check-projects').click(function() {
@@ -347,6 +371,27 @@
                     $('.additionalfunds-check').addClass('hidden');
                 }
             });
+        },
+        loadtestvalues: function() {
+            $("#street_address").val("101 8th st");
+            $("#street_address2").val("4");
+            $("#city").val("oakland");
+            $("#state").val("ca");
+            $("#zip").val(94607);
+            $("#primary_title").val("None");
+            $("#primary_firstname").val("John");
+            $("#primary_lastname").val("Smith");
+            $("#primary_position").val("GIS");
+            $("#primary_phone").val(55555555);
+            $("#primary_email").val("john@mtc.ca.gov");
+
+            $("#streetsaver_firstname").val("John");
+            $("#streetsaver_lastname").val("Smith");
+            $("#streetsaver_position").val("None");
+            $("#streetsaver_phone").val(55555555);
+            $("#streetsaver_email").val("john@mtc.ca.gov");
+            $("#last_user_meeting").val("None");
+
         }
     };
     app.init();
