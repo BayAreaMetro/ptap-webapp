@@ -91,7 +91,7 @@
                 if (vals[i].Jurisdiction === lookupVal) {
                     //Autopopulate values
                     $('#network_centerlinemiles').val(vals[i]['Total Centerline Miles']);
-                    $('#last_major_inspection').val(vals[i]['Certification Date']);
+                    $('#last_major_inspection').val(vals[i]['Last Major Inspection']);
                 }
             }
         },
@@ -101,7 +101,7 @@
             for (var i = 0; i < data.length; i++) {
                 sourceArr.push(data[i].Jurisdiction);
                 //$("#jurisdiction").append('<option>' + data[i].Jurisdiction + '</option>');
-                $("#jurisdiction").append('<option data-date=' + data[i]['Certification Date'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
+                $("#jurisdiction").append('<option data-date=' + data[i]['Last Major Inspection'] + ' data-miles=' + data[i]['Total Centerline Miles'] + '>' + data[i].Jurisdiction + '</option>');
                 //console.log(data[i].Jurisdiction);
             }
         },

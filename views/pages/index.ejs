@@ -237,19 +237,19 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="network_totalpercentage" class="col-lg-2 control-label">Total Percentage</label>
+                            <label for="network_totalpercentage" class="col-lg-2 control-label">Enter % of Network</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="network_totalpercentage" name="network_totalpercentage" placeholder="Total %" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="network_milesforsurvey" class="col-lg-2 control-label">Miles for Survey</label>
+                            <label for="network_milesforsurvey" class="col-lg-2 control-label">Network Miles that will be Surveyed</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="network_milesforsurvey" name="network_milesforsurvey" placeholder="Miles for Survey" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="network_milesremaining" class="col-lg-2 control-label">Miles Remaining</label>
+                            <label for="network_milesremaining" class="col-lg-2 control-label">Network Miles Remaining to be Inspected</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining" data-parsley-type="number" data-parsley-required>
                             </div>
@@ -261,13 +261,13 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="network_percentadditionalfunds" class="col-lg-2 control-label">Percentage Of Additional funds</label>
+                            <label for="network_percentadditionalfunds" class="col-lg-2 control-label">Percent of Network Completed with Addtional Funding</label>
                             <div class="col-lg-6">
-                                <input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" placeholder="Percentage Of Additional funds" data-parsley-required>
+                                <input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="arterials" class="col-lg-2 control-label">?</label>
+                            <label for="arterials" class="col-lg-2 control-label">Please check all that apply:</label>
                             <div class="col-lg-6">
                                 <div>
                                     <label>
@@ -280,7 +280,7 @@
                                         <input type="checkbox" name="residentials" id="residentials" value="yes"> Residentials
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="other" id="other" value="yes"> Others
+                                        <input type="checkbox" name="other" id="other" value="yes"> Other (Please describe below)
                                     </label>
                                 </div>
                             </div>
@@ -303,11 +303,11 @@
                 <!-- Page 3B -->
                 <form class="form-horizontal form-reset project-options hidden" id="update3b" method="post" action="">
                     <fieldset>
-                        <legend>Non-Pavemement Asset Management Project</legend>
+                        <legend>Non-Pavement Asset Management Projects</legend>
                         <div class="form-group">
                             <label for="option2_projectdescription" class="col-lg-2 control-label">Project description</label>
                             <div class="col-lg-8">
-                                <textarea type="text" class="form-control" id="option2_projectdescription" name="option2_projectdescription" placeholder="Project description" data-parsley-required></textarea>
+                                <textarea type="text" class="form-control" id="option2_projectdescription" name="option2_projectdescription" placeholder="Describe non-pavement project" data-parsley-required></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -371,11 +371,11 @@
                 <!-- Page 3C -->
                 <form class="form-horizontal form-reset project-options hidden" id="update3c" method="post" action="">
                     <fieldset>
-                        <legend>Pavement Design Project</legend>
+                        <legend>Pavement Design Projects - Develop Plans, Specifications & Cost Estimates (PS&E)</legend>
                         <div class="form-group">
                             <label for="option3_projectdescription" class="col-lg-2 control-label">Project description</label>
                             <div class="col-lg-8">
-                                <textarea type="text" class="form-control" id="option3_projectdescription" name="option3_projectdescription" placeholder="Project description" data-parsley-required></textarea>
+                                <textarea type="text" class="form-control" id="option3_projectdescription" name="option3_projectdescription" placeholder="Describe pavement design project" data-parsley-required></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -385,7 +385,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label">Federal Aid Eligible?</label>
+                            <label class="col-lg-2 control-label"> Are streets eligible for federal aid (only arterials and collectors)?</label>
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
@@ -400,7 +400,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label">Construction Phase fully funded?</label>
+                            <label class="col-lg-2 control-label">Is the construction phase of this project fully funded? </label>
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
@@ -426,15 +426,15 @@
                 <!-- Page 4 -->
                 <form class="form-horizontal form-reset" id="update4" method="post" action="">
                     <fieldset>
-                        <legend>Form 4</legend>
+                        <legend>Project Budget</legend>
                         <div class="form-group">
-                            <label for="pms_grantamount" class="col-lg-2 control-label">Grant Amount</label>
+                            <label for="pms_grantamount" class="col-lg-2 control-label">P-TAP Grant Amount</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="pms_grantamount" name="pms_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="pms_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
+                            <label for="pms_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="pms_localcontribution" name="pms_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
                             </div>
@@ -464,7 +464,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="npt_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
+                            <label for="npt_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="npt_localcontribution" name="npt_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
                             </div>
@@ -482,7 +482,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="pdc_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
+                            <label for="pdc_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="pdc_localcontribution" name="pdc_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
                             </div>
@@ -499,7 +499,7 @@
                 <!-- Page 5 -->
                 <form class="form-horizontal form-reset" id="update5" method="post" action="">
                     <fieldset>
-                        <legend>Form 5</legend>
+                        <legend>SIGNATURE</legend>
                         <!-- Signature -->
                         <div class="form-group">
                             <label for="publicworksdirector_fullname" class="col-lg-2 control-label">Full Name</label>
