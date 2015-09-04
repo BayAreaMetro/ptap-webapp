@@ -11,7 +11,7 @@
             app.change();
             app.additionalFunds();
             app.checkProjectOptions();
-            app.attendedTraining();
+            app.radioButtonsCheck();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -289,13 +289,23 @@
                 }
             });
         },
-        attendedTraining: function() {
+        radioButtonsCheck: function() {
             $(".training-radio").change(function() {
                 var val = $(this).val();
                 if (val === "yes") {
                     $('.training-check').removeClass('hidden');
                 } else {
                     $('.training-check').addClass('hidden');
+                }
+            });
+
+            $(".additionalfunds-radio").change(function() {
+                var val = $(this).val();
+                console.log(val);
+                if (val === "yes") {
+                    $('.additionalfunds-check').removeClass('hidden');
+                } else {
+                    $('.additionalfunds-check').addClass('hidden');
                 }
             });
         }

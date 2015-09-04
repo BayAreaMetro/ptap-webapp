@@ -254,13 +254,28 @@
                                 <input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
-                        <div class="form-group">
+                         <div class="form-group">
+                            <label class="col-lg-2 control-label">Additional Funds?</label>
+                            <div class="col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="addtional_funds_check" id="additionfunds_radio_1" value="yes" class="additionalfunds-radio"> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="addtional_funds_check" id="additonal_funds_radio2" value="no" class="additionalfunds-radio"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group additionalfunds-check hidden">
                             <label for="network_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="network_additionalfunds" name="network_additionalfunds" placeholder="Additional funds" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group additionalfunds-check hidden">
                             <label for="network_percentadditionalfunds" class="col-lg-2 control-label">Percent of Network Completed with Addtional Funding</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" data-parsley-required>
