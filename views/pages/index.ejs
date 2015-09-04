@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label">Attended Training</label>
+                            <label class="col-lg-2 control-label">Have staff attended training and/or user week meetings?</label>
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         <div class="form-group training-check hidden">
-                            <label for="last_user_meeting" class="col-lg-2 control-label">Last Meeting</label>
+                            <label for="last_user_meeting" class="col-lg-2 control-label">Last user meeting attended:</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
                             </div>
@@ -160,29 +160,29 @@
                     <fieldset>
                         <legend>Form 2</legend>
                         <div class="form-group">
-                            <label for="last_major_inspection" class="col-lg-2 control-label">MTC Inspection</label>
+                            <label for="last_major_inspection" class="col-lg-2 control-label">Last Major MTC Inspection</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="last_major_inspection" name="last_major_inspection" placeholder="Last Major MTC Inspection" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="pms_consultants" class="col-lg-2 control-label">PMS Consultants</label>
+                            <label for="pms_consultants" class="col-lg-2 control-label">List any PMS consultants you prefer to work with (optional):</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="pms_consultants" name="pms_consultants" placeholder="PMS Consultants" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="digitalmap_format" class="col-lg-2 control-label">List Map Format</label>
+                            <label for="digitalmap_format" class="col-lg-2 control-label">If you have a digital map (e.g., GIS) of your Jurisdiction, list the format: </label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="digitalmap_format" name="digitalmap_format" placeholder="GIS, PDF, JPEG" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label">Linked your Basemap to PMS Database?</label>
+                            <label class="col-lg-2 control-label">Do you have an agency GIS map integrated in StreetSaver?</label>
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="linked_basemap" id="basemap_radio_1" value="yes" checked=""> Yes
+                                        <input type="radio" name="linked_basemap" id="basemap_radio_1" value="yes"> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
@@ -213,7 +213,7 @@
                             <div class="col-lg-6">
                                 <div>
                                     <label>
-                                        <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" checked="" data="pms"> Pavement Management System (PMS) Project
+                                        <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" data="pms"> Pavement Management System (PMS) Project
                                     </label>
                                     <label>
                                         <input type="checkbox" class="check-projects" name="nonpavementprojects" id="nonpavementprojects" value="yes" data="npa"> Non-Pavement Asset Management Project
@@ -226,7 +226,7 @@
                         </fieldset>
                 </form>
                 <!-- Page 3A -->
-                <form class="form-horizontal form-reset" id="update3a" method="post" action="">
+                <form class="form-horizontal form-reset hidden" id="update3a" method="post" action="">
                     <fieldset>
                         <legend>Pavement Management System (PMS) Project</legend>
                         <!-- PMS Projects -->
@@ -271,7 +271,7 @@
                             <div class="col-lg-6">
                                 <div>
                                     <label>
-                                        <input type="checkbox" name="arterials" id="arterials" value="yes" checked=""> Arterials
+                                        <input type="checkbox" name="arterials" id="arterials" value="yes"> Arterials
                                     </label>
                                     <label>
                                         <input type="checkbox" name="collectors" id="collectors" value="yes"> Collectors
@@ -303,7 +303,7 @@
                 <!-- Page 3B -->
                 <form class="form-horizontal form-reset project-options hidden" id="update3b" method="post" action="">
                     <fieldset>
-                        <legend>Form 3B</legend>
+                        <legend>Non-Pavemement Asset Management Project</legend>
                         <div class="form-group">
                             <label for="option2_projectdescription" class="col-lg-2 control-label">Project description</label>
                             <div class="col-lg-8">
@@ -327,7 +327,7 @@
                                 <label for=" assettypes" class="col-lg-2 control-label">Types of Assets</label>
                                 <div id='assettypes'>
                                     <label>
-                                        <input type="checkbox" name="signs" id="signs" value="yes" checked=""> Signs
+                                        <input type="checkbox" name="signs" id="signs" value="yes"> Signs
                                     </label>
                                     <label>
                                         <input type="checkbox" name="stormdrains" id="stormdrains" value="yes"> Storm Drains
@@ -371,7 +371,7 @@
                 <!-- Page 3C -->
                 <form class="form-horizontal form-reset project-options hidden" id="update3c" method="post" action="">
                     <fieldset>
-                        <legend>Form 3C</legend>
+                        <legend>Pavement Design Project</legend>
                         <div class="form-group">
                             <label for="option3_projectdescription" class="col-lg-2 control-label">Project description</label>
                             <div class="col-lg-8">
@@ -389,7 +389,7 @@
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="option3_federalaideligible" id="federal_aid_1" value="yes" checked=""> Yes
+                                        <input type="radio" name="option3_federalaideligible" id="federal_aid_1" value="yes"> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
@@ -404,7 +404,7 @@
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="option3_constructionfullyfunded" id="constuction_funded_1" value="yes" checked=""> Yes
+                                        <input type="radio" name="option3_constructionfullyfunded" id="constuction_funded_1" value="yes"> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
@@ -457,6 +457,12 @@
                                 <input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
+                          <div class="form-group">
+                            <label for="npt_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="npt_additionalfunds" name="npt_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="npt_localcontribution" class="col-lg-2 control-label">Local Contribution</label>
                             <div class="col-lg-6">
@@ -467,6 +473,12 @@
                             <label for="pdc_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
                             <div class="col-lg-6">
                                 <input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label for="pdc_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pdc_additionalfunds" name="pdc_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
