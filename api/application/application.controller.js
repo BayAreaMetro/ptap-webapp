@@ -187,6 +187,8 @@ exports.update3c = function(req, res, next) {
         $set: {
             option3_projectdescription: req.body.option3_projectdescription,
             option3_anticipatedconstructiondate: req.body.option3_anticipatedconstructiondate,
+            option3_estimatedcost: req.body.option3_estimatedcost,
+            option3_additionalfunds: req.body.option3_additionalfunds,
             option3_federalaideligible: req.body.option3_federalaideligible,
             option3_constructionfullyfunded: req.body.option3_constructionfullyfunded,
             option3: 'yes'
@@ -218,8 +220,10 @@ exports.update4 = function(req, res, next) {
             pms_additionalfunds: req.body.pms_additionalfunds,
             pms_totalprojectcost: req.body.pms_totalprojectcost,
             npt_totalprojectcost: req.body.npt_totalprojectcost,
+            npt_additionalfunds: req.body.npt_additionalfunds,
             npt_localcontribution: req.body.npt_localcontribution,
             pdc_totalprojectcost: req.body.pdc_totalprojectcost,
+            pdc_additionalfunds: req.body.pdc_additionalfunds,
             pdc_localcontribution: req.body.pdc_localcontribution
         }
     }, {
