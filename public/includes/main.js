@@ -235,7 +235,7 @@
                     }
                     break;
                 case 'pms_localcontribution':
-                    if (value <= 333.33) {
+                    if (value <= 20000) {
                         return value;
                     } else {
                         return 20000;
