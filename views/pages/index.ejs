@@ -11,7 +11,7 @@
             <section class="col-lg-12">
                 <!-- Page 1-->
                 <!-- Contact Info -->
-                <form class="form-horizontal" id="/" method="post" action="">
+                <form class="form-horizontal" id="" method="post" action="">
                     <fieldset>
                         <legend>Form 1</legend>
                         <div class="form-group">
@@ -150,7 +150,7 @@
                 </form>
                 <!-- Page 2 -->
                 <!-- Pavement Manage -->
-                <form class="form-horizontal form-reset" id="/update2/" method="post" action="">
+                <form class="form-horizontal form-reset" id="update2" method="post" action="">
                     <fieldset>
                         <legend>Form 2</legend>
                         <div class="form-group">
@@ -206,10 +206,29 @@
                         </div>
                     </fieldset>
                 </form>
-                <!-- Page 3A -->
-                <form class="form-horizontal form-reset" id="/update3a/" method="post" action="">
+                <form form-horizontal form-reset>
+                    <div class="form-group">
                     <fieldset>
-                        <legend>Form 3A</legend>
+                        <label for="pmsprojects " class="col-lg-2 control-label">Choose Projects</label>
+                        <div class="col-lg-6">
+                            <div>
+                                <label>
+                                    <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" checked="" data="pms"> Pavement Management System (PMS) Project
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="check-projects" name="nonpavementprojects" id="nonpavementprojects" value="yes" data="npa"> Non-Pavement Asset Management Project
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="check-projects" name="pavementdesignprojects" id="pavementdesignprojects" value="yes" data="pdp"> Pavement Design Project
+                                </label>
+                            </div>
+                        </div>
+                        </fieldset>
+                </form>
+                <!-- Page 3A -->
+                <form class="form-horizontal form-reset" id="update3a" method="post" action="">
+                    <fieldset>
+                        <legend>Pavement Management System (PMS) Project</legend>
                         <!-- PMS Projects -->
                         <div class="form-group">
                             <label for="network_centerlinemiles" class="col-lg-2 control-label">Network Center Lines Miles</label>
@@ -282,7 +301,7 @@
                     </fieldset>
                 </form>
                 <!-- Page 3B -->
-                <form class="form-horizontal form-reset" id="/update3b/" method="post" action="">
+                <form class="form-horizontal form-reset project-options hidden" id="update3b" method="post" action="">
                     <fieldset>
                         <legend>Form 3B</legend>
                         <div class="form-group">
@@ -305,8 +324,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12">
-                            <label for=" assettypes" class="col-lg-2 control-label">Types of Assets</label>
-                                <div  id='assettypes'>
+                                <label for=" assettypes" class="col-lg-2 control-label">Types of Assets</label>
+                                <div id='assettypes'>
                                     <label>
                                         <input type="checkbox" name="signs" id="signs" value="yes" checked=""> Signs
                                     </label>
@@ -334,12 +353,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                            <label for="option2_otherassetdescription" class="col-lg-2 control-label">Other Description</label>
-                            <div class="col-lg-8">
-                                <textarea type="text" class="form-control" id="option2_otherassetdescription" name="option2_otherassetdescription" placeholder="Other description" data-parsley-required></textarea>
+                                <label for="option2_otherassetdescription" class="col-lg-2 control-label">Other Description</label>
+                                <div class="col-lg-8">
+                                    <textarea type="text" class="form-control" id="option2_otherassetdescription" name="option2_otherassetdescription" placeholder="Other description" data-parsley-required></textarea>
+                                </div>
                             </div>
-                        </div>
-                           
                         </div>
                         <div class="form-group">
                             <label class="col-lg-2 control-label">Next</label>
@@ -351,7 +369,7 @@
                     </fieldset>
                 </form>
                 <!-- Page 3C -->
-                <form class="form-horizontal form-reset" id="/update3c/" method="post" action="">
+                <form class="form-horizontal form-reset project-options hidden" id="update3c" method="post" action="">
                     <fieldset>
                         <legend>Form 3C</legend>
                         <div class="form-group">
@@ -406,7 +424,7 @@
                     </fieldset>
                 </form>
                 <!-- Page 4 -->
-                <form class="form-horizontal form-reset" id="/update4/" method="post" action="">
+                <form class="form-horizontal form-reset" id="update4" method="post" action="">
                     <fieldset>
                         <legend>Form 4</legend>
                         <div class="form-group">
@@ -467,7 +485,7 @@
                     </fieldset>
                 </form>
                 <!-- Page 5 -->
-                <form class="form-horizontal form-reset" id="/update5/" method="post" action="">
+                <form class="form-horizontal form-reset" id="update5" method="post" action="">
                     <fieldset>
                         <legend>Form 5</legend>
                         <!-- Signature -->
@@ -716,8 +734,8 @@
                                 <h3 class="va-title">Submit to PTAP</h3>
                                 <div class="va-content">
                                     <h3>
-									Submit
-								</h3>
+                                    Submit
+                                </h3>
                                 </div>
                                 <div class="col-lg-10">
                                     <button class="btn btn-default">Next</button>
@@ -727,20 +745,20 @@
                     </div>
                 </div>
             </section>
-    </div>
-    <!-- /.container -->
-    <!-- <script src="bower/jquery/dist/jquery.min.js"></script> -->
-    <script src="includes/vendor/jquery-1.9.1.min.js"></script>
-    <script src="includes/vendor/bootstrap.js"></script>
-    <script src="bower/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="bower/datatables/media/js/dataTables.bootstrap.js"></script>
-    <script src="includes/vendor/jquery.easing.1.3.js"></script>
-    <!-- 	<script src="includes/vendor/jquery.mousewheel.js"></script> -->
-    <script src="includes/vendor/jquery.vaccordion.js"></script>
-    <script src="includes/vendor/uuid.js"></script>
-    <script src="//kendo.cdn.telerik.com/2015.2.805/js/kendo.all.min.js"></script>
-    <script src="bower/parsleyjs/dist/parsley.min.js"></script>
-    <script src="includes/main.js"></script>
+            </div>
+            <!-- /.container -->
+            <!-- <script src="bower/jquery/dist/jquery.min.js"></script> -->
+            <script src="includes/vendor/jquery-1.9.1.min.js"></script>
+            <script src="includes/vendor/bootstrap.js"></script>
+            <script src="bower/datatables/media/js/jquery.dataTables.js"></script>
+            <script src="bower/datatables/media/js/dataTables.bootstrap.js"></script>
+            <script src="includes/vendor/jquery.easing.1.3.js"></script>
+            <!--    <script src="includes/vendor/jquery.mousewheel.js"></script> -->
+            <script src="includes/vendor/jquery.vaccordion.js"></script>
+            <script src="includes/vendor/uuid.js"></script>
+            <script src="//kendo.cdn.telerik.com/2015.2.805/js/kendo.all.min.js"></script>
+            <script src="bower/parsleyjs/dist/parsley.min.js"></script>
+            <script src="includes/main.js"></script>
 </body>
 
 </html>

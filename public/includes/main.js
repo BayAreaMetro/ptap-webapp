@@ -6,12 +6,11 @@
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
-            console.log(app.projectid);
-            // app.kendoElements();
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
             app.change();
             app.additionalFunds();
+            app.checkProjectOptions();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -42,7 +41,7 @@
                 app.validate(formId, submitAttr);
 
                 //Submit form
-               // app.post(formId, submitAttr, app.projectId);
+                // app.post(formId, submitAttr, app.projectId);
             });
 
         },
@@ -138,12 +137,15 @@
                 pmsLocalContribution = pmsGrantAmount * 0.2,
                 pmsTotalProjectCost,
                 networkMilesForSurvey;
+
             //Set Grant amount (max 100k, min 15k)
             pmsGrantAmount = app.checkInputLimits(pmsGrantAmount, 'pms_grantamount');
             $("#pms_grantamount").val(pmsGrantAmount);
+
             //Set percentage of network covered by grant amount
             networkTotalPercentage = app.checkInputLimits(networkTotalPercentage, 'percentage');
             $("#network_totalpercentage").val(networkTotalPercentage);
+
             //Set miles remaining after grant amount used
             app.networkMilesRemaining = app.checkInputLimits(networkMilesRemaining, 'network_milesremaining');
             $("#network_milesremaining").val(app.networkMilesRemaining);
@@ -151,6 +153,7 @@
             //Set miles that will be surveyed with grant amount (max 333.33)
             networkMilesForSurvey = app.checkInputLimits(miles, 'network_milesforsurvey');
             $("#network_milesforsurvey").val(networkMilesForSurvey);
+
             //Set local contribution (20% of grant amount)
             pmsLocalContribution = app.checkInputLimits(pmsLocalContribution, 'pms_localcontribution');
             $("#pms_localcontribution").val(pmsLocalContribution);
@@ -172,12 +175,15 @@
                 //Check if additional funds is empty
                 additonalFunds = app.checkInputLimits(additonalFunds, 'additional_funds');
                 $("#network_percentadditionalfunds").val(additonalFunds);
+
                 //Set Percentage of Network covered by grant plus additional funds
                 newPercentageNetwork = app.checkInputLimits(newPercentageNetwork, 'percentage');
                 $("#network_percentadditionalfunds").val(newPercentageNetwork);
+
                 //Set network miles remaining after additional funds
                 newRemainingMiles = app.checkInputLimits(newRemainingMiles, 'network_milesremaining');
                 $("#network_milesremaining").val(newRemainingMiles);
+
                 //Set additional funds in section 4 summary
                 console.log('additional funds' + additonalFunds);
                 $("#pms_additionalfunds").val(additonalFunds);
@@ -260,6 +266,26 @@
             $(form).parsley().on('form:success', function() {
                 $.post('/api/application' + attr + app.projectid, $(form).serialize());
                 console.log('pass');
+            });
+        },
+        checkProjectOptions: function() {
+            $('.check-projects').click(function() {
+                var options = $(this).attr('data');
+                var checked = $(this).prop('checked');
+              
+                if (options === 'npa' && checked === true) {
+                    $('#update3b').removeClass('hidden');
+                } else if (options === 'pdp' && checked === true) {
+                    $('#update3c').removeClass('hidden');
+                } else if (options === 'npa' && checked === false) {
+                    $('#update3b').addClass('hidden');
+                } else if (options === 'pdp' && checked === false) {
+                    $('#update3c').addClass('hidden');
+                } else if (options === 'pms' && checked === true) {
+                    $('#update3a').removeClass('hidden');
+                } else if (options === 'pms' && checked === false) {
+                    $('#update3a').addClass('hidden');
+                }
             });
         }
     };
