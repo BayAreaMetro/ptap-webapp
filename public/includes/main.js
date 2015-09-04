@@ -123,6 +123,9 @@
                     return this.value == currentJurisdiction;
                 }).data('miles');
 
+                //Set miles globally
+                app.centerLineMiles = dataMiles;
+
                 //Populate on change
                 app.autoPopulateValues(dataDate, dataMiles);
 
@@ -164,6 +167,7 @@
             $("#network_centerlinemiles").val(miles);
         },
         additionalFunds: function() {
+            //Option 1 Additional Funds Input
             $("#network_additionalfunds").on('input', function() {
                 var totalMiles = $("#network_centerlinemiles").val();
                 var milesRemaining = app.networkMilesRemaining;
@@ -194,6 +198,25 @@
                 $("#pms_totalprojectcost").val(pmsTotalProjectCost);
             });
 
+            //Option 2 Additional Funds Input
+            $("#option2_additionalfunds").on('input', function() {
+                var option2AdditionalFunds = $(this).val();
+                var option2LocalContribution = (app.centerLineMiles * 300) * 0.2;
+                option2AdditionalFunds = app.checkInputLimits(option2AdditionalFunds, 'additional_funds');
+                $("#npt_additionalfunds").val(option2AdditionalFunds);
+                $("#npt_localcontribution").val(option2LocalContribution);
+
+            });
+
+            //Option 3 Additional Funds Input
+            $("#option3_additionalfunds").on('input', function() {
+                var option3AdditionalFunds = $(this).val();
+                var option3LocalContribution = (app.centerLineMiles * 300) * 0.2;
+                option3AdditionalFunds = app.checkInputLimits(option3AdditionalFunds, 'additional_funds');
+                $("#pdc_additionalfunds").val(option3AdditionalFunds);
+                $("#pdc_localcontribution").val(option3LocalContribution);
+
+            });
 
         },
         checkInputLimits: function(value, field) {
@@ -273,17 +296,32 @@
             $('.check-projects').click(function() {
                 var options = $(this).attr('data');
                 var checked = $(this).prop('checked');
+                var totalcost = app.centerLineMiles * 300;
+
+                totalcost = app.checkInputLimits(totalcost, 'pms_grantamount');
 
                 if (options === 'npa' && checked === true) {
                     $('#update3b').removeClass('hidden');
+                    console.log('whats the total cost');
+                    console.log(totalcost);
+                    //Autopopulate fields
+                    $("#option2_estimatedcost").val(parseFloat(totalcost));
+                    $("#npt_totalprojectcost").val(parseFloat(totalcost));
+
                 } else if (options === 'pdp' && checked === true) {
                     $('#update3c').removeClass('hidden');
+                    //Autopopulate fields
+                    $("#option3_estimatedcost").val(parseFloat(totalcost));
+                    $("#pdc_totalprojectcost").val(parseFloat(totalcost));
+
                 } else if (options === 'npa' && checked === false) {
                     $('#update3b').addClass('hidden');
                 } else if (options === 'pdp' && checked === false) {
                     $('#update3c').addClass('hidden');
+
                 } else if (options === 'pms' && checked === true) {
                     $('#update3a').removeClass('hidden');
+
                 } else if (options === 'pms' && checked === false) {
                     $('#update3a').addClass('hidden');
                 }
