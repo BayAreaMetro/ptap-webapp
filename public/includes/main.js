@@ -11,6 +11,7 @@
             app.change();
             app.additionalFunds();
             app.checkProjectOptions();
+            app.attendedTraining();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -272,7 +273,7 @@
             $('.check-projects').click(function() {
                 var options = $(this).attr('data');
                 var checked = $(this).prop('checked');
-              
+
                 if (options === 'npa' && checked === true) {
                     $('#update3b').removeClass('hidden');
                 } else if (options === 'pdp' && checked === true) {
@@ -285,6 +286,16 @@
                     $('#update3a').removeClass('hidden');
                 } else if (options === 'pms' && checked === false) {
                     $('#update3a').addClass('hidden');
+                }
+            });
+        },
+        attendedTraining: function() {
+            $(".training-radio").change(function() {
+                var val = $(this).val();
+                if (val === "yes") {
+                    $('.training-check').removeClass('hidden');
+                } else {
+                    $('.training-check').addClass('hidden');
                 }
             });
         }

@@ -129,14 +129,20 @@
                             <div class="col-lg-6">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="attended_training" id="training_radio_1" value="yes" checked=""> Yes
+                                        <input type="radio" name="attended_training" id="training_radio_1" value="yes" class="training-radio"> Yes
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="attended_training" id="training_radio_2" value="no"> No
+                                        <input type="radio" name="attended_training" id="training_radio_2" value="no" class="training-radio"> No
                                     </label>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group training-check hidden">
+                            <label for="last_user_meeting" class="col-lg-2 control-label">Last Meeting</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -153,12 +159,6 @@
                 <form class="form-horizontal form-reset" id="update2" method="post" action="">
                     <fieldset>
                         <legend>Form 2</legend>
-                        <div class="form-group">
-                            <label for="last_user_meeting" class="col-lg-2 control-label">Last Meeting</label>
-                            <div class="col-lg-6">
-                                <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label for="last_major_inspection" class="col-lg-2 control-label">MTC Inspection</label>
                             <div class="col-lg-6">
@@ -208,21 +208,21 @@
                 </form>
                 <form form-horizontal form-reset>
                     <div class="form-group">
-                    <fieldset>
-                        <label for="pmsprojects " class="col-lg-2 control-label">Choose Projects</label>
-                        <div class="col-lg-6">
-                            <div>
-                                <label>
-                                    <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" checked="" data="pms"> Pavement Management System (PMS) Project
-                                </label>
-                                <label>
-                                    <input type="checkbox" class="check-projects" name="nonpavementprojects" id="nonpavementprojects" value="yes" data="npa"> Non-Pavement Asset Management Project
-                                </label>
-                                <label>
-                                    <input type="checkbox" class="check-projects" name="pavementdesignprojects" id="pavementdesignprojects" value="yes" data="pdp"> Pavement Design Project
-                                </label>
+                        <fieldset>
+                            <label for="pmsprojects " class="col-lg-2 control-label">Choose Projects</label>
+                            <div class="col-lg-6">
+                                <div>
+                                    <label>
+                                        <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" checked="" data="pms"> Pavement Management System (PMS) Project
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" class="check-projects" name="nonpavementprojects" id="nonpavementprojects" value="yes" data="npa"> Non-Pavement Asset Management Project
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" class="check-projects" name="pavementdesignprojects" id="pavementdesignprojects" value="yes" data="pdp"> Pavement Design Project
+                                    </label>
+                                </div>
                             </div>
-                        </div>
                         </fieldset>
                 </form>
                 <!-- Page 3A -->
