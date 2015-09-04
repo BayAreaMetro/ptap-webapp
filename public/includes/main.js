@@ -6,6 +6,7 @@
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
+            $('#projectid').val(app.projectid);
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
             app.change();
