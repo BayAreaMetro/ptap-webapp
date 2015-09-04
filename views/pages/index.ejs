@@ -9,9 +9,13 @@
         <% include ../partials/nav %>
             <!-- Form -->
             <section class="col-lg-12">
+	            
+	            <!-- Sample form boxes -->
+	            <% include ../partials/form-box %>
+	            
                 <!-- Page 1-->
                 <!-- Contact Info -->
-                <form class="form-horizontal" id="" method="post" action="">
+                <form class="form-horizontal hidden" id="" method="post" action="">
                     <fieldset>
                         <legend>Form 1</legend>
                         <div class="form-group">
@@ -757,7 +761,10 @@
                     </div>
                 </div>
             </section>
-            </div>
+            
+            <!-- Footer -->
+            <% include ../partials/footer %>
+        </div>
             <!-- /.container -->
             <!-- <script src="bower/jquery/dist/jquery.min.js"></script> -->
             <script src="includes/vendor/jquery-1.9.1.min.js"></script>

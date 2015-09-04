@@ -4,26 +4,112 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass";
 @import "_util";
 //@import "_bootswatch";
 @import "_bootstrap.min";
 @import "_bootstrap-theme.min";
 @import "_parsley";
 @import "_tiles";
+@import "_app-variables";
 
 //Landing
-#viewport{
+#app-viewport{
 	section{
-		margin: {
-			top: 350px;
-		}
-		.logo-wrapper{
-			h2{
-				font-size: 80px;
-			}
-			.enter-site{
 		
-			}	
+	}
+	.navbar-wrapper{
+		border-bottom: 2px solid $mainColor;
+		.icon-bar{
+			background-color: #000000;
+		}
+		.navbar-brand{
+			color: black;
+		}
+		.navbar-nav{
+			a{
+				@extend .navbar-brand;
+			}
+		}
+	}
+}
+#form-box{
+	.box-wrapper{
+		border:{
+			top: 5px solid $form-border;
+			bottom: 1px solid black;
+			left: 1px solid black;
+			right: 1px solid black;
+		}
+		height: 500px;
+		padding-right: 0;
+		.form-close{
+			color: #ffffff;
+			button{
+				background-color: $form-border;
+				border-radius: 0;
+				font-size: 2em;
+				@include single-transition(all, 1s, ease-in-out, 0s);
+				&:hover{
+					background-color: lighten($form-border, 5%);
+					color: #252525;
+				}
+			}
+		}
+		.form-box-header{
+			border: 1px solid $mainColor;
+			width: 200px;
+			position: absolute;
+			background-color: #ffffff;
+			margin:{
+				left: -100px;
+				top: 10px;
+			}
+			p{
+				font-size: 2em;
+				color: $form-headers;
+			}
+		}
+		.form-submit{
+			margin:{
+				top: 450px;
+			}
+			.form-check{
+				position: absolute;
+				.btn{
+					@include border-radius(50px);
+					@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
+					@include single-transition(all, 1s, ease-in-out, 0s);
+					background-color: $success;
+					color:#ffffff;
+					font-size: 2em;
+					padding:{
+						top: 20px;
+						bottom: 20px;
+						left: 30px;
+						right: 30px
+					}
+					&:hover{
+						background-color: darken($success, 15%);
+						@include single-box-shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0.40));
+					}
+				}
+			}
+		}
+	}
+}
+#ptap-footer{
+	border-top: 2px solid $mainColor;
+	ul{
+		li{
+			@include inline-block;
+			a{
+				@extend .navbar-brand;
+				color: #000000;
+				&.hover{
+					cursor: pointer;
+				}
+			}
 		}
 	}
 }
