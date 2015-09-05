@@ -304,14 +304,7 @@
             } else {
                 $(form).parsley().validate();
             }
-            // $(form).submit(function(e) {
-            //     e.preventDefault();
-            //     if ($(this).parsley().isValid()) {
-            //         $.post(url, $(form).serialize());
-            //     } else {
-            //         alert('not valid');
-            //     }
-            // });
+           
             // $(form).parsley().on('form:success', function() {
             //     $.post(url, $(form).serialize());
             //     console.log('pass');
