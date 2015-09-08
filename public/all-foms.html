@@ -1,0 +1,776 @@
+<!-- forms -->
+<!-- Page 1-->
+                <!-- Contact Info -->
+                <form class="form-horizontal hidden" id="section1" method="post" action="">
+
+                    <fieldset>
+                        <legend>Form 1</legend>
+                        <div class="form-group">
+                            <label for="jurisdiction" class="col-lg-2 control-label">Jurisdiction</label>
+                            <div class="col-lg-6">
+                                <select type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="Jurisdiction" data-parsley-required></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="street_address" class="col-lg-2 control-label">Street Address</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="street_address" name="street_address" placeholder="street-address" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="street_address2" class="col-lg-2 control-label">Address Line 2</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="street_address2" name="street_address2" placeholder="E.g. Suite Floor" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="col-lg-2 control-label">City</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="city" name="city" placeholder="City" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="state" class="col-lg-2 control-label">State</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="state" name="state" placeholder="State" data-parsley-maxlength="2" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip" class="col-lg-2 control-label">Zip</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="zip" name="zip" placeholder="zip" data-parsley-type="digits" data-parsley-required>
+                            </div>
+                        </div>
+                        <!-- Primary Contact -->
+                        <div class="form-group">
+                            <label for="primary_title" class="col-lg-2 control-label">Title</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="primary_title" name="primary_title" placeholder="Title" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="primary_firstname" class="col-lg-2 control-label">First Name</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="primary_firstname" name="primary_firstname" placeholder="First Name" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="primary_lastname" class="col-lg-2 control-label">Last Name</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="primary_lastname" name="primary_lastname" placeholder="Last Name" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="primary_position" class="col-lg-2 control-label">Position</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="primary_position" name="primary_position" placeholder="Position" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="primary_phone" class="col-lg-2 control-label">Phone</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="primary_phone" name="primary_phone" placeholder="Phone Number" data-parsley-type="digits" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="primary_email" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="E-mail" data-parsley-type="email" data-parsley-required>
+                            </div>
+                        </div>
+                        <!-- Street Saver Contact -->
+                        <div class="form-group">
+                            <label for="streetsaver_title" class="col-lg-2 control-label">Title</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="streetsaver_title" name="streetsaver_title" placeholder="Title" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="streetsaver_firstname" class="col-lg-2 control-label">First Name</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="streetsaver_firstname" name="streetsaver_firstname" placeholder="First Name" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="streetsaver_lastname" class="col-lg-2 control-label">Last Name</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="streetsaver_lastname" name="streetsaver_lastname" placeholder="Last Name" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="streetsaver_position" class="col-lg-2 control-label">Position</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="streetsaver_position" name="streetsaver_position" placeholder="Position" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="streetsaver_phone" class="col-lg-2 control-label">Phone</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="streetsaver_phone" name="streetsaver_phone" placeholder="Phone" data-parsley-type="digits" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="streetsaver_email" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="streetsaver_email" name="streetsaver_email" placeholder="Email" data-parsley-type="email" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Have staff attended training and/or user week meetings?</label>
+                            <div class="col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="attended_training" id="training_radio_1" value="yes" class="training-radio"> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="attended_training" id="training_radio_2" value="no" class="training-radio"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group training-check hidden">
+                            <label for="last_user_meeting" class="col-lg-2 control-label">Last user meeting attended:</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="section1">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- Page 2 -->
+                <!-- Pavement Manage -->
+                <form class="form-horizontal form-reset hidden" id="update2" method="post" action="">
+                    <fieldset>
+                        <legend>Form 2</legend>
+                        <div class="form-group">
+                            <label for="last_major_inspection" class="col-lg-2 control-label">Last Major MTC Inspection</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="last_major_inspection" name="last_major_inspection" placeholder="Last Major MTC Inspection" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pms_consultants" class="col-lg-2 control-label">List any PMS consultants you prefer to work with (optional):</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pms_consultants" name="pms_consultants" placeholder="PMS Consultants" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="digitalmap_format" class="col-lg-2 control-label">If you have a digital map (e.g., GIS) of your Jurisdiction, list the format: </label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="digitalmap_format" name="digitalmap_format" placeholder="GIS, PDF, JPEG" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Do you have an agency GIS map integrated in StreetSaver?</label>
+                            <div class="col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="linked_basemap" id="basemap_radio_1" value="yes"> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="linked_basemap" id="basemap_radio_2" value="no"> No
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="linked_basemap" id="basemap_radio_3" value="not sure"> Not Sure
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update2">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form class="hidden" form-horizontal form-reset>
+                    <div class="form-group">
+                        <fieldset>
+                            <label for="pmsprojects " class="col-lg-2 control-label">Choose Projects</label>
+                            <div class="col-lg-6">
+                                <div>
+                                    <label>
+                                        <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" data="pms"> Pavement Management System (PMS) Project
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" class="check-projects" name="nonpavementprojects" id="nonpavementprojects" value="yes" data="npa"> Non-Pavement Asset Management Project
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" class="check-projects" name="pavementdesignprojects" id="pavementdesignprojects" value="yes" data="pdp"> Pavement Design Project
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                </form>
+                <!-- Page 3A -->
+                <form class="form-horizontal form-reset hidden" id="update3a" method="post" action="">
+                    <fieldset>
+                        <legend>Pavement Management System (PMS) Project</legend>
+                        <!-- PMS Projects -->
+                        <div class="form-group">
+                            <label for="network_centerlinemiles" class="col-lg-2 control-label">Network Center Lines Miles</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="network_centerlinemiles" name="network_centerlinemiles" placeholder="Network Center Lines Miles" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="network_totalpercentage" class="col-lg-2 control-label">Enter % of Network</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="network_totalpercentage" name="network_totalpercentage" placeholder="Total %" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="network_milesforsurvey" class="col-lg-2 control-label">Network Miles that will be Surveyed</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="network_milesforsurvey" name="network_milesforsurvey" placeholder="Miles for Survey" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="network_milesremaining" class="col-lg-2 control-label">Network Miles Remaining to be Inspected</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-lg-2 control-label">Additional Funds?</label>
+                            <div class="col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="addtional_funds_check" id="additionfunds_radio_1" value="yes" class="additionalfunds-radio"> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="addtional_funds_check" id="additonal_funds_radio2" value="no" class="additionalfunds-radio"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group additionalfunds-check hidden">
+                            <label for="network_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="network_additionalfunds" name="network_additionalfunds" placeholder="Additional funds" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
+                            </div>
+                        </div>
+                        <div class="form-group additionalfunds-check hidden">
+                            <label for="network_percentadditionalfunds" class="col-lg-2 control-label">Percent of Network Completed with Addtional Funding</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arterials" class="col-lg-2 control-label">Please check all that apply:</label>
+                            <div class="col-lg-6">
+                                <div>
+                                    <label>
+                                        <input type="checkbox" name="arterials" id="arterials" value="yes"> Arterials
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="collectors" id="collectors" value="yes"> Collectors
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="residentials" id="residentials" value="yes"> Residentials
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="other" id="other" value="yes"> Other (Please describe below)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="other_description" class="col-lg-2 control-label">Other description</label>
+                            <div class="col-lg-8">
+                                <textarea type="text" class="form-control" id="other_description" name="other_description" placeholder="include any special circumstances such as changes to CL mile total" data-parsley-required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update3a">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- Page 3B -->
+                <form class="form-horizontal form-reset project-options hidden" id="update3b" method="post" action="">
+                    <fieldset>
+                        <legend>Non-Pavement Asset Management Projects</legend>
+                        <div class="form-group">
+                            <label for="option2_projectdescription" class="col-lg-2 control-label">Project description</label>
+                            <div class="col-lg-8">
+                                <textarea type="text" class="form-control" id="option2_projectdescription" name="option2_projectdescription" placeholder="Describe non-pavement project" data-parsley-required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="option2_estimatedcost" class="col-lg-2 control-label">Total Estimated Cost</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="option2_estimatedcost" name="option2_estimatedcost" placeholder="Total" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="option2_additionalfunds" class="col-lg-2 control-label">Addtional Funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="option2_additionalfunds" name="option2_additionalfunds" placeholder="Additional Funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <label for=" assettypes" class="col-lg-2 control-label">Types of Assets</label>
+                                <div id='assettypes'>
+                                    <label>
+                                        <input type="checkbox" name="signs" id="signs" value="yes"> Signs
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="stormdrains" id="stormdrains" value="yes"> Storm Drains
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="curbs" id="curbs" value="yes"> Curbs
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="gutters" id="gutters" value="yes"> Gutters
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="sidewalks" id="sidewalks" value="yes"> Sidewalks
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="trafficsignals" id="trafficsignals" value="yes"> Traffic Signals
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="streetlights" id="streetlights" value="yes"> Street Lights
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="otherasset" id="otherasset" value="yes"> Other
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="option2_otherassetdescription" class="col-lg-2 control-label">Other Description</label>
+                                <div class="col-lg-8">
+                                    <textarea type="text" class="form-control" id="option2_otherassetdescription" name="option2_otherassetdescription" placeholder="Other description" data-parsley-required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update3b">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- Page 3C -->
+                <form class="form-horizontal form-reset project-options hidden" id="update3c" method="post" action="">
+                    <fieldset>
+                        <legend>Pavement Design Projects - Develop Plans, Specifications & Cost Estimates (PS&E)</legend>
+                        <div class="form-group">
+                            <label for="option3_projectdescription" class="col-lg-2 control-label">Project description</label>
+                            <div class="col-lg-8">
+                                <textarea type="text" class="form-control" id="option3_projectdescription" name="option3_projectdescription" placeholder="Describe pavement design project" data-parsley-required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="option3_anticipatedconstructiondate" class="col-lg-2 control-label">Anticipated Construction Start Date</label>
+                            <div class="col-lg-8">
+                                <textarea type="text" class="form-control" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="Date" data-parsley-required></textarea>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="option3_estimatedcost" class="col-lg-2 control-label">Total Estimated Cost</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="option3_estimatedcost" name="option3_estimatedcost" placeholder="Total" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="option3_additionalfunds" class="col-lg-2 control-label">Addtional Funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="option3_additionalfunds" name="option3_additionalfunds" placeholder="Additional Funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label"> Are streets eligible for federal aid (only arterials and collectors)?</label>
+                            <div class="col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="option3_federalaideligible" id="federal_aid_1" value="yes"> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="option3_federalaideligible" id="federal_aid_2" value="no"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Is the construction phase of this project fully funded? </label>
+                            <div class="col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="option3_constructionfullyfunded" id="constuction_funded_1" value="yes"> Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="option3_constructionfullyfunded" id="constuction_funded_2" value="no"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update3c">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- Page 4 -->
+                <form class="form-horizontal form-reset" id="update4" method="post" action="">
+                    <fieldset>
+                        <legend>Project Budget</legend>
+                        <div class="form-group">
+                            <label for="pms_grantamount" class="col-lg-2 control-label">P-TAP Grant Amount</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pms_grantamount" name="pms_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pms_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pms_localcontribution" name="pms_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pms_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pms_additionalfunds" name="pms_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pms_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pms_totalprojectcost" name="pms_totalprojectcost" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="npt_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label for="npt_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="npt_additionalfunds" name="npt_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="npt_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="npt_localcontribution" name="npt_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pdc_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label for="pdc_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pdc_additionalfunds" name="pdc_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pdc_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="pdc_localcontribution" name="pdc_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update4">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- Page 5 -->
+                <form class="form-horizontal form-reset" id="update5" method="post" action="">
+                    <fieldset>
+                        <legend>SIGNATURE</legend>
+                        <!-- Signature -->
+                        <div class="form-group">
+                            <label for="publicworksdirector_fullname" class="col-lg-2 control-label">Full Name</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="publicworksdirector_fullname" name="publicworksdirector_fullname" placeholder="Full Name" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="publicworksdirector_title" class="col-lg-2 control-label">Title</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="publicworksdirector_title" name="publicworksdirector_title" placeholder="e.g. Public Works Director" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="publicworksdirector_contactnumber" class="col-lg-2 control-label">Contact Number</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="publicworksdirector_contactnumber" name="publicworksdirector_contactnumber" placeholder="Phone Number" data-parsley-type="number" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="applicationdate" class="col-lg-2 control-label">Application Date</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="applicationdate" name="applicationdate" placeholder="Date" data-parsley-required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Next</label>
+                            <div class="col-lg-6">
+                                <button class="btn btn-default">Cancel</button>
+                                <button class="btn btn-success submit-button" type="submit" data="update5">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Styled section -->
+            <section class="hidden">
+                <div class="" style="margin:0px;">
+                    <div id="va-accordion" class="va-container" style="margin-top:0px;">
+                        <div class="va-nav">
+                            <span class="va-nav-prev" style="top:10px;">Previous</span>
+                            <span class="va-nav-next" style="bottom:10px;">Next</span>
+                        </div>
+                        <div class="va-wrapper">
+                            <div class="va-slice va-slice-color-1">
+                                <h3 class="va-title">Form 1</h3>
+                                <div class="va-content">
+                                    <form class="form-horizontal form-reset">
+                                        <fieldset>
+                                            <legend>Legend</legend>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                                <div class="col-lg-6">
+                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Done?</label>
+                                                <div class="col-lg-10">
+                                                    <button class="btn btn-default">Next</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="va-slice va-slice-color-2">
+                                <h3 class="va-title">Form 2</h3>
+                                <div class="va-content">
+                                    <form class="form-horizontal form-reset">
+                                        <fieldset>
+                                            <legend>Legend</legend>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                                <div class="col-lg-6">
+                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Done?</label>
+                                                <div class="col-lg-10">
+                                                    <button class="btn btn-default">Next</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="va-slice va-slice-color-3">
+                                <h3 class="va-title">Form 3</h3>
+                                <div class="va-content">
+                                    <form class="form-horizontal form-reset">
+                                        <fieldset>
+                                            <legend>Legend</legend>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                                <div class="col-lg-6">
+                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Done?</label>
+                                                <div class="col-lg-10">
+                                                    <button class="btn btn-default">Next</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="va-slice va-slice-color-4">
+                                <h3 class="va-title">Form 4</h3>
+                                <div class="va-content">
+                                    <form class="form-horizontal form-reset">
+                                        <fieldset>
+                                            <legend>Legend</legend>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                                <div class="col-lg-6">
+                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Done?</label>
+                                                <div class="col-lg-10">
+                                                    <button class="btn btn-default">Next</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="va-slice va-slice-color-5">
+                                <h3 class="va-title">Form 5</h3>
+                                <div class="va-content">
+                                    <form class="form-horizontal form-reset">
+                                        <fieldset>
+                                            <legend>Legend</legend>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                                <div class="col-lg-6">
+                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Done?</label>
+                                                <div class="col-lg-10">
+                                                    <button class="btn btn-default">Next</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="va-slice va-slice-color-6">
+                                <h3 class="va-title">Form 6</h3>
+                                <div class="va-content">
+                                    <form class="form-horizontal form-reset">
+                                        <fieldset>
+                                            <legend>Legend</legend>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                                <div class="col-lg-6">
+                                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox"> Checkbox
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword" class="col-lg-2 control-label">Done?</label>
+                                                <div class="col-lg-10">
+                                                    <button class="btn btn-default">Next</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="va-slice va-slice-color-7">
+                                <h3 class="va-title">Submit to PTAP</h3>
+                                <div class="va-content">
+                                    <h3>
+                                    Submit
+                                </h3>
+                                </div>
+                                <div class="col-lg-10">
+                                    <button class="btn btn-default">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

@@ -1,0 +1,251 @@
+<!-- form-box -->
+<div id="form-box-3" class="row pad-bottom-l">
+	
+	<div class="box-wrapper col-lg-8 col-lg-offset-2 slide-1">
+		
+		<!-- close or cancel -->
+		<span class="form-close pull-right">
+			<button class="btn">&#x2715;</button>
+		</span>
+		<!-- Off Center header -->
+		<div class="form-box-header">
+			<p class="text-center">Form</p>
+		</div>
+		
+		<!-- Forms here -->
+		<div class="form-wrapper">
+			<!-- Page 3A -->
+            <form class="form-horizontal form-reset" id="update3a" method="post" action="">
+                <fieldset>
+                    <legend>Pavement Management System (PMS) Project</legend>
+                    <!-- PMS Projects -->
+                    <div class="form-group">
+                        <label for="network_centerlinemiles" class="col-lg-2 control-label">Network Center Lines Miles</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="network_centerlinemiles" name="network_centerlinemiles" placeholder="Network Center Lines Miles" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="network_totalpercentage" class="col-lg-2 control-label">Enter % of Network</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="network_totalpercentage" name="network_totalpercentage" placeholder="Total %" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="network_milesforsurvey" class="col-lg-2 control-label">Network Miles that will be Surveyed</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="network_milesforsurvey" name="network_milesforsurvey" placeholder="Miles for Survey" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="network_milesremaining" class="col-lg-2 control-label">Network Miles Remaining to be Inspected</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="network_milesremaining" name="network_milesremaining" placeholder="Miles Remaining" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-lg-2 control-label">Additional Funds?</label>
+                        <div class="col-lg-6">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="addtional_funds_check" id="additionfunds_radio_1" value="yes" class="additionalfunds-radio"> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="addtional_funds_check" id="additonal_funds_radio2" value="no" class="additionalfunds-radio"> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group additionalfunds-check hidden">
+                        <label for="network_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="network_additionalfunds" name="network_additionalfunds" placeholder="Additional funds" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
+                        </div>
+                    </div>
+                    <div class="form-group additionalfunds-check hidden">
+                        <label for="network_percentadditionalfunds" class="col-lg-2 control-label">Percent of Network Completed with Addtional Funding</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="network_percentadditionalfunds" name="network_percentadditionalfunds" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="arterials" class="col-lg-2 control-label">Please check all that apply:</label>
+                        <div class="col-lg-6">
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="arterials" id="arterials" value="yes"> Arterials
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="collectors" id="collectors" value="yes"> Collectors
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="residentials" id="residentials" value="yes"> Residentials
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="other" id="other" value="yes"> Other (Please describe below)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="other_description" class="col-lg-2 control-label">Other description</label>
+                        <div class="col-lg-8">
+                            <textarea type="text" class="form-control" id="other_description" name="other_description" placeholder="include any special circumstances such as changes to CL mile total" data-parsley-required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Next</label>
+                        <div class="col-lg-6">
+                            <button class="btn btn-default">Cancel</button>
+                            <button class="btn btn-success submit-button" type="submit" data="update3a">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- Page 3B -->
+            <form class="form-horizontal form-reset project-options hidden" id="update3b" method="post" action="">
+                <fieldset>
+                    <legend>Non-Pavement Asset Management Projects</legend>
+                    <div class="form-group">
+                        <label for="option2_projectdescription" class="col-lg-2 control-label">Project description</label>
+                        <div class="col-lg-8">
+                            <textarea type="text" class="form-control" id="option2_projectdescription" name="option2_projectdescription" placeholder="Describe non-pavement project" data-parsley-required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="option2_estimatedcost" class="col-lg-2 control-label">Total Estimated Cost</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="option2_estimatedcost" name="option2_estimatedcost" placeholder="Total" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="option2_additionalfunds" class="col-lg-2 control-label">Addtional Funds</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="option2_additionalfunds" name="option2_additionalfunds" placeholder="Additional Funds" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <label for=" assettypes" class="col-lg-2 control-label">Types of Assets</label>
+                            <div id='assettypes'>
+                                <label>
+                                    <input type="checkbox" name="signs" id="signs" value="yes"> Signs
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="stormdrains" id="stormdrains" value="yes"> Storm Drains
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="curbs" id="curbs" value="yes"> Curbs
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="gutters" id="gutters" value="yes"> Gutters
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="sidewalks" id="sidewalks" value="yes"> Sidewalks
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="trafficsignals" id="trafficsignals" value="yes"> Traffic Signals
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="streetlights" id="streetlights" value="yes"> Street Lights
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="otherasset" id="otherasset" value="yes"> Other
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="option2_otherassetdescription" class="col-lg-2 control-label">Other Description</label>
+                            <div class="col-lg-8">
+                                <textarea type="text" class="form-control" id="option2_otherassetdescription" name="option2_otherassetdescription" placeholder="Other description" data-parsley-required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Next</label>
+                        <div class="col-lg-6">
+                            <button class="btn btn-default">Cancel</button>
+                            <button class="btn btn-success submit-button" type="submit" data="update3b">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- Page 3C -->
+            <form class="form-horizontal form-reset project-options hidden" id="update3c" method="post" action="">
+                <fieldset>
+                    <legend>Pavement Design Projects - Develop Plans, Specifications & Cost Estimates (PS&E)</legend>
+                    <div class="form-group">
+                        <label for="option3_projectdescription" class="col-lg-2 control-label">Project description</label>
+                        <div class="col-lg-8">
+                            <textarea type="text" class="form-control" id="option3_projectdescription" name="option3_projectdescription" placeholder="Describe pavement design project" data-parsley-required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="option3_anticipatedconstructiondate" class="col-lg-2 control-label">Anticipated Construction Start Date</label>
+                        <div class="col-lg-8">
+                            <textarea type="text" class="form-control" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="Date" data-parsley-required></textarea>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="option3_estimatedcost" class="col-lg-2 control-label">Total Estimated Cost</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="option3_estimatedcost" name="option3_estimatedcost" placeholder="Total" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="option3_additionalfunds" class="col-lg-2 control-label">Addtional Funds</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="option3_additionalfunds" name="option3_additionalfunds" placeholder="Additional Funds" data-parsley-type="number" data-parsley-required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label"> Are streets eligible for federal aid (only arterials and collectors)?</label>
+                        <div class="col-lg-6">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="option3_federalaideligible" id="federal_aid_1" value="yes"> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="option3_federalaideligible" id="federal_aid_2" value="no"> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Is the construction phase of this project fully funded? </label>
+                        <div class="col-lg-6">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="option3_constructionfullyfunded" id="constuction_funded_1" value="yes"> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="option3_constructionfullyfunded" id="constuction_funded_2" value="no"> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Next</label>
+                        <div class="col-lg-6">
+                            <button class="btn btn-default">Cancel</button>
+                            <button class="btn btn-success submit-button" type="submit" data="update3c">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+		</div>
+		
+	</div>
+	<!-- Submit -->
+	<div class="form-submit">
+		<span class="form-check">
+			<button class="btn">&#x2713;</button>
+		</span>
+	</div>
+</div>

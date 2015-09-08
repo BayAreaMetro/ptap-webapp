@@ -9,6 +9,7 @@
 //@import "_bootswatch";
 @import "_bootstrap.min";
 @import "_bootstrap-theme.min";
+@import "_stroll";
 @import "_parsley";
 @import "_tiles";
 @import "_app-variables";
@@ -33,13 +34,15 @@
 		}
 	}
 }
-#form-box{
+#form-box-1{
+	height: 600px;
+	overflow: hidden;
 	.box-wrapper{
 		border:{
 			top: 5px solid $form-border;
-			bottom: 1px solid black;
-			left: 1px solid black;
-			right: 1px solid black;
+			bottom: 1px solid lightgray;
+			left: 1px solid lightgray;
+			right: 1px solid lightgray;
 		}
 		height: 500px;
 		padding-right: 0;
@@ -57,10 +60,11 @@
 			}
 		}
 		.form-box-header{
-			border: 1px solid $mainColor;
-			width: 200px;
-			position: absolute;
-			background-color: #ffffff;
+			//border: 1px solid $mainColor;
+			text-align: center;
+			width: 80%;
+			//position: absolute;
+			//background-color: #ffffff;
 			margin:{
 				left: -100px;
 				top: 10px;
@@ -70,33 +74,50 @@
 				color: $form-headers;
 			}
 		}
-		.form-submit{
-			margin:{
-				top: 450px;
-			}
-			.form-check{
-				position: absolute;
-				.btn{
-					@include border-radius(50px);
-					@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
-					@include single-transition(all, 1s, ease-in-out, 0s);
-					background-color: $success;
-					color:#ffffff;
-					font-size: 2em;
-					padding:{
-						top: 20px;
-						bottom: 20px;
-						left: 30px;
-						right: 30px
-					}
-					&:hover{
-						background-color: darken($success, 15%);
-						@include single-box-shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0.40));
-					}
+		.form-wrapper{
+			height: 400px;
+			overflow: scroll;
+		}
+	}
+	.form-submit{
+		margin:{
+			top: 450px;
+		}
+		.form-check{
+			position: absolute;
+			margin-left: -50px;
+			.btn{
+				@include border-radius(50px);
+				@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
+				@include single-transition(all, 1s, ease-in-out, 0s);
+				background-color: $success;
+				color:#ffffff;
+				font-size: 2em;
+				padding:{
+					top: 20px;
+					bottom: 20px;
+					left: 30px;
+					right: 30px
+				}
+				&:hover{
+					background-color: darken($success, 15%);
+					@include single-box-shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0.40));
 				}
 			}
 		}
 	}
+}
+#form-box-2{
+	@extend #form-box-1
+}
+#form-box-3{
+	@extend #form-box-1
+}
+#form-box-4{
+	@extend #form-box-1
+}
+#form-box-5{
+	@extend #form-box-1
 }
 #ptap-footer{
 	border-top: 2px solid $mainColor;

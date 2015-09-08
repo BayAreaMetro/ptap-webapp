@@ -13,6 +13,7 @@
             app.checkProjectOptions();
             app.radioButtonsCheck();
             app.loadtestvalues();
+            app.formScroll();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -384,7 +385,9 @@
             $("#streetsaver_phone").val(55555555);
             $("#streetsaver_email").val("john@mtc.ca.gov");
             $("#last_user_meeting").val("None");
-
+        },
+        formScroll: function(){
+	        stroll.bind( document.getElementById( 'form-list-ul' ) );
         }
     };
     app.init();
