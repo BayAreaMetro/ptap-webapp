@@ -3,6 +3,7 @@
     var app = {
 
         init: function() {
+	        $('.closer ').click(app.toggleForm);
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
@@ -388,6 +389,11 @@
         },
         formScroll: function(){
 	        stroll.bind( document.getElementById( 'form-list-ul' ) );
+        },
+        toggleForm: function(){
+	        $(this).closest('.form-hider').toggleClass('notActive');
+	        $(this).closest('.box-wrapper').toggleClass('notActive');
+	        //$(".form-hider").toggleClass('notActive');
         }
     };
     app.init();

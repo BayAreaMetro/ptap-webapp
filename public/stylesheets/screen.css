@@ -10603,12 +10603,17 @@ textarea.parsley-error {
 #form-box-1, #form-box-2, #form-box-3, #form-box-4, #form-box-5 {
   height: 600px;
   overflow: hidden;
+  -moz-transition: all 1s ease-in-out 0s;
+  -o-transition: all 1s ease-in-out 0s;
+  -webkit-transition: all 1s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition: all 1s ease-in-out 0s;
 }
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 #form-box-1.notActive, .notActive#form-box-2, .notActive#form-box-3, .notActive#form-box-4, .notActive#form-box-5 {
   height: 60px;
 }
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 #form-box-1 .box-wrapper, #form-box-2 .box-wrapper, #form-box-3 .box-wrapper, #form-box-4 .box-wrapper, #form-box-5 .box-wrapper {
   border-top: 5px solid #4a75e6;
   border-bottom: 1px solid lightgray;
@@ -10616,12 +10621,17 @@ textarea.parsley-error {
   border-right: 1px solid lightgray;
   height: 500px;
   padding-right: 0;
+  -moz-transition: all 1s ease-in-out 0s;
+  -o-transition: all 1s ease-in-out 0s;
+  -webkit-transition: all 1s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition: all 1s ease-in-out 0s;
 }
-/* line 52, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-close, #form-box-2 .box-wrapper .form-close, #form-box-3 .box-wrapper .form-close, #form-box-4 .box-wrapper .form-close, #form-box-5 .box-wrapper .form-close {
   color: #ffffff;
 }
-/* line 54, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-close button, #form-box-2 .box-wrapper .form-close button, #form-box-3 .box-wrapper .form-close button, #form-box-4 .box-wrapper .form-close button, #form-box-5 .box-wrapper .form-close button {
   background-color: #4a75e6;
   border-radius: 0;
@@ -10632,43 +10642,43 @@ textarea.parsley-error {
   -webkit-transition-delay: 0s;
   transition: all 1s ease-in-out 0s;
 }
-/* line 59, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-close button:hover, #form-box-2 .box-wrapper .form-close button:hover, #form-box-3 .box-wrapper .form-close button:hover, #form-box-4 .box-wrapper .form-close button:hover, #form-box-5 .box-wrapper .form-close button:hover {
   background-color: #6086e9;
   color: #252525;
 }
-/* line 65, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-box-header, #form-box-2 .box-wrapper .form-box-header, #form-box-3 .box-wrapper .form-box-header, #form-box-4 .box-wrapper .form-box-header, #form-box-5 .box-wrapper .form-box-header {
   text-align: center;
   width: 80%;
   margin-left: -100px;
   margin-top: 10px;
 }
-/* line 75, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-box-header p, #form-box-2 .box-wrapper .form-box-header p, #form-box-3 .box-wrapper .form-box-header p, #form-box-4 .box-wrapper .form-box-header p, #form-box-5 .box-wrapper .form-box-header p {
   font-size: 2em;
   color: #7a7a7a;
 }
-/* line 80, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-wrapper, #form-box-2 .box-wrapper .form-wrapper, #form-box-3 .box-wrapper .form-wrapper, #form-box-4 .box-wrapper .form-wrapper, #form-box-5 .box-wrapper .form-wrapper {
   height: 400px;
   overflow: scroll;
 }
-/* line 84, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #form-box-1 .box-wrapper.notActive, #form-box-2 .box-wrapper.notActive, #form-box-3 .box-wrapper.notActive, #form-box-4 .box-wrapper.notActive, #form-box-5 .box-wrapper.notActive {
   height: 60px;
   overflow: hidden;
 }
-/* line 89, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #form-box-1 .form-submit, #form-box-2 .form-submit, #form-box-3 .form-submit, #form-box-4 .form-submit, #form-box-5 .form-submit {
   margin-top: 450px;
 }
-/* line 93, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 #form-box-1 .form-submit .form-check, #form-box-2 .form-submit .form-check, #form-box-3 .form-submit .form-check, #form-box-4 .form-submit .form-check, #form-box-5 .form-submit .form-check {
   position: absolute;
   margin-left: -50px;
 }
-/* line 96, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 #form-box-1 .form-submit .form-check .btn, #form-box-2 .form-submit .form-check .btn, #form-box-3 .form-submit .form-check .btn, #form-box-4 .form-submit .form-check .btn, #form-box-5 .form-submit .form-check .btn {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -10689,23 +10699,23 @@ textarea.parsley-error {
   padding-left: 30px;
   padding-right: 30px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 #form-box-1 .form-submit .form-check .btn:hover, #form-box-2 .form-submit .form-check .btn:hover, #form-box-3 .form-submit .form-check .btn:hover, #form-box-4 .form-submit .form-check .btn:hover, #form-box-5 .form-submit .form-check .btn:hover {
   background-color: #07c4f4;
   -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
 }
-/* line 115, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #form-box-1 .form-submit.notActive, #form-box-2 .form-submit.notActive, #form-box-3 .form-submit.notActive, #form-box-4 .form-submit.notActive, #form-box-5 .form-submit.notActive {
   display: none;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 #ptap-footer {
   border-top: 2px solid #6334e3;
 }
-/* line 135, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #ptap-footer ul li {
   display: inline-block;
   vertical-align: middle;
@@ -10713,11 +10723,11 @@ textarea.parsley-error {
   *zoom: 1;
   *display: inline;
 }
-/* line 137, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 #ptap-footer ul li a {
   color: #000000;
 }
-/* line 140, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #ptap-footer ul li a.hover {
   cursor: pointer;
 }
