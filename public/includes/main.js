@@ -3,7 +3,6 @@
     var app = {
 
         init: function() {
-	        $('.closer ').click(app.toggleForm);
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
@@ -14,7 +13,6 @@
             app.checkProjectOptions();
             app.radioButtonsCheck();
             app.loadtestvalues();
-            app.formScroll();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -289,6 +287,29 @@
                 .removeAttr('selected');
         },
         post: function(form, attr, projectId) {
+            app.message = [{
+                "name": "section1",
+                "message": "Section 1 successfully saved to database"
+            }, {
+                "name": "update2",
+                "message": "Section 2 successfully saved to database!"
+            }, {
+                "name": "update3a",
+                "message": "Section 3A successfully saved to database!"
+            }, {
+                "name": "update3b",
+                "message": "Section 3B successfully saved to database!"
+            }, {
+                "name": "update3c",
+                "message": "Section 3C successfully saved to database!"
+            }, {
+                "name": "update4",
+                "message": "Section 4 successfully saved to database!"
+            }, {
+                "name": "update5",
+                "message": "Application successfully submitted!"
+            }];
+
             console.log(app.projectid);
             console.log(form);
             console.log('checking post');
@@ -302,11 +323,21 @@
 
             var isvalid = $(form).parsley().isValid();
             if (isvalid === true) {
-                $.post(url, $(form).serialize());
+                $.post(url, $(form).serialize(), function(response) {
+                    console.log(response);
+                    app.notify(attr, "success", "top-right");
+                });
             } else {
                 $(form).parsley().validate();
             }
-           
+            // $(form).submit(function(e) {
+            //     e.preventDefault();
+            //     if ($(this).parsley().isValid()) {
+            //         $.post(url, $(form).serialize());
+            //     } else {
+            //         alert('not valid');
+            //     }
+            // });
             // $(form).parsley().on('form:success', function() {
             //     $.post(url, $(form).serialize());
             //     console.log('pass');
@@ -386,14 +417,30 @@
             $("#streetsaver_phone").val(55555555);
             $("#streetsaver_email").val("john@mtc.ca.gov");
             $("#last_user_meeting").val("None");
+
         },
-        formScroll: function(){
-	        stroll.bind( document.getElementById( 'form-list-ul' ) );
-        },
-        toggleForm: function(){
-	        $(this).closest('.form-hider').toggleClass('notActive');
-	        $(this).closest('.box-wrapper').toggleClass('notActive');
-	        //$(".form-hider").toggleClass('notActive');
+        notify: function(form, type, position) {
+            //form = "section1";
+            console.log(form, type, position);
+            //console.log(app.message);
+            var notification;
+            for (var i = app.message.length - 1; i >= 0; i--) {
+                console.log(app.message[i].name);
+                console.log(form);
+                if (app.message[i].name === form) {
+                    notification = app.message[i].message;
+                    console.log(app.message[i].message);
+                }
+            }
+            $('.' + position).notify({
+                message: {
+                    text: notification
+                },
+                type: type,
+                fadeOut: {
+                    delay: Math.floor(Math.random() * 500) + 2500
+                }
+            }).show();
         }
     };
     app.init();
