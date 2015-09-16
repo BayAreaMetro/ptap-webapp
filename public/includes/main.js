@@ -12,7 +12,7 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-            //app.loadtestvalues();
+            app.loadtestvalues();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
