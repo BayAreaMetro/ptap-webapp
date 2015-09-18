@@ -296,9 +296,47 @@ exports.update5 = function(req, res, next) {
                 streetsaver_lastname: [application.streetsaver_lastname],
                 streetsaver_position: [application.streetsaver_position],
                 streetsaver_phone: [application.streetsaver_phone],
-                streetsaver_email: [application.streetsaver_email]
+                streetsaver_email: [application.streetsaver_email],
+                attended_training: [application.attended_training],
+                last_user_meeting: [application.last_user_meeting],
+                last_major_inspection: [application.last_major_inspection],
+                pms_consultants: [application.pms_consultants],
+                digitalmap_format: [application.digitalmap_format],
+                network_centerlinemiles: [application.network_centerlinemiles],
+                network_totalpercentage: [application.network_totalpercentage],
+                network_milesforsurvey: [application.network_milesforsurvey],
+                network_milesremaining: [application.network_milesremaining],
+                network_additionalfunds: [application.network_additionalfunds],
+                network_percentadditionalfunds: [application.network_percentadditionalfunds],
+                other_description: [application.other_description],
+                option2_projectdescription: [application.option2_projectdescription],
+                option2_estimatedcost: [application.option2_estimatedcost],
+                option2_additionalfunds: [application.option2_additionalfunds],
+                option2_otherassetdescription: [application.option2_otherassetdescription],
+                option3_projectdescription: [application.option3_projectdescription],
+                option3_anticipatedconstructiondate: [application.option3_anticipatedconstructiondate],
+                option3_estimatedcost: [application.option3_estimatedcost],
+                option3_additionalfunds: [application.option3_additionalfunds],
+                option3_federalaideligible: [application.option3_federalaideligible],
+                option3_constructionfullyfunded: [application.option3_constructionfullyfunded],
+                pms_grantamount: [application.pms_grantamount],
+                pms_localcontribution: [application.pms_localcontribution],
+                pms_additionalfunds: [application.pms_additionalfunds],
+                pms_totalprojectcost: [application.pms_totalprojectcost],
+                npt_totalprojectcost: [application.npt_totalprojectcost],
+                npt_additionalfunds: [application.npt_additionalfunds],
+                npt_localcontribution: [application.npt_localcontribution],
+                pdc_totalprojectcost: [application.pdc_totalprojectcost],
+                pdc_additionalfunds: [application.pdc_additionalfunds],
+                pdc_localcontribution: [application.pdc_localcontribution],
+                publicworksdirector_fullname: [application.publicworksdirector_fullname],
+                publicworksdirector_title: [application.publicworksdirector_title],
+                publicworksdirector_contactnumber: [application.publicworksdirector_contactnumber],
+                applicationdate: [application.applicationdate],
 
             });
+
+            console.log('about to send email');
 
             sendgrid.send(email, function(err, json) {
                 if (err) {
