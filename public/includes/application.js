@@ -14,7 +14,7 @@
             app.checkProjectOptions();
             app.radioButtonsCheck();
             app.loadtestvalues();
-            app.formScroll();
+            app.formTabs();
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -387,13 +387,40 @@
             $("#streetsaver_email").val("john@mtc.ca.gov");
             $("#last_user_meeting").val("None");
         },
-        formScroll: function(){
-	        stroll.bind( document.getElementById( 'form-list-ul' ) );
-        },
         toggleForm: function(){
 	        $(this).closest('.form-hider').toggleClass('notActive');
 	        $(this).closest('.box-wrapper').toggleClass('notActive');
 	        //$(".form-hider").toggleClass('notActive');
+        },
+        formTabs: function(){
+	        console.log('init working');
+	        //Initialize tooltips
+		    $('.nav-tabs > li a[title]').tooltip();
+		    
+		    //Wizard
+		    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+		
+		        var $target = $(e.target);
+		    
+		        if ($target.parent().hasClass('disabled')) {
+		            return false;
+		        }
+		    });
+		
+		    $(".next-step").click(function (e) {
+		
+		        var $active = $('.wizard .nav-tabs li.active');
+		        $active.next().removeClass('disabled');
+		        nextTab($active);
+		
+		    });
+		    $(".prev-step").click(function (e) {
+		
+		        var $active = $('.wizard .nav-tabs li.active');
+		        prevTab($active);
+		
+		    });
+		    
         }
     };
     app.init();

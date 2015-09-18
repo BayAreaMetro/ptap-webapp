@@ -10711,11 +10711,162 @@ textarea.parsley-error {
   display: none;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
+#app-tabs .wizard {
+  margin: 20px auto;
+  background: #fff;
+}
+/* line 135, ../sass/screen.scss */
+#app-tabs .wizard.nav-tabs {
+  position: relative;
+  margin: 40px auto;
+  margin-bottom: 0;
+  border-bottom-color: #e0e0e0;
+}
+/* line 141, ../sass/screen.scss */
+#app-tabs .wizard > div.wizard-inner {
+  position: relative;
+}
+/* line 146, ../sass/screen.scss */
+#app-tabs .wizard .nav-tabs > li.active > a {
+  color: #555555;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
+}
+/* line 151, ../sass/screen.scss */
+#app-tabs .wizard .nav-tabs > li.active > a:hover, #app-tabs .wizard .nav-tabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
+}
+/* line 161, ../sass/screen.scss */
+#app-tabs .wizard li.active span.round-tab {
+  background: #fff;
+  border: 2px solid #5bc0de;
+}
+/* line 166, ../sass/screen.scss */
+#app-tabs .wizard li.active span.round-tab i {
+  color: #5bc0de;
+}
+/* line 170, ../sass/screen.scss */
+#app-tabs .wizard .nav-tabs > li {
+  width: 25%;
+}
+/* line 173, ../sass/screen.scss */
+#app-tabs .wizard .nav-tabs a {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+}
+/* line 179, ../sass/screen.scss */
+#app-tabs .wizard .nav-tabs a:hover {
+  background: transparent;
+}
+/* line 185, ../sass/screen.scss */
+#app-tabs .wizard li:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 0;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 5px solid transparent;
+  border-bottom-color: #5bc0de;
+  transition: 0.1s ease-in-out;
+}
+/* line 198, ../sass/screen.scss */
+#app-tabs .wizard li.active:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 1;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 10px solid transparent;
+  border-bottom-color: #5bc0de;
+}
+/* line 209, ../sass/screen.scss */
+#app-tabs .wizard .tab-pane {
+  position: relative;
+  padding-top: 50px;
+}
+/* line 213, ../sass/screen.scss */
+#app-tabs .wizard h3 {
+  margin-top: 0;
+}
+/* line 217, ../sass/screen.scss */
+#app-tabs .connecting-line {
+  height: 2px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+/* line 228, ../sass/screen.scss */
+#app-tabs span.round-tab {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  border-radius: 100px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 25px;
+}
+/* line 241, ../sass/screen.scss */
+#app-tabs span.round-tab i {
+  color: #555555;
+}
+/* line 244, ../sass/screen.scss */
+#app-tabs span.round-tab:hover {
+  color: #333;
+  border: 2px solid #333;
+}
+
+@media (max-width: 585px) {
+  /* line 252, ../sass/screen.scss */
+  .wizard {
+    width: 90%;
+    height: auto !important;
+  }
+  /* line 257, ../sass/screen.scss */
+  .wizard .nav-tabs > li a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  /* line 264, ../sass/screen.scss */
+  .wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 35%;
+  }
+
+  /* line 270, ../sass/screen.scss */
+  span.round-tab {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+/* line 278, ../sass/screen.scss */
 #ptap-footer {
   border-top: 2px solid #6334e3;
 }
-/* line 134, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 #ptap-footer ul li {
   display: inline-block;
   vertical-align: middle;
@@ -10723,11 +10874,11 @@ textarea.parsley-error {
   *zoom: 1;
   *display: inline;
 }
-/* line 136, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 #ptap-footer ul li a {
   color: #000000;
 }
-/* line 139, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 #ptap-footer ul li a.hover {
   cursor: pointer;
 }
