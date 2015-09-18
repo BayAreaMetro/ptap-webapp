@@ -1,0 +1,24 @@
+.btn{
+	&.btn-default{
+		background-color: #ffffff;
+		background-image: none;
+		border: 1px solid $mainColor;
+		border-radius: 0;
+		@include single-transition(all, .5s, ease-in-out, 0s); 
+		box-shadow: none;
+		&:hover{
+			@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
+		}
+	}
+	&.btn-primary{
+		background-color: $tabs;
+		background-image: none;
+		border: none;
+		border-radius: 0;
+		@include single-transition(all, .5s, ease-in-out, 0s); 
+		box-shadow: none;
+		&:hover{
+			@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
+		}
+	}
+}

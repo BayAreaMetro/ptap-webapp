@@ -9,10 +9,10 @@
 //@import "_bootswatch";
 @import "_bootstrap.min";
 @import "_bootstrap-theme.min";
-@import "_stroll";
-@import "_parsley";
-@import "_tiles";
 @import "_app-variables";
+@import "_overrides";
+@import "_parsley";
+
 
 //Landing
 #app-viewport{
@@ -168,7 +168,7 @@
 		}
 		.nav-tabs{ 
 			> li {
-		    	width: 25%;
+		    	width: 15%;
 		    }
 		    a{
 			    width: 70px;

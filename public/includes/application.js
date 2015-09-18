@@ -411,16 +411,21 @@
 		
 		        var $active = $('.wizard .nav-tabs li.active');
 		        $active.next().removeClass('disabled');
-		        nextTab($active);
+		        app.nextTab($active);
 		
 		    });
 		    $(".prev-step").click(function (e) {
 		
 		        var $active = $('.wizard .nav-tabs li.active');
-		        prevTab($active);
+		        app.prevTab($active);
 		
-		    });
-		    
+		    });  
+        },
+        nextTab: function(elem){
+	        $(elem).next().find('a[data-toggle="tab"]').click();
+        },
+        prevTab: function(elem){
+	        $(elem).prev().find('a[data-toggle="tab"]').click();
         }
     };
     app.init();
