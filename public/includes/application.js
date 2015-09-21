@@ -300,8 +300,8 @@
             console.log(url);
             console.log($(form).parsley().isValid());
 
-            var isvalid = $(form).parsley().isValid();
-            if (isvalid === true) {
+            app.isValid = $(form).parsley().isValid();
+            if (app.isValid === true) {
                 $.post(url, $(form).serialize());
             } else {
                 $(form).parsley().validate();
@@ -393,7 +393,6 @@
 	        //$(".form-hider").toggleClass('notActive');
         },
         formTabs: function(){
-	        console.log('init working');
 	        //Initialize tooltips
 		    $('.nav-tabs > li a[title]').tooltip();
 		    
@@ -408,10 +407,13 @@
 		    });
 		
 		    $(".next-step").click(function (e) {
-		
-		        var $active = $('.wizard .nav-tabs li.active');
-		        $active.next().removeClass('disabled');
-		        app.nextTab($active);
+				if(app.isValid === true){
+					var $active = $('.wizard .nav-tabs li.active');
+			        $active.next().removeClass('disabled');
+			        app.nextTab($active);	
+				} else{
+					return false;
+				}
 		
 		    });
 		    $(".prev-step").click(function (e) {
