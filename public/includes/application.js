@@ -49,25 +49,6 @@
             });
 
         },
-        kendoElements: function() {
-            function onselect(e) {
-
-            }
-
-            $("#jurisdiction").kendoDropDownList({
-                dataTextField: "Jurisdiction",
-                dataValueField: "Jurisdiction",
-                dataSource: {
-                    transport: {
-                        read: {
-                            dataType: "json",
-                            url: "/api/jurisdiction/name",
-                        }
-                    }
-                },
-                select: app.onselect
-            });
-        },
         loadJurisdictions: function() {
             $.ajax({
                 url: "/api/jurisdiction",
