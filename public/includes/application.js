@@ -3,7 +3,7 @@
     var app = {
 
         init: function() {
-	        $('.closer ').click(app.toggleForm);
+            $('.closer ').click(app.toggleForm);
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
@@ -287,7 +287,7 @@
             } else {
                 $(form).parsley().validate();
             }
-           
+
             // $(form).parsley().on('form:success', function() {
             //     $.post(url, $(form).serialize());
             //     console.log('pass');
@@ -306,13 +306,13 @@
                     console.log('whats the total cost');
                     console.log(totalcost);
                     //Autopopulate fields
-                    $("#option2_estimatedcost").val(parseFloat(totalcost));
+                    //  $("#option2_estimatedcost").val(parseFloat(totalcost));
                     $("#npt_totalprojectcost").val(parseFloat(totalcost));
 
                 } else if (options === 'pdp' && checked === true) {
                     $('#update3c').removeClass('hidden');
                     //Autopopulate fields
-                    $("#option3_estimatedcost").val(parseFloat(totalcost));
+                    //   $("#option3_estimatedcost").val(parseFloat(totalcost));
                     $("#pdc_totalprojectcost").val(parseFloat(totalcost));
 
                 } else if (options === 'npa' && checked === false) {
@@ -368,47 +368,47 @@
             $("#streetsaver_email").val("john@mtc.ca.gov");
             $("#last_user_meeting").val("None");
         },
-        toggleForm: function(){
-	        $(this).closest('.form-hider').toggleClass('notActive');
-	        $(this).closest('.box-wrapper').toggleClass('notActive');
-	        //$(".form-hider").toggleClass('notActive');
+        toggleForm: function() {
+            $(this).closest('.form-hider').toggleClass('notActive');
+            $(this).closest('.box-wrapper').toggleClass('notActive');
+            //$(".form-hider").toggleClass('notActive');
         },
-        formTabs: function(){
-	        //Initialize tooltips
-		    $('.nav-tabs > li a[title]').tooltip();
-		    
-		    //Wizard
-		    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-		
-		        var $target = $(e.target);
-		    
-		        if ($target.parent().hasClass('disabled')) {
-		            return false;
-		        }
-		    });
-		
-		    $(".next-step").click(function (e) {
-				if(app.isValid === true){
-					var $active = $('.wizard .nav-tabs li.active');
-			        $active.next().removeClass('disabled');
-			        app.nextTab($active);	
-				} else{
-					return false;
-				}
-		
-		    });
-		    $(".prev-step").click(function (e) {
-		
-		        var $active = $('.wizard .nav-tabs li.active');
-		        app.prevTab($active);
-		
-		    });  
+        formTabs: function() {
+            //Initialize tooltips
+            $('.nav-tabs > li a[title]').tooltip();
+
+            //Wizard
+            $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+
+                var $target = $(e.target);
+
+                if ($target.parent().hasClass('disabled')) {
+                    return false;
+                }
+            });
+
+            $(".next-step").click(function(e) {
+                if (app.isValid === true) {
+                    var $active = $('.wizard .nav-tabs li.active');
+                    $active.next().removeClass('disabled');
+                    app.nextTab($active);
+                } else {
+                    return false;
+                }
+
+            });
+            $(".prev-step").click(function(e) {
+
+                var $active = $('.wizard .nav-tabs li.active');
+                app.prevTab($active);
+
+            });
         },
-        nextTab: function(elem){
-	        $(elem).next().find('a[data-toggle="tab"]').click();
+        nextTab: function(elem) {
+            $(elem).next().find('a[data-toggle="tab"]').click();
         },
-        prevTab: function(elem){
-	        $(elem).prev().find('a[data-toggle="tab"]').click();
+        prevTab: function(elem) {
+            $(elem).prev().find('a[data-toggle="tab"]').click();
         }
     };
     app.init();
