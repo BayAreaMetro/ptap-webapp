@@ -12,7 +12,6 @@ var ApplicationSchema = new Schema({
     street_address: String,
     street_address2: String,
     city: String,
-    state: String,
     zip: String,
     primary_title: String,
     primary_firstname: String,

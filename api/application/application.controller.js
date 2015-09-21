@@ -261,7 +261,6 @@ exports.update5 = function(req, res, next) {
             primary_streetaddress: [application.street_address],
             primary_city: [application.city],
             primary_zip: [application.zip],
-            primary_state: [application.state],
             primary_position: [application.primary_position],
             primary_phone: [application.primary_phone],
             primary_email: [application.primary_email],
