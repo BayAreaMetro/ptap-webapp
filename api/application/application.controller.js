@@ -44,32 +44,7 @@ exports.create = function(req, res, next) {
     newapplication.save(function(err, application) {
         if (err) return console.error(err);
 
-        if (emailConfirmation === 'yes') {
-            //Send Confirmation email if user has selected option
-            var email = new sendgrid.Email();
-            email.addTo('mziyambi@mtc.ca.gov');
-            email.subject = "P-TAP Application";
-            email.from = 'ptapsupport@mtc.ca.gov';
-            email.text = 'Hi there!';
-            email.setSendAt(19169967909);
-            email.html = 'Thank you for submitting your application. Please save this email or print a copy for your records!<br><br> If you have any questions of concerns, please contact Christina Hohorst at chohorst@mtc.ca.gov';
-
-            // add filter settings one at a time
-            email.addFilter('templates', 'enable', 1);
-            email.addFilter('templates', 'template_id', '2e7ce831-0891-47d8-bbd8-c63cf0e90755');
-
-            sendgrid.send(email, function(err, json) {
-                if (err) {
-                    return console.error(err);
-                }
-                console.log(json);
-            });
-            res.json(application);
-        } else {
-            res.json(application);
-        }
-        //end if
-
+        res.json(application);
 
     });
 };
