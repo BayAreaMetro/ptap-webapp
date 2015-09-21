@@ -60,58 +60,59 @@
 	                    </li>
 	                </ul>
 	            </div>
-	
-	            <form role="form" class="container">
-	                <div class="tab-content">
-	                    <div class="tab-pane active" role="tabpanel" id="step1">
-	                        <h3>Step 1</h3>
-	                        <p>This is step 1</p>
-	                        <ul class="list-inline pull-right">
-	                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step2">
-	                        <h3>Step 2</h3>
-	                        <p>This is step 2</p>
-	                        <ul class="list-inline pull-right">
-	                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-	                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step3">
-	                        <h3>Step 3</h3>
-	                        <p>This is step 3</p>
-	                        <ul class="list-inline pull-right">
-	                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-	                            <li><button type="button" class="btn btn-default next-step">Skip</button></li>
-	                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step4">
-	                        <h3>Step 4</h3>
-	                        <p>This is step 4</p>
-	                        <ul class="list-inline pull-right">
-	                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-	                            <li><button type="button" class="btn btn-default next-step">Skip</button></li>
-	                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="step5">
-	                        <h3>Step 5</h3>
-	                        <p>This is step 5</p>
-	                        <ul class="list-inline pull-right">
-	                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-	                            <li><button type="button" class="btn btn-default next-step">Skip</button></li>
-	                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
-	                        </ul>
-	                    </div>
-	                    <div class="tab-pane" role="tabpanel" id="complete">
-	                        <h3>Complete</h3>
-	                        <p>You have successfully completed all steps.</p>
-	                    </div>
-	                    <div class="clearfix"></div>
+                
+	            <div class="tab-content">
+	                <!-- 1 -->
+					<div class="tab-pane active" role="tabpanel" id="step1">
+	                    <h3>Form 1</h3>
+	                    <% include ../partials/form-box-1 %>
+	                    <ul class="list-inline pull-right">
+	                        <li><button type="button" class="btn btn-primary next-step submit-button" type="submit">Save and continue</button></li>
+	                    </ul>
 	                </div>
-	            </form>
+	                
+	                <!-- 2 -->
+	                <div class="tab-pane" role="tabpanel" id="step2">
+	                    <h3>Step 2</h3>
+	                    <p>This is step 2</p>
+	                    <ul class="list-inline pull-right">
+	                        <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+	                        <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+	                    </ul>
+	                </div>
+	                <div class="tab-pane" role="tabpanel" id="step3">
+	                    <h3>Step 3</h3>
+	                    <p>This is step 3</p>
+	                    <ul class="list-inline pull-right">
+	                        <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+	                        <li><button type="button" class="btn btn-default next-step">Skip</button></li>
+	                        <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+	                    </ul>
+	                </div>
+	                <div class="tab-pane" role="tabpanel" id="step4">
+	                    <h3>Step 4</h3>
+	                    <p>This is step 4</p>
+	                    <ul class="list-inline pull-right">
+	                        <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+	                        <li><button type="button" class="btn btn-default next-step">Skip</button></li>
+	                        <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+	                    </ul>
+	                </div>
+	                <div class="tab-pane" role="tabpanel" id="step5">
+	                    <h3>Step 5</h3>
+	                    <p>This is step 5</p>
+	                    <ul class="list-inline pull-right">
+	                        <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+	                        <li><button type="button" class="btn btn-default next-step">Skip</button></li>
+	                        <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+	                    </ul>
+	                </div>
+	                <div class="tab-pane" role="tabpanel" id="complete">
+	                    <h3>Complete</h3>
+	                    <p>You have successfully completed all steps.</p>
+	                </div>
+	                <div class="clearfix"></div>
+	            </div>
 	        </div>
 	    </section>
             <!-- Forms -->

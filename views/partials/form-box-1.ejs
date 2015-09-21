@@ -1,5 +1,148 @@
 <!-- form-box -->
-<div id="form-box-1" class="row pad-bottom-l form-hider notActive">
+<form class="form-horizontal" id="section1" method="post" action="">
+    <fieldset>
+		<!--<legend>Form 1</legend> -->
+        <div class="form-group">
+            <label for="jurisdiction" class="col-lg-2 control-label">Jurisdiction</label>
+            <div class="col-lg-6">
+                <select type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="Jurisdiction" data-parsley-required></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="street_address" class="col-lg-2 control-label">Street Address</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="street_address" name="street_address" placeholder="street-address" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="street_address2" class="col-lg-2 control-label">Address Line 2</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="street_address2" name="street_address2" placeholder="E.g. Suite Floor" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="city" class="col-lg-2 control-label">City</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="state" class="col-lg-2 control-label">State</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="state" name="state" placeholder="State" data-parsley-maxlength="2" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="zip" class="col-lg-2 control-label">Zip</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="zip" data-parsley-type="digits" data-parsley-required>
+            </div>
+        </div>
+        <!-- Primary Contact -->
+        <div class="form-group">
+            <label for="primary_title" class="col-lg-2 control-label">Title</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_title" name="primary_title" placeholder="Title" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="primary_firstname" class="col-lg-2 control-label">First Name</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_firstname" name="primary_firstname" placeholder="First Name" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="primary_lastname" class="col-lg-2 control-label">Last Name</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_lastname" name="primary_lastname" placeholder="Last Name" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="primary_position" class="col-lg-2 control-label">Position</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_position" name="primary_position" placeholder="Position" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="primary_phone" class="col-lg-2 control-label">Phone</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_phone" name="primary_phone" placeholder="Phone Number" data-parsley-type="digits" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="primary_email" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="E-mail" data-parsley-type="email" data-parsley-required>
+            </div>
+        </div>
+        <!-- Street Saver Contact -->
+        <div class="form-group">
+            <label for="streetsaver_title" class="col-lg-2 control-label">Title</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_title" name="streetsaver_title" placeholder="Title" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="streetsaver_firstname" class="col-lg-2 control-label">First Name</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_firstname" name="streetsaver_firstname" placeholder="First Name" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="streetsaver_lastname" class="col-lg-2 control-label">Last Name</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_lastname" name="streetsaver_lastname" placeholder="Last Name" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="streetsaver_position" class="col-lg-2 control-label">Position</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_position" name="streetsaver_position" placeholder="Position" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="streetsaver_phone" class="col-lg-2 control-label">Phone</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_phone" name="streetsaver_phone" placeholder="Phone" data-parsley-type="digits" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="streetsaver_email" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_email" name="streetsaver_email" placeholder="Email" data-parsley-type="email" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Have staff attended training and/or user week meetings?</label>
+            <div class="col-lg-6">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="attended_training" id="training_radio_1" value="yes" class="training-radio"> Yes
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="attended_training" id="training_radio_2" value="no" class="training-radio"> No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group training-check hidden">
+            <label for="last_user_meeting" class="col-lg-2 control-label">Last user meeting attended:</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Next</label>
+            <div class="col-lg-6">
+                <button class="btn btn-default">Cancel</button>
+                <button class="btn btn-success submit-button" type="submit" data="section1">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<div id="form-box-1" class="row pad-bottom-l form-hider notActive hidden">
 	
 	<div class="box-wrapper col-lg-10 col-lg-offset-1 slide-1 notActive">
 		
