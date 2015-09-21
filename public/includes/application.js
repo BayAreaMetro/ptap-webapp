@@ -149,6 +149,11 @@
             //Last inpspection date and total miles from json Array
             $("#last_major_inspection").val(date);
             $("#network_centerlinemiles").val(miles);
+
+            //Set Application Date
+            var applicationdate = moment(new Date()).format("MMM Do YY");
+            $("#applicationdate").val(applicationdate);
+
         },
         additionalFunds: function() {
             //Option 1 Additional Funds Input
