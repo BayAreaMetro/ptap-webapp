@@ -357,6 +357,11 @@
             $("#contactcheck").click(function() {
                 if ($(this).is(':checked')) app.popupateStreetSaver();
             });
+
+            $("#last_major_inspection").datepicker({
+                showOtherMonths: true,
+                selectOtherMonths: true
+            });
         },
         loadtestvalues: function() {
             $("#street_address").val("101 8th st");
