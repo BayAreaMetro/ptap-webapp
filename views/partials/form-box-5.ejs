@@ -1,64 +1,37 @@
-<!-- form-box -->
-<div id="form-box-5" class="row pad-bottom-l form-hider notActive">
-	
-	<div class="box-wrapper col-lg-10 col-lg-offset-1  slide-1 notActive">
-		
-		<!-- close or cancel -->
-		<span class="form-close pull-right">
-			<button class="btn closer">&#x2715;</button>
-		</span>
-		<!-- Off Center header -->
-		<div class="form-box-header">
-			<p class="text-center">Form</p>
-		</div>
-		
-		<!-- Forms here -->
-		<div class="form-wrapper">
-			<!-- Page 5 -->
-            <form class="form-horizontal form-reset" id="update5" method="post" action="">
-                <fieldset>
-                    <legend>SIGNATURE</legend>
-                    <!-- Signature -->
-                    <div class="form-group">
-                        <label for="publicworksdirector_fullname" class="col-lg-2 control-label">Full Name</label>
-                        <div class="col-lg-6">
-                            <input type="text" class="form-control" id="publicworksdirector_fullname" name="publicworksdirector_fullname" placeholder="Full Name" data-parsley-required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="publicworksdirector_title" class="col-lg-2 control-label">Title</label>
-                        <div class="col-lg-6">
-                            <input type="text" class="form-control" id="publicworksdirector_title" name="publicworksdirector_title" placeholder="e.g. Public Works Director" data-parsley-required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="publicworksdirector_contactnumber" class="col-lg-2 control-label">Contact Number</label>
-                        <div class="col-lg-6">
-                            <input type="text" class="form-control" id="publicworksdirector_contactnumber" name="publicworksdirector_contactnumber" placeholder="Phone Number" data-parsley-type="number" data-parsley-required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="applicationdate" class="col-lg-2 control-label">Application Date</label>
-                        <div class="col-lg-6">
-                            <input type="text" class="form-control" id="applicationdate" name="applicationdate" placeholder="Date" data-parsley-required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-2 control-label">Next</label>
-                        <div class="col-lg-6">
-                            <button class="btn btn-default">Cancel</button>
-                            <button class="btn btn-success submit-button" type="submit" data="update5">Submit</button>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-		</div>
-		
-	</div>
-	<!-- Submit -->
-	<div class="form-submit notActive">
-		<span class="form-check">
-			<button class="btn">&#x2713;</button>
-		</span>
-	</div>
-</div>
+<form class="form-horizontal form-reset" id="update5" method="post" action="">
+    <fieldset>
+        <legend>SIGNATURE</legend>
+        <!-- Signature -->
+        <div class="form-group">
+            <label for="publicworksdirector_fullname" class="col-lg-2 control-label">Full Name</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="publicworksdirector_fullname" name="publicworksdirector_fullname" placeholder="Full Name" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="publicworksdirector_title" class="col-lg-2 control-label">Title</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="publicworksdirector_title" name="publicworksdirector_title" placeholder="e.g. Public Works Director" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="publicworksdirector_contactnumber" class="col-lg-2 control-label">Contact Number</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="publicworksdirector_contactnumber" name="publicworksdirector_contactnumber" placeholder="Phone Number" data-parsley-type="number" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="applicationdate" class="col-lg-2 control-label">Application Date</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="applicationdate" name="applicationdate" placeholder="Date" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Next</label>
+            <div class="col-lg-6">
+                <button class="btn btn-default">Cancel</button>
+                <button class="btn btn-primary submit-button next-step" type="submit" data="update5">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
