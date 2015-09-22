@@ -153,7 +153,7 @@
             $("#network_centerlinemiles").val(miles);
 
             //Set Application Date
-            var applicationdate = moment(new Date()).format("MMM Do YY");
+            var applicationdate = moment(new Date()).format("MMM Do YYYY");
             $("#applicationdate").val(applicationdate);
 
         },
@@ -362,8 +362,12 @@
                 console.log(val);
                 if (val === "yes") {
                     $('.additionalfunds-check').removeClass('hidden');
+                    $('.additionalfunds-check').attr('data-parsley-required').attr('data-parsley-type', 'integer');
+
                 } else {
                     $('.additionalfunds-check').addClass('hidden');
+                    $('.additionalfunds-check').removeAttr('data-parsley-required').removeAttr('data-parsley-type');
+
                 }
             });
 
