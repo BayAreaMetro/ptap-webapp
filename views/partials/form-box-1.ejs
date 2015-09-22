@@ -1,12 +1,12 @@
 <!-- form-box -->
 <form class="form-horizontal" id="section1" method="post" action="">
     <fieldset>
-		<!--<legend>Form 1</legend> -->
+        <!--<legend>Form 1</legend> -->
         <div class="form-group">
             <label for="jurisdiction" class="col-lg-2 control-label">Jurisdiction</label>
             <div class="col-lg-6">
                 <select type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="Jurisdiction" data-parsley-required>
-                	<option value="No Selection"> -- Select Jurisdiction --</option>
+                    <option value="No Selection"> -- Select Jurisdiction --</option>
                 </select>
             </div>
         </div>
@@ -29,18 +29,13 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="state" class="col-lg-2 control-label">State</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="state" name="state" placeholder="State" data-parsley-maxlength="2" data-parsley-required>
-            </div>
-        </div>
-        <div class="form-group">
             <label for="zip" class="col-lg-2 control-label">Zip</label>
             <div class="col-lg-6">
                 <input type="text" class="form-control" id="zip" name="zip" placeholder="zip" data-parsley-type="digits" data-parsley-required>
             </div>
         </div>
         <!-- Primary Contact -->
+        <h4>Primary Contact</h4>
         <div class="form-group">
             <label for="primary_title" class="col-lg-2 control-label">Title</label>
             <div class="col-lg-6">
@@ -72,12 +67,22 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="primary_email" class="col-lg-2 control-label">Email</label>
+            <label for="primary_email" class="col-lg-2 control-label">Email Address</label>
             <div class="col-lg-6">
                 <input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="E-mail" data-parsley-type="email" data-parsley-required>
             </div>
         </div>
+        <div class="form-group">
+            <label for="primary_email_confirm" class="col-lg-2 control-label">Confirm Email Address</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="primary_email_confirm" placeholder="E-mail" data-parsley-type="email" data-parsley-equalto="#primary_email" data-parsley-equalto-message="Your email addresses do not match!">
+            </div>
+        </div>
+        <label>
+            <input type="checkbox" name="contactcheck" id="contactcheck" value="no">  Is Streetsaver contact the same as your primary contact?
+        </label>
         <!-- Street Saver Contact -->
+        <h4>Streetsaver Contact</h4>
         <div class="form-group">
             <label for="streetsaver_title" class="col-lg-2 control-label">Title</label>
             <div class="col-lg-6">
@@ -109,9 +114,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="streetsaver_email" class="col-lg-2 control-label">Email</label>
+            <label for="streetsaver_email" class="col-lg-2 control-label">Email Address</label>
             <div class="col-lg-6">
                 <input type="text" class="form-control" id="streetsaver_email" name="streetsaver_email" placeholder="Email" data-parsley-type="email" data-parsley-required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="streetsaver_email_confirm" class="col-lg-2 control-label">Confirm Email Address</label>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="streetsaver_email_confirm" placeholder="Email" data-parsley-equalto="#streetsaver_email" data-parsley-equalto-message="Your email addresses do not match!">
             </div>
         </div>
         <div class="form-group">

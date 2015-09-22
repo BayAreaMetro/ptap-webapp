@@ -352,6 +352,11 @@
                     $('.additionalfunds-check').addClass('hidden');
                 }
             });
+
+
+            $("#contactcheck").click(function() {
+                if ($(this).is(':checked')) app.popupateStreetSaver();
+            });
         },
         loadtestvalues: function() {
             $("#street_address").val("101 8th st");
@@ -366,12 +371,12 @@
             $("#primary_phone").val(55555555);
             $("#primary_email").val("john@mtc.ca.gov");
 
-            $("#streetsaver_firstname").val("John");
-            $("#streetsaver_lastname").val("Smith");
-            $("#streetsaver_position").val("None");
-            $("#streetsaver_phone").val(55555555);
-            $("#streetsaver_email").val("john@mtc.ca.gov");
-            $("#last_user_meeting").val("None");
+            // $("#streetsaver_firstname").val("John");
+            // $("#streetsaver_lastname").val("Smith");
+            // $("#streetsaver_position").val("None");
+            // $("#streetsaver_phone").val(55555555);
+            // $("#streetsaver_email").val("john@mtc.ca.gov");
+            // $("#last_user_meeting").val("None");
         },
         toggleForm: function() {
             $(this).closest('.form-hider').toggleClass('notActive');
@@ -414,7 +419,16 @@
         },
         prevTab: function(elem) {
             $(elem).prev().find('a[data-toggle="tab"]').click();
+        },
+        popupateStreetSaver: function() {
+            $("#streetsaver_title").val($("#primary_title").val());
+            $("#streetsaver_firstname").val($("#primary_firstname").val());
+            $("#streetsaver_lastname").val($("#primary_lastname").val());
+            $("#streetsaver_position").val($("#primary_position").val());
+            $("#streetsaver_phone").val($("#primary_phone").val());
+            $("#streetsaver_email").val($("#primary_email").val());
         }
+
     };
     app.init();
 })();
