@@ -15,6 +15,7 @@
             app.radioButtonsCheck();
             app.loadtestvalues();
             app.formTabs();
+            app.projectTypeSelection();
 
         },
         accordion: function() {
@@ -445,6 +446,32 @@
             $("#streetsaver_position").val($("#primary_position").val());
             $("#streetsaver_phone").val($("#primary_phone").val());
             $("#streetsaver_email").val($("#primary_email").val());
+        },
+        projectTypeSelection: function() {
+            $('.project-selection').click(function(e) {
+                var project = $(this).attr('data');
+                var checked = $(this).prop('checked');
+
+                if (checked === true) {
+                    switch (project) {
+                        case '3a':
+                            console.log("3a");
+                            $('#li-3a').removeClass('hidden');
+                            $('#step3a').removeClass('hidden');
+                            break;
+                        case '3b':
+                            console.log("3b");
+                            $('#li-3b').removeClass('hidden');
+                            $('#step3b').removeClass('hidden');
+                            break;
+                        case '3c':
+                            console.log('3c');
+                            $('#li-3c').removeClass('hidden');
+                            $('#step3c').removeClass('hidden');
+                    }
+                }
+                // console.log(project, checked);
+            });
         }
 
     };

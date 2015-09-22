@@ -17,6 +17,15 @@
             -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
         }
+
+        .checkbox {
+        	margin: 4px;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 0 solid;
+            border-width: 1px;
+            color: #959595;
+        }
         </style>
 </head>
 
@@ -46,6 +55,27 @@
                                 <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
                                     <span class="round-tab">
 	                                <i class="">3</i>
+	                            </span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="disabled hidden" id="li-3a">
+                                <a href="#step3a" data-toggle="tab" aria-controls="step3a" role="tab" title="Step 3a">
+                                    <span class="round-tab">
+	                                <i class="">3A</i>
+	                            </span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="disabled hidden" id="li-3b">
+                                <a href="#step3b" data-toggle="tab" aria-controls="step3b" role="tab" title="Step 3b">
+                                    <span class="round-tab">
+	                                <i class="">3B</i>
+	                            </span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="disabled hidden" id="li-3c">
+                                <a href="#step3c" data-toggle="tab" aria-controls="step3c" role="tab" title="Step 3c">
+                                    <span class="round-tab">
+	                                <i class="">3C</i>
 	                            </span>
                                 </a>
                             </li>
@@ -98,7 +128,70 @@
                         </div>
                         <div class="tab-pane" role="tabpanel" id="step3">
                             <!-- <h3>Pavement Management System</h3> -->
-                            <% include ../partials/form-box-3 %>
+                            <h4 class="h4-heading">Please select project types. (You can selection more than one if necessary).</h4>
+                            <div class="checkbox">
+                                <h4>Pavement Management Service Project</h4>
+                                <label>
+                                    <input type="checkbox" class="project-selection" data="3a"> Select Type
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <h4>Non Pavement Asset Management Project</h4>
+                                <label>
+                                    <input type="checkbox" class="project-selection" data="3b"> Select Type
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <h4>Pavement Design Project -- Develop Plans, Specifications & Cost Estimates (PS&E)</h4>
+                                <label>
+                                    <input type="checkbox" class="project-selection" data="3c"> Select Type
+                                </label>
+                            </div>
+                            <ul class="list-inline pull-right">
+                                <li>
+                                    <button type="button" class="btn btn-default prev-step">Previous</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default next-step">Skip</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane hidden" role="tabpanel" id="step3a">
+                            <!-- <h3>Pavement Management System</h3> -->
+                            <% include ../partials/form-box-3a %>
+                                <ul class="list-inline pull-right">
+                                    <li>
+                                        <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-default next-step">Skip</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="tab-pane hidden" role="tabpanel" id="step3b">
+                            <!-- <h3>Pavement Management System</h3> -->
+                            <% include ../partials/form-box-3b %>
+                                <ul class="list-inline pull-right">
+                                    <li>
+                                        <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-default next-step">Skip</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="tab-pane hidden" role="tabpanel" id="step3c">
+                            <!-- <h3>Pavement Management System</h3> -->
+                            <% include ../partials/form-box-3c %>
                                 <ul class="list-inline pull-right">
                                     <li>
                                         <button type="button" class="btn btn-default prev-step">Previous</button>
