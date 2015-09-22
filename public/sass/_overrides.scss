@@ -1,34 +1,42 @@
 .btn{
 	&.btn-default{
-		background-color: #ffffff;
+		background-color: $white;
 		background-image: none;
 		border: 1px solid $mainColor;
 		border-radius: 0;
 		@include single-transition(all, .5s, ease-in-out, 0s); 
 		box-shadow: none;
+		text-shadow: none;
 		&:hover{
+			background-color: $mainColor;
+			color: $white;
 			@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
 		}
 	}
 	&.btn-primary{
-		background-color: $tabs;
+		background-color: white;
 		background-image: none;
-		border: none;
+		border: 1px solid $tabs;
+		color: $text;
 		border-radius: 0;
 		@include single-transition(all, .5s, ease-in-out, 0s); 
 		box-shadow: none;
+		text-shadow: none;
 		&:hover{
 			@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
+			background-color: $tabs;
+			color: $white;
 		}
 	}
 	&.btn-success{
-		background-color: #ffffff;
+		background-color: $white;
 		background-image: none;
 		border: 1px solid $submit;
 		color: $text;
 		border-radius: 0;
 		@include single-transition(all, .5s, ease-in-out, 0s); 
 		box-shadow: none;
+		text-shadow: none;
 		&:hover{
 			@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
 		}
