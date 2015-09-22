@@ -9965,7 +9965,7 @@ textarea.parsley-error {
 /* line 161, ../sass/screen.scss */
 #app-tabs .wizard li.active span.round-tab {
   background: #fff;
-  border: 2px solid #5bc0de;
+  border: 2px solid #059EF7;
 }
 /* line 166, ../sass/screen.scss */
 #app-tabs .wizard li.active span.round-tab i {
@@ -9996,7 +9996,7 @@ textarea.parsley-error {
   margin: 0 auto;
   bottom: 0px;
   border: 5px solid transparent;
-  border-bottom-color: #5bc0de;
+  border-bottom-color: #059EF7;
   transition: 0.1s ease-in-out;
 }
 /* line 198, ../sass/screen.scss */
@@ -10008,7 +10008,7 @@ textarea.parsley-error {
   margin: 0 auto;
   bottom: 0px;
   border: 10px solid transparent;
-  border-bottom-color: #5bc0de;
+  border-bottom-color: #059EF7;
 }
 /* line 209, ../sass/screen.scss */
 #app-tabs .wizard .tab-pane {
@@ -10024,10 +10024,10 @@ textarea.parsley-error {
   height: 2px;
   background: #e0e0e0;
   position: absolute;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   left: 0;
-  right: 0;
+  right: 10%;
   top: 50%;
   z-index: 1;
 }

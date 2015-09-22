@@ -160,7 +160,7 @@
 	    }
 	    li.active span.round-tab {
 		    background: #fff;
-		    border: 2px solid #5bc0de;
+		    border: 2px solid $submit;
 		    
 		}
 		li.active span.round-tab i{
@@ -190,7 +190,7 @@
 			    margin: 0 auto;
 			    bottom: 0px;
 			    border: 5px solid transparent;
-			    border-bottom-color: #5bc0de;
+			    border-bottom-color: $submit;
 			    transition: 0.1s ease-in-out;
 			}
 		}
@@ -203,7 +203,7 @@
 			    margin: 0 auto;
 			    bottom: 0px;
 			    border: 10px solid transparent;
-			    border-bottom-color: #5bc0de;
+			    border-bottom-color: $submit;
 			}	
 		}
 		.tab-pane {
@@ -218,10 +218,10 @@
 	    height: 2px;
 	    background: #e0e0e0;
 	    position: absolute;
-	    width: 80%;
+	    width: 70%;
 	    margin: 0 auto;
 	    left: 0;
-	    right: 0;
+	    right: 10%;
 	    top: 50%;
 	    z-index: 1;
 	}
