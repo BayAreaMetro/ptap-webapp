@@ -2,11 +2,12 @@
 <form class="form-horizontal" id="section1" method="post" action="">
     <fieldset>
         <!--<legend>Form 1</legend> -->
+        <h4 class="h4-heading">Jurisdiction Information</h4>
         <div class="form-group">
             <label for="jurisdiction" class="col-lg-2 control-label">Jurisdiction</label>
             <div class="col-lg-6">
-                <select type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="Jurisdiction" data-parsley-required>
-                    <option value="No Selection"> -- Select Jurisdiction --</option>
+                <select type="text" class="form-control" id="jurisdiction" name="jurisdiction" placeholder="Jurisdiction" data-parsley-required data-parsley-notequalto="-- Select Jurisdiction --">
+                    <option value="No Selection">-- Select Jurisdiction --</option>
                 </select>
             </div>
         </div>
@@ -35,7 +36,7 @@
             </div>
         </div>
         <!-- Primary Contact -->
-        <h4>Primary Contact</h4>
+        <h4 class="h4-heading">Primary Contact</h4>
         <div class="form-group">
             <label for="primary_title" class="col-lg-2 control-label">Title</label>
             <div class="col-lg-6">
@@ -69,20 +70,20 @@
         <div class="form-group">
             <label for="primary_email" class="col-lg-2 control-label">Email Address</label>
             <div class="col-lg-6">
-                <input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="E-mail" data-parsley-type="email" data-parsley-required>
+                <input type="text" class="form-control" id="primary_email" name="primary_email" placeholder="Enter valid email address" data-parsley-type="email" data-parsley-required>
             </div>
         </div>
         <div class="form-group">
             <label for="primary_email_confirm" class="col-lg-2 control-label">Confirm Email Address</label>
             <div class="col-lg-6">
-                <input type="text" class="form-control" id="primary_email_confirm" placeholder="E-mail" data-parsley-type="email" data-parsley-equalto="#primary_email" data-parsley-equalto-message="Your email addresses do not match!">
+                <input type="text" class="form-control" id="primary_email_confirm" placeholder="Please re-enter email address" data-parsley-type="email" data-parsley-required>
             </div>
         </div>
-        <label>
-            <input type="checkbox" name="contactcheck" id="contactcheck" value="no">  Is Streetsaver contact the same as your primary contact?
-        </label>
         <!-- Street Saver Contact -->
-        <h4>Streetsaver Contact</h4>
+        <h4 class="h4-heading">Streetsaver Contact</h4>
+        <label>
+            <input type="checkbox" name="contactcheck" id="contactcheck" value="no"> Is Streetsaver contact the same as your primary contact?
+        </label>
         <div class="form-group">
             <label for="streetsaver_title" class="col-lg-2 control-label">Title</label>
             <div class="col-lg-6">
@@ -122,7 +123,7 @@
         <div class="form-group">
             <label for="streetsaver_email_confirm" class="col-lg-2 control-label">Confirm Email Address</label>
             <div class="col-lg-6">
-                <input type="text" class="form-control" id="streetsaver_email_confirm" placeholder="Email" data-parsley-equalto="#streetsaver_email" data-parsley-equalto-message="Your email addresses do not match!">
+                <input type="text" class="form-control" id="streetsaver_email_confirm" placeholder="Please re-enter email address" data-parsley-required>
             </div>
         </div>
         <div class="form-group">
@@ -143,7 +144,7 @@
         <div class="form-group training-check hidden">
             <label for="last_user_meeting" class="col-lg-2 control-label">Last user meeting attended:</label>
             <div class="col-lg-6">
-                <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?" data-parsley-required>
+                <input type="text" class="form-control" id="last_user_meeting" name="last_user_meeting" placeholder="Last Meeting?">
             </div>
         </div>
         <div class="form-group">

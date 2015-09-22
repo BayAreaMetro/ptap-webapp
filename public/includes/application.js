@@ -15,6 +15,7 @@
             app.radioButtonsCheck();
             app.loadtestvalues();
             app.formTabs();
+
         },
         accordion: function() {
             $('#va-accordion').vaccordion({
@@ -291,6 +292,18 @@
                 $.post(url, $(form).serialize());
             } else {
                 $(form).parsley().validate();
+                $.notify({
+                    icon: 'glyphicon glyphicon-warning-sign',
+                    title: 'We found some issues on this page!',
+                    message: 'Please fix all errors highlighted in red',
+                    animate: {
+                        enter: 'animated fadeInDown',
+                        exit: 'animated fadeOutUp'
+                    }
+                }, {
+                    // settings
+                    type: 'danger'
+                });
             }
 
             // $(form).parsley().on('form:success', function() {
