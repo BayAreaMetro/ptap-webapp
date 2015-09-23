@@ -16,6 +16,7 @@
             app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
+            app.checkboxes();
 
         },
         accordion: function() {
@@ -405,11 +406,11 @@
                 console.log(val);
                 if (val === "yes") {
                     $('.additionalfunds-check').removeClass('hidden');
-                    $('#network_additionalfunds').attr('data-parsley-required').attr('data-parsley-type', 'number').attr('min','25000');
 
-                } else if(val === 'no') {
+
+                } else if (val === 'no') {
                     $('.additionalfunds-check').addClass('hidden');
-                    $('#network_additionalfunds').removeAttr('data-parsley-required').removeAttr('data-parsley-type');
+
 
                 }
             });
@@ -533,6 +534,30 @@
                 }
 
             });
+        },
+        checkboxes: function() {
+            console.log('loaded');
+            $('#othertype').click(function(e) {
+                var checked = $(this).prop('checked');
+                console.log(checked);
+                if (checked === true) {
+                    $('#pms_other_description').removeClass('hidden');
+                } else {
+                    $('#pms_other_description').addClass('hidden');
+                }
+            });
+
+            $('#otherasset').click(function(e) {
+                var checkedother = $(this).prop('checked');
+                console.log(checkedother);
+                if (checkedother === true) {
+                    $('#npt_other_description').removeClass('hidden');
+                } else {
+                    $('#npt_other_description').addClass('hidden');
+                }
+            });
+
+
         }
 
     };
