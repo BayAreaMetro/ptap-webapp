@@ -13,7 +13,7 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-           // app.loadtestvalues();
+            app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
 
@@ -423,6 +423,12 @@
             $(".next-step").click(function(e) {
                 if (app.isValid === true) {
                     var $active = $('.wizard .nav-tabs li.active');
+                    var nextClass = $active.next().attr('class');
+
+                    //Check is next link is hidden. If it is, skip it
+                    if (nextClass === 'disabled hidden') {
+                        $active = $active.next();
+                    }
                     $active.next().removeClass('disabled');
                     app.nextTab($active);
                 } else {
@@ -474,7 +480,7 @@
                             $('#step3c').removeClass('hidden');
                     }
                 }
-                // console.log(project, checked);
+               
             });
         }
 
