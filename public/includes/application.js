@@ -4,6 +4,7 @@
 
         init: function() {
             $('.closer ').click(app.toggleForm);
+            // $('.phone-us').mask("(999) 999-9999");
             //Launch accordion
             app.accordion();
             app.projectid = uuid.v1();
@@ -13,10 +14,11 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-           // app.loadtestvalues();
+            app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
             app.checkboxes();
+            app.masking();
 
         },
         accordion: function() {
@@ -165,15 +167,15 @@
             $("#pms_grantamount").val(pmsGrantAmount);
 
             //Set percentage of network covered by grant amount
-            networkTotalPercentage = app.checkInputLimits(networkTotalPercentage, 'percentage');
+            networkTotalPercentage = Math.round(app.checkInputLimits(networkTotalPercentage, 'percentage'));
             $("#network_totalpercentage").val(networkTotalPercentage);
 
             //Set miles remaining after grant amount used
-            app.networkMilesRemaining = app.checkInputLimits(networkMilesRemaining, 'network_milesremaining');
+            app.networkMilesRemaining = Math.round(app.checkInputLimits(networkMilesRemaining, 'network_milesremaining'));
             $("#network_milesremaining").val(app.networkMilesRemaining);
 
             //Set miles that will be surveyed with grant amount (max 333.33)
-            networkMilesForSurvey = app.checkInputLimits(miles, 'network_milesforsurvey');
+            networkMilesForSurvey = Math.round(app.checkInputLimits(miles, 'network_milesforsurvey'));
             $("#network_milesforsurvey").val(networkMilesForSurvey);
 
             //Set local contribution (20% of grant amount)
@@ -557,6 +559,11 @@
                 }
             });
 
+
+        },
+        masking: function() {
+            $('.phone-us').mask("(999) 999-9999");
+            $('.date').mask("99/9999");
 
         }
 
