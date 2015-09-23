@@ -125,9 +125,11 @@
                 var grantamount = app.checkInputLimits(value, "estimatedcost");
                 var additionalfunds = app.checkInputLimits(value, "additionalfunds");
                 var localcontribution = app.checkInputLimits(value, "localcontribution");
+                var totalcost = additionalfunds + localcontribution;
                 //Budget Summary Values
                 $('#npt_grantamount').val(grantamount);
-                $('#npt_totalprojectcost').val(value);
+                $('#npt_totalprojectcost').val(totalcost);
+                $('#npt_estimatedcost').val(value);
                 $('#npt_additionalfunds').val(additionalfunds);
                 $('#npt_localcontribution').val(localcontribution);
             });
@@ -138,9 +140,11 @@
                 var grantamount = app.checkInputLimits(value, "estimatedcost");
                 var additionalfunds = app.checkInputLimits(value, "additionalfunds");
                 var localcontribution = app.checkInputLimits(value, "localcontribution");
+                var totalcost = additionalfunds + localcontribution;
                 //Budget Summary Values
                 $('#pdc_grantamount').val(grantamount);
-                $('#pdc_totalprojectcost').val(value);
+                $('#pdc_totalprojectcost').val(totalcost);
+                $('#pdc_estimatedcost').val(value);
                 $('#pdc_additionalfunds').val(additionalfunds);
                 $('#pdc_localcontribution').val(localcontribution);
             });
@@ -151,7 +155,7 @@
             var pmsGrantAmount = miles * 300,
                 networkTotalPercentage = 100 - (100 * (miles - 333.33) / miles),
                 networkMilesRemaining = miles - 333.33,
-                pmsLocalContribution = pmsGrantAmount * 0.2,
+                pmsLocalContribution,
                 pmsTotalProjectCost,
                 networkMilesForSurvey;
 
@@ -172,7 +176,14 @@
             $("#network_milesforsurvey").val(networkMilesForSurvey);
 
             //Set local contribution (20% of grant amount)
+            pmsLocalContribution = pmsGrantAmount * 0.2;
             pmsLocalContribution = app.checkInputLimits(pmsLocalContribution, 'pms_localcontribution');
+
+            //Set total cost to jurisdiction
+            pmsTotalProjectCost = pmsLocalContribution;
+            console.log(pmsTotalProjectCost);
+            $("#pms_totalprojectcost").val(pmsTotalProjectCost);
+
             $("#pms_localcontribution").val(pmsLocalContribution);
 
             //Last inpspection date and total miles from json Array
@@ -194,6 +205,7 @@
                 var additionalMilesFunded = additonalFunds / 300;
                 var newRemainingMiles = milesRemaining - additionalMilesFunded;
                 var newPercentageNetwork = (100 * (totalMiles - newRemainingMiles) / totalMiles) + percentNetwork;
+                var localcontribution = $('#pms_grantamount').val() * 0.2;
 
                 //Check if additional funds is empty
                 additonalFunds = app.checkInputLimits(additonalFunds, 'additional_funds');
@@ -212,29 +224,10 @@
                 $("#pms_additionalfunds").val(additonalFunds);
 
                 //Set total project cost in section 4 summary
-                var pmsTotalProjectCost = parseFloat($("#pms_additionalfunds").val()) + parseFloat($("#pms_grantamount").val());
+                var pmsTotalProjectCost = parseFloat($("#pms_additionalfunds").val()) + parseFloat(localcontribution);
                 $("#pms_totalprojectcost").val(pmsTotalProjectCost);
             });
 
-            //Option 2 Additional Funds Input
-            $("#option2_additionalfunds").on('input', function() {
-                var option2AdditionalFunds = $(this).val();
-                var option2LocalContribution = (app.centerLineMiles * 300) * 0.2;
-                option2AdditionalFunds = app.checkInputLimits(option2AdditionalFunds, 'additional_funds');
-                $("#npt_additionalfunds").val(option2AdditionalFunds);
-                $("#npt_localcontribution").val(option2LocalContribution);
-
-            });
-
-            //Option 3 Additional Funds Input
-            $("#option3_additionalfunds").on('input', function() {
-                var option3AdditionalFunds = $(this).val();
-                var option3LocalContribution = (app.centerLineMiles * 300) * 0.2;
-                option3AdditionalFunds = app.checkInputLimits(option3AdditionalFunds, 'additional_funds');
-                $("#pdc_additionalfunds").val(option3AdditionalFunds);
-                $("#pdc_localcontribution").val(option3LocalContribution);
-
-            });
 
         },
         checkInputLimits: function(value, field) {
@@ -412,11 +405,11 @@
                 console.log(val);
                 if (val === "yes") {
                     $('.additionalfunds-check').removeClass('hidden');
-                    $('.additionalfunds-check').attr('data-parsley-required').attr('data-parsley-type', 'integer');
+                    $('#network_additionalfunds').attr('data-parsley-required').attr('data-parsley-type', 'number').attr('min','25000');
 
-                } else {
+                } else if(val === 'no') {
                     $('.additionalfunds-check').addClass('hidden');
-                    $('.additionalfunds-check').removeAttr('data-parsley-required').removeAttr('data-parsley-type');
+                    $('#network_additionalfunds').removeAttr('data-parsley-required').removeAttr('data-parsley-type');
 
                 }
             });
@@ -474,10 +467,15 @@
                 if (app.isValid === true) {
                     var $active = $('.wizard .nav-tabs li.active');
                     var nextClass = $active.next().attr('class');
+                    console.log(nextClass);
 
                     //Check is next link is hidden. If it is, skip it
                     if (nextClass === 'disabled hidden') {
                         $active = $active.next();
+                        nextClass = $active.next().attr('class');
+                        if (nextClass === 'disabled hidden') {
+                            $active = $active.next();
+                        }
                     }
                     $active.next().removeClass('disabled');
                     app.nextTab($active);
