@@ -14,7 +14,7 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-            app.loadtestvalues();
+           // app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
             app.checkboxes();
