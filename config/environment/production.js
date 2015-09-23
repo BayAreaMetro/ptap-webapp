@@ -23,4 +23,5 @@ module.exports = {
             process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
 	        'mongodb://ptap:GISptap101@ds035613.mongolab.com:35613/ptap-production'
   }
+  
 };
