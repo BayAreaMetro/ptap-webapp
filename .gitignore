@@ -14,3 +14,4 @@ client/bower_components/*
 bower_components/*
 data/*
 downloads/*
+config/environment/production.js

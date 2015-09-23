@@ -26,3 +26,8 @@ NodeJS Template
 	npm install
 	bower install
 	nodemon app.js (if required, npm install -g nodemon)
+
+7. Deployment
+	Set environment to production (app.js)
+	Comment out app.loadTestValues (application.js) [Loads test values for development purposes]
+	Deploy using eb deploy (ptap-production.elasticbeanstalk.com)
