@@ -195,9 +195,11 @@ exports.update4 = function(req, res, next) {
             pms_localcontribution: req.body.pms_localcontribution,
             pms_additionalfunds: req.body.pms_additionalfunds,
             pms_totalprojectcost: req.body.pms_totalprojectcost,
+            npt_grantamount: req.body.npt_grantamount,
             npt_totalprojectcost: req.body.npt_totalprojectcost,
             npt_additionalfunds: req.body.npt_additionalfunds,
             npt_localcontribution: req.body.npt_localcontribution,
+            pdc_grantamount: req.body.pdc_grantamount,
             pdc_totalprojectcost: req.body.pdc_totalprojectcost,
             pdc_additionalfunds: req.body.pdc_additionalfunds,
             pdc_localcontribution: req.body.pdc_localcontribution

@@ -1,64 +1,84 @@
 <form class="form-horizontal form-reset" id="update4" method="post" action="">
     <fieldset>
-        <legend>Project Budget Summary</legend>
-        <div class="form-group">
-            <label for="pms_grantamount" class="col-lg-2 control-label">P-TAP Grant Amount</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pms_grantamount" name="pms_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
+        <div id="pmsSummary" class="hidden">
+            <h4 class="h4-heading">Pavement Management Service Project</h4>
+            <div class="form-group">
+                <label for="pms_grantamount" class="col-lg-2 control-label">P-TAP Grant Amount</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pms_grantamount" name="pms_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pms_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pms_localcontribution" name="pms_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pms_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pms_additionalfunds" name="pms_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pms_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pms_totalprojectcost" name="pms_totalprojectcost" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label for="pms_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pms_localcontribution" name="pms_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+        <div id="npaSummary" class="hidden">
+            <h4 class="h4-heading">Non Pavement Asset Management Project</h4>
+            <div class="form-group">
+                <label for="npt_grantamount" class="col-lg-2 control-label">P-TAP Grant Amount</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="npt_grantamount" name="npt_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="npt_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="npt_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="npt_additionalfunds" name="npt_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="npt_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="npt_localcontribution" name="npt_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label for="pms_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pms_additionalfunds" name="pms_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+        <div id="pdpSummary" class="hidden">
+            <h4 class="h4-heading">Pavement Design Project (PS&E)</h4>
+            <div class="form-group">
+                <label for="pdc_grantamount" class="col-lg-2 control-label">P-TAP Grant Amount</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pdc_grantamount" name="pdc_grantamount" placeholder="" data-parsley-type="number" data-parsley-required>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="pms_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pms_totalprojectcost" name="pms_totalprojectcost" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+            <div class="form-group">
+                <label for="pdc_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="npt_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="npt_totalprojectcost" name="npt_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
+            <div class="form-group">
+                <label for="pdc_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pdc_additionalfunds" name="pdc_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
+                </div>
             </div>
-        </div>
-          <div class="form-group">
-            <label for="npt_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="npt_additionalfunds" name="npt_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="npt_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="npt_localcontribution" name="npt_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="pdc_totalprojectcost" class="col-lg-2 control-label">Total Project Cost</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pdc_totalprojectcost" name="pdc_totalprojectcost" placeholder="Total Project Cost" data-parsley-type="number" data-parsley-required>
-            </div>
-        </div>
-          <div class="form-group">
-            <label for="pdc_additionalfunds" class="col-lg-2 control-label">Additional funds</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pdc_additionalfunds" name="pdc_additionalfunds" placeholder="Additional funds" data-parsley-type="number" data-parsley-required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="pdc_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="pdc_localcontribution" name="pdc_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+            <div class="form-group">
+                <label for="pdc_localcontribution" class="col-lg-2 control-label">Local contribution(20% of total):</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="pdc_localcontribution" name="pdc_localcontribution" placeholder="Local Contribution" data-parsley-type="number" data-parsley-required>
+                </div>
             </div>
         </div>
         <div class="form-group">

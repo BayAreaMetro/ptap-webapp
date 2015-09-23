@@ -118,6 +118,33 @@
                 //testing
                 console.log(dataDate, dataMiles);
             });
+
+            $('#option2_estimatedcost').change(function(e) {
+                var value = $('#option2_estimatedcost').val();
+                console.log(value);
+                var grantamount = app.checkInputLimits(value, "estimatedcost");
+                var additionalfunds = app.checkInputLimits(value, "additionalfunds");
+                var localcontribution = app.checkInputLimits(value, "localcontribution");
+                //Budget Summary Values
+                $('#npt_grantamount').val(grantamount);
+                $('#npt_totalprojectcost').val(value);
+                $('#npt_additionalfunds').val(additionalfunds);
+                $('#npt_localcontribution').val(localcontribution);
+            });
+
+            $('#option3_estimatedcost').change(function(e) {
+                var value = $('#option3_estimatedcost').val();
+                console.log(value);
+                var grantamount = app.checkInputLimits(value, "estimatedcost");
+                var additionalfunds = app.checkInputLimits(value, "additionalfunds");
+                var localcontribution = app.checkInputLimits(value, "localcontribution");
+                //Budget Summary Values
+                $('#pdc_grantamount').val(grantamount);
+                $('#pdc_totalprojectcost').val(value);
+                $('#pdc_additionalfunds').val(additionalfunds);
+                $('#pdc_localcontribution').val(localcontribution);
+            });
+
         },
         autoPopulateValues: function(date, miles) {
             app.resetForms();
@@ -264,6 +291,29 @@
                         return value;
                     }
                     break;
+                case 'estimatedcost':
+                    if (value <= 100000) {
+                        return value;
+                    } else {
+                        return 100000;
+                    }
+                    break;
+
+                case 'additionalfunds':
+                    if (value <= 100000) {
+                        return 0;
+                    } else {
+                        return value - 100000;
+                    }
+                    break;
+                case 'localcontribution':
+                    if (value <= 100000) {
+                        return 0.2 * value;
+                    } else {
+                        return 20000;
+                    }
+                    break;
+
             }
 
 
@@ -468,19 +518,22 @@
                             console.log("3a");
                             $('#li-3a').removeClass('hidden');
                             $('#step3a').removeClass('hidden');
+                            $('#pmsSummary').removeClass('hidden');
                             break;
                         case '3b':
                             console.log("3b");
                             $('#li-3b').removeClass('hidden');
                             $('#step3b').removeClass('hidden');
+                            $('#npaSummary').removeClass('hidden');
                             break;
                         case '3c':
                             console.log('3c');
                             $('#li-3c').removeClass('hidden');
                             $('#step3c').removeClass('hidden');
+                            $('#pdpSummary').removeClass('hidden');
                     }
                 }
-               
+
             });
         }
 
