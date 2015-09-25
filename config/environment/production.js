@@ -18,10 +18,10 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri:    process.env.MONGOLAB_URI ||
+    uri:    process.env.MONGOLAB_URL ||
             process.env.MONGOHQ_URL ||
-            process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-	        'mongodb://ptap:GISptap101@ds035613.mongolab.com:35613/ptap-production'
+            process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME 
+	        
   }
   
 };
