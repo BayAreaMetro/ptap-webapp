@@ -19,8 +19,8 @@ var config = require('./environment');
 var passport = require('passport');
 var session = require('express-session');
 
-var routes = require('./../routes/pages/index');
-var users = require('./../routes/users');
+// var routes = require('./../routes/pages/index');
+// var users = require('./../routes/users');
 
 // var mongoStore = require('connect-mongo')(session);
 // var multer = require('multer');

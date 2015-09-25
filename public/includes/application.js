@@ -6,7 +6,6 @@
             $('.closer ').click(app.toggleForm);
             // $('.phone-us').mask("(999) 999-9999");
             //Launch accordion
-            app.accordion();
             app.projectid = uuid.v1();
             app.findAndSubmit(); //Submit current Form
             app.loadJurisdictions();
@@ -14,23 +13,14 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-           app.loadtestvalues();
+            app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
             app.checkboxes();
             app.masking();
 
         },
-        accordion: function() {
-            $('#va-accordion').vaccordion({
-                accordionW: $(window).width(),
-                accordionH: $(window).height(),
-                visibleSlices: 5,
-                expandedHeight: 450,
-                animOpacity: 0.1,
-                contentAnimSpeed: 100
-            });
-        },
+
         findAndSubmit: function() {
             $(".submit-button").click(function(e) {
 
@@ -46,11 +36,8 @@
                 console.log(submitAttr);
                 console.log(selection);
 
-                //Validate form
-                app.validate(formId, submitAttr);
-
                 //Submit form
-                // app.post(formId, submitAttr, app.projectId);
+                app.post(formId, submitAttr, app.projectId);
             });
 
         },
@@ -66,12 +53,7 @@
                 }
             });
         },
-        validate: function(currentForm, submitAttr) {
 
-            //Pass current form id and then validate
-            // $(currentForm).parsley().validate();
-            app.post(currentForm, submitAttr, app.projectId);
-        },
         onselect: function(e) {
             var dataItem = this.dataItem(e.item);
             var vals = app.Jurisdictions;
