@@ -25,7 +25,9 @@ NodeJS Template
 6. Run application
 	npm install
 	bower install
-	nodemon app.js (if required, npm install -g nodemon)
+	open a new terminal/console and run 'mongod' (make sure mongodb is installed)
+	in original terminal/console, run nodemon app.js (if required, npm install -g nodemon)
+	[NB* To run in production mode, switch env to 'production' in app.js, then run MONGOLAB_URL=urlnamehere nodemon app.js Database url is set as an environmental variable]
 
 7. Deployment
 	Set environment to production (app.js)
