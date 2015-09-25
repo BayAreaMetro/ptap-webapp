@@ -14,7 +14,7 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-           // app.loadtestvalues();
+           app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
             app.checkboxes();
@@ -167,7 +167,7 @@
             $("#pms_grantamount").val(pmsGrantAmount);
 
             //Set percentage of network covered by grant amount
-            networkTotalPercentage = Math.round(app.checkInputLimits(networkTotalPercentage, 'percentage'));
+            networkTotalPercentage = app.checkInputLimits(networkTotalPercentage, 'percentage');
             $("#network_totalpercentage").val(networkTotalPercentage);
 
             //Set miles remaining after grant amount used
@@ -243,7 +243,7 @@
                     if (value <= 0) {
                         return 0;
                     } else if (value > 0 && value <= 100) {
-                        return value;
+                        return Math.round(value);
                     } else {
                         return 100;
                     }
@@ -261,7 +261,7 @@
                     if (value <= 0 || isNaN(value) === true) {
                         return 0;
                     } else {
-                        return value;
+                        return Math.round(value);
                     }
                     break;
                 case 'network_milesforsurvey':
@@ -284,7 +284,7 @@
                     } else if (isNaN(value) === true) {
                         return 0;
                     } else {
-                        return value;
+                        return Math.round(value);
                     }
                     break;
                 case 'estimatedcost':
