@@ -1,4 +1,3 @@
-
 <!-- Page 3C -->
 <form class="form-horizontal form-reset project-options" id="update3c" method="post" action="">
     <fieldset>
@@ -12,10 +11,11 @@
         <div class="form-group">
             <label for="option3_anticipatedconstructiondate" class="col-lg-2 control-label">Anticipated Construction Start Date</label>
             <div class="col-lg-8">
-                <input type="text" class="form-control date" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="MM/YYYY" data-parsley-required></textarea>
+                <input type="text" class="form-control date" id="option3_anticipatedconstructiondate" name="option3_anticipatedconstructiondate" placeholder="MM/YYYY" data-parsley-required>
+                </textarea>
             </div>
         </div>
-         <div class="form-group">
+        <div class="form-group">
             <label for="option3_estimatedcost" class="col-lg-2 control-label">Total Estimated Cost</label>
             <div class="col-lg-6">
                 <input type="text" class="form-control" id="option3_estimatedcost" name="option3_estimatedcost" placeholder="Total" data-parsley-type="number" data-parsley-required>
@@ -52,10 +52,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Next</label>
-            <div class="col-lg-6">
-                <button class="btn btn-default">Cancel</button>
-                <button class="btn btn-primary submit-button next-step" type="submit" data="update3c">Submit</button>
+            <div class="col-lg-12">
+                <ul class="list-inline pull-right">
+                    <li>
+                        <button class="btn btn-default">Cancel</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary submit-button next-step" type="submit" data="update3c">Continue</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </fieldset>

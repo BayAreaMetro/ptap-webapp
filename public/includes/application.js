@@ -13,7 +13,7 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-            app.loadtestvalues();
+            // app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
             app.checkboxes();
@@ -255,7 +255,7 @@
                     break;
                 case 'pms_localcontribution':
                     if (value <= 20000) {
-                        return value;
+                        return Math.round(value);
                     } else {
                         return 20000;
                     }
@@ -286,7 +286,7 @@
                     break;
                 case 'localcontribution':
                     if (value <= 100000) {
-                        return 0.2 * value;
+                        return Math.round(0.2 * value);
                     } else {
                         return 20000;
                     }
@@ -419,7 +419,7 @@
             $("#primary_firstname").val("John");
             $("#primary_lastname").val("Smith");
             $("#primary_position").val("GIS");
-            $("#primary_phone").val(55555555);
+            $("#primary_phone").val("5555555555");
             $("#primary_email").val("john@mtc.ca.gov");
 
             // $("#streetsaver_firstname").val("John");

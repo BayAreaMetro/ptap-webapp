@@ -1,6 +1,6 @@
 <form class="form-horizontal form-reset" id="update2" method="post" action="">
     <fieldset>
-		<!--legend>Form 2</legend> -->
+        <!--legend>Form 2</legend> -->
         <div class="form-group">
             <label for="last_major_inspection" class="col-lg-2 control-label">Last Major MTC Inspection</label>
             <div class="col-lg-6">
@@ -40,31 +40,16 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Next</label>
-            <div class="col-lg-6">
-                <button class="btn btn-default">Cancel</button>
-                <button class="btn btn-primary submit-button next-step" type="submit" data="update2">Submit</button>
+            <div class="col-lg-12">
+                <ul class="list-inline pull-right">
+                    <li>
+                        <button class="btn btn-default">Cancel</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary submit-button next-step" type="submit" data="update2">Continue</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </fieldset>
-</form>
-<form class="hidden" form-horizontal form-reset>
-    <div class="form-group">
-        <fieldset>
-            <label for="pmsprojects " class="col-lg-2 control-label">Choose Projects</label>
-            <div class="col-lg-6">
-                <div>
-                    <label>
-                        <input type="checkbox" class="check-projects" name="pmsprojects" id="pmsprojects" value="yes" data="pms"> Pavement Management System (PMS) Project
-                    </label>
-                    <label>
-                        <input type="checkbox" class="check-projects" name="nonpavementprojects" id="nonpavementprojects" value="yes" data="npa"> Non-Pavement Asset Management Project
-                    </label>
-                    <label>
-                        <input type="checkbox" class="check-projects" name="pavementdesignprojects" id="pavementdesignprojects" value="yes" data="pdp"> Pavement Design Project
-                    </label>
-                </div>
-            </div>
-        </fieldset>
-    </div>
 </form>
