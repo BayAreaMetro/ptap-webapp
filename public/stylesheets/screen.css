@@ -9703,7 +9703,7 @@ button.close {
 .btn.btn-default {
   background-color: #FFFFFF;
   background-image: none;
-  border: 1px solid #6334e3;
+  border: 1px solid #E6293C;
   border-radius: 0;
   -moz-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -9715,7 +9715,7 @@ button.close {
 }
 /* line 10, ../sass/_overrides.scss */
 .btn.btn-default:hover {
-  background-color: #6334e3;
+  background-color: #E6293C;
   color: #FFFFFF;
   -moz-box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.4);
@@ -9725,7 +9725,7 @@ button.close {
 .btn.btn-primary {
   background-color: white;
   background-image: none;
-  border: 1px solid #059EF7;
+  border: 1px solid #004677;
   color: #333;
   border-radius: 0;
   -moz-transition: all 0.5s ease-in-out 0s;
@@ -9741,14 +9741,14 @@ button.close {
   -moz-box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.4);
-  background-color: #059EF7;
+  background-color: #004677;
   color: #FFFFFF;
 }
 /* line 31, ../sass/_overrides.scss */
 .btn.btn-success {
   background-color: #FFFFFF;
   background-image: none;
-  border: 1px solid #059EF7;
+  border: 1px solid #004677;
   color: #333;
   border-radius: 0;
   -moz-transition: all 0.5s ease-in-out 0s;
@@ -9803,17 +9803,19 @@ textarea.parsley-error {
   opacity: 1;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 #app-viewport .navbar-wrapper {
-  border-bottom: 2px solid #6334e3;
+  border-bottom: 2px solid #004677;
+  background-color: #004677;
+  color: #ffffff;
 }
-/* line 23, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 #app-viewport .navbar-wrapper .icon-bar {
   background-color: #000000;
 }
-/* line 26, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 #app-viewport .navbar-wrapper .navbar-brand, #app-viewport .navbar-wrapper .navbar-nav a, #app-viewport .navbar-wrapper #ptap-footer ul li a, #ptap-footer ul li #app-viewport .navbar-wrapper a {
-  color: black;
+  color: #ffffff;
 }
 
 /* line 36, ../sass/screen.scss */
@@ -9832,7 +9834,7 @@ textarea.parsley-error {
 }
 /* line 43, ../sass/screen.scss */
 #form-box-1 .box-wrapper, #form-box-2 .box-wrapper, #form-box-3 .box-wrapper, #form-box-4 .box-wrapper, #form-box-5 .box-wrapper {
-  border-top: 5px solid #4a75e6;
+  border-top: 5px solid #E6293C;
   border-bottom: 1px solid lightgray;
   border-left: 1px solid lightgray;
   border-right: 1px solid lightgray;
@@ -9850,7 +9852,7 @@ textarea.parsley-error {
 }
 /* line 55, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-close button, #form-box-2 .box-wrapper .form-close button, #form-box-3 .box-wrapper .form-close button, #form-box-4 .box-wrapper .form-close button, #form-box-5 .box-wrapper .form-close button {
-  background-color: #4a75e6;
+  background-color: #E6293C;
   border-radius: 0;
   font-size: 2em;
   -moz-transition: all 1s ease-in-out 0s;
@@ -9861,7 +9863,7 @@ textarea.parsley-error {
 }
 /* line 60, ../sass/screen.scss */
 #form-box-1 .box-wrapper .form-close button:hover, #form-box-2 .box-wrapper .form-close button:hover, #form-box-3 .box-wrapper .form-close button:hover, #form-box-4 .box-wrapper .form-close button:hover, #form-box-5 .box-wrapper .form-close button:hover {
-  background-color: #6086e9;
+  background-color: #e94051;
   color: #252525;
 }
 /* line 66, ../sass/screen.scss */
@@ -9908,7 +9910,7 @@ textarea.parsley-error {
   -webkit-transition: all 1s ease-in-out;
   -webkit-transition-delay: 0s;
   transition: all 1s ease-in-out 0s;
-  background-color: #4dd7fa;
+  background-color: #6699CC;
   color: #ffffff;
   font-size: 2em;
   padding-top: 20px;
@@ -9918,7 +9920,7 @@ textarea.parsley-error {
 }
 /* line 107, ../sass/screen.scss */
 #form-box-1 .form-submit .form-check .btn:hover, #form-box-2 .form-submit .form-check .btn:hover, #form-box-3 .form-submit .form-check .btn:hover, #form-box-4 .form-submit .form-check .btn:hover, #form-box-5 .form-submit .form-check .btn:hover {
-  background-color: #07c4f4;
+  background-color: #3973ac;
   -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
@@ -9928,54 +9930,54 @@ textarea.parsley-error {
   display: none;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 #app-tabs {
   margin-bottom: 50px;
 }
-/* line 132, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 #app-tabs .wizard {
   margin: 20px auto;
   background: #fff;
 }
-/* line 135, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 #app-tabs .wizard.nav-tabs {
   position: relative;
   margin: 40px auto;
   margin-bottom: 0;
   border-bottom-color: #e0e0e0;
 }
-/* line 141, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 #app-tabs .wizard > div.wizard-inner {
   position: relative;
 }
-/* line 146, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 #app-tabs .wizard .nav-tabs > li.active > a {
   color: #555555;
   cursor: default;
   border: 0;
   border-bottom-color: transparent;
 }
-/* line 151, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 #app-tabs .wizard .nav-tabs > li.active > a:hover, #app-tabs .wizard .nav-tabs > li.active > a:focus {
   color: #555555;
   cursor: default;
   border: 0;
   border-bottom-color: transparent;
 }
-/* line 161, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 #app-tabs .wizard li.active span.round-tab {
   background: #fff;
-  border: 2px solid #059EF7;
-}
-/* line 166, ../sass/screen.scss */
-#app-tabs .wizard li.active span.round-tab i {
-  color: #5bc0de;
+  border: 2px solid #004677;
 }
 /* line 170, ../sass/screen.scss */
+#app-tabs .wizard li.active span.round-tab i {
+  color: red;
+}
+/* line 174, ../sass/screen.scss */
 #app-tabs .wizard .nav-tabs > li {
   width: 15%;
 }
-/* line 173, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 #app-tabs .wizard .nav-tabs a {
   width: 70px;
   height: 70px;
@@ -9983,11 +9985,11 @@ textarea.parsley-error {
   border-radius: 100%;
   padding: 0;
 }
-/* line 179, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 #app-tabs .wizard .nav-tabs a:hover {
   background: transparent;
 }
-/* line 185, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #app-tabs .wizard li:after {
   content: " ";
   position: absolute;
@@ -9996,10 +9998,10 @@ textarea.parsley-error {
   margin: 0 auto;
   bottom: 0px;
   border: 5px solid transparent;
-  border-bottom-color: #059EF7;
+  border-bottom-color: #004677;
   transition: 0.1s ease-in-out;
 }
-/* line 198, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #app-tabs .wizard li.active:after {
   content: " ";
   position: absolute;
@@ -10008,18 +10010,18 @@ textarea.parsley-error {
   margin: 0 auto;
   bottom: 0px;
   border: 10px solid transparent;
-  border-bottom-color: #059EF7;
+  border-bottom-color: #004677;
 }
-/* line 209, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #app-tabs .wizard .tab-pane {
   position: relative;
   padding-top: 50px;
 }
-/* line 213, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 #app-tabs .wizard h3 {
   margin-top: 0;
 }
-/* line 217, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 #app-tabs .connecting-line {
   height: 2px;
   background: #e0e0e0;
@@ -10031,7 +10033,7 @@ textarea.parsley-error {
   top: 50%;
   z-index: 1;
 }
-/* line 228, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 #app-tabs span.round-tab {
   width: 70px;
   height: 70px;
@@ -10046,36 +10048,36 @@ textarea.parsley-error {
   text-align: center;
   font-size: 25px;
 }
-/* line 241, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 #app-tabs span.round-tab i {
   color: #555555;
 }
-/* line 244, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 #app-tabs span.round-tab:hover {
   color: #333;
   border: 2px solid #333;
 }
 
 @media (max-width: 585px) {
-  /* line 252, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   .wizard {
     width: 90%;
     height: auto !important;
   }
-  /* line 257, ../sass/screen.scss */
+  /* line 262, ../sass/screen.scss */
   .wizard .nav-tabs > li a {
     width: 50px;
     height: 50px;
     line-height: 50px;
   }
-  /* line 264, ../sass/screen.scss */
+  /* line 269, ../sass/screen.scss */
   .wizard li.active:after {
     content: " ";
     position: absolute;
     left: 35%;
   }
 
-  /* line 270, ../sass/screen.scss */
+  /* line 275, ../sass/screen.scss */
   span.round-tab {
     font-size: 16px;
     width: 50px;
@@ -10083,11 +10085,13 @@ textarea.parsley-error {
     line-height: 50px;
   }
 }
-/* line 278, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 #ptap-footer {
-  border-top: 2px solid #6334e3;
+  border-top: 3px solid red;
+  background: #004677;
+  color: #ffffff;
 }
-/* line 281, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 #ptap-footer ul li {
   display: inline-block;
   vertical-align: middle;
@@ -10095,11 +10099,48 @@ textarea.parsley-error {
   *zoom: 1;
   *display: inline;
 }
-/* line 283, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 #ptap-footer ul li a {
-  color: #000000;
+  color: #ffffff;
 }
-/* line 286, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 #ptap-footer ul li a.hover {
   cursor: pointer;
+}
+
+/* line 301, ../sass/screen.scss */
+.h4-heading {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 0 solid;
+  border-bottom-width: 1px;
+  color: #004677;
+  text-indent: -1px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 316, ../sass/screen.scss */
+.checkbox {
+  margin: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 0 solid;
+  border-width: 1px;
+  color: #7a7a7a;
+}
+
+/* line 325, ../sass/screen.scss */
+.wizard-width {
+  width: 100px !important;
+}
+
+/* line 329, ../sass/screen.scss */
+.disabled-input {
+  background-color: #004677 !important;
+  color: white !important;
 }

@@ -3,6 +3,15 @@
     var app = {
 
         init: function() {
+
+            //window.open("URL", "mywindow", "status=1,toolbar=0");
+
+            window.history.forward();
+
+            function noBack() {
+                window.history.forward();
+            }
+
             $('.closer ').click(app.toggleForm);
             // $('.phone-us').mask("(999) 999-9999");
             //Launch accordion
@@ -28,6 +37,7 @@
 
                 //Gloabl
                 app.parseForm = $(this).attr('data');
+                app.currencyFormatting(app.parseForm);
 
                 //Get Attr
                 var submitAttr = $(this).attr('data'),
@@ -38,6 +48,7 @@
 
                 //Submit form
                 app.post(formId, submitAttr, app.projectId);
+
             });
 
         },
@@ -321,18 +332,24 @@
                 $.post(url, $(form).serialize());
             } else {
                 $(form).parsley().validate();
-                $.notify({
-                    icon: 'glyphicon glyphicon-warning-sign',
-                    title: 'We found some issues on this page!',
-                    message: 'Please fix all errors highlighted in red',
-                    animate: {
-                        enter: 'animated fadeInDown',
-                        exit: 'animated fadeOutUp'
-                    }
-                }, {
-                    // settings
-                    type: 'danger'
-                });
+                var message = 'Please fix all errors highlighted in red';
+                var title = 'We found some issues on this page!';
+                var type = 'danger';
+
+                // $.notify({
+                //     icon: 'glyphicon glyphicon-warning-sign',
+                //     title: 'We found some issues on this page!',
+                //     message: 'Please fix all errors highlighted in red',
+                //     animate: {
+                //         enter: 'animated fadeInDown',
+                //         exit: 'animated fadeOutUp'
+                //     }
+                // }, {
+                //     // settings
+                //     type: 'danger'
+                // });
+
+                app.notify(title, message, type);
             }
 
             // $(form).parsley().on('form:success', function() {
@@ -547,7 +564,114 @@
             $('.phone-us').mask("(999) 999-9999");
             $('.date').mask("99/9999");
 
+        },
+        currencyFormatting: function(form) {
+            console.log(form);
+            //Currency formatting
+            // Format while typing & warn on decimals entered, 2 decimal places
+            if (form === 'update3a') {
+                $('#network_additionalfunds').formatCurrency();
+
+                $('#pms_grantamount').formatCurrency();
+                $('#pms_localcontribution').formatCurrency();
+                $('#pms_additionalfunds').formatCurrency();
+                $('#pms_totalprojectcost').formatCurrency();
+                $('#npt_estimatedcost').formatCurrency();
+                $('#npt_grantamount').formatCurrency();
+                $('#npt_localcontribution').formatCurrency();
+                $('#npt_additionalfunds').formatCurrency();
+                $('#npt_totalprojectcost').formatCurrency();
+                $('#pdc_estimatedcost').formatCurrency();
+                $('#pdc_grantamount').formatCurrency();
+                $('#pdc_localcontribution').formatCurrency();
+                $('#pdc_additionalfunds').formatCurrency();
+                $('#pdc_totalprojectcost').formatCurrency();
+            } else if (form === 'update3b') {
+                $('#option2_estimatedcost').formatCurrency();
+
+                $('#pms_grantamount').formatCurrency();
+                $('#pms_localcontribution').formatCurrency();
+                $('#pms_additionalfunds').formatCurrency();
+                $('#pms_totalprojectcost').formatCurrency();
+                $('#npt_estimatedcost').formatCurrency();
+                $('#npt_grantamount').formatCurrency();
+                $('#npt_localcontribution').formatCurrency();
+                $('#npt_additionalfunds').formatCurrency();
+                $('#npt_totalprojectcost').formatCurrency();
+                $('#pdc_estimatedcost').formatCurrency();
+                $('#pdc_grantamount').formatCurrency();
+                $('#pdc_localcontribution').formatCurrency();
+                $('#pdc_additionalfunds').formatCurrency();
+                $('#pdc_totalprojectcost').formatCurrency();
+            } else if (form === 'update3c') {
+                $('#option3_estimatedcost').formatCurrency();
+
+                $('#pms_grantamount').formatCurrency();
+                $('#pms_localcontribution').formatCurrency();
+                $('#pms_additionalfunds').formatCurrency();
+                $('#pms_totalprojectcost').formatCurrency();
+                $('#npt_estimatedcost').formatCurrency();
+                $('#npt_grantamount').formatCurrency();
+                $('#npt_localcontribution').formatCurrency();
+                $('#npt_additionalfunds').formatCurrency();
+                $('#npt_totalprojectcost').formatCurrency();
+                $('#pdc_estimatedcost').formatCurrency();
+                $('#pdc_grantamount').formatCurrency();
+                $('#pdc_localcontribution').formatCurrency();
+                $('#pdc_additionalfunds').formatCurrency();
+                $('#pdc_totalprojectcost').formatCurrency();
+            }
+        },
+
+        notify: function(title, message, type) {
+            $.notify({
+                icon: 'glyphicon glyphicon-warning-sign',
+                title: title,
+                message: message
+                    // url: 'Enter url here',
+                    // target: '_blank'
+
+            }, {
+                // settings
+                timer: 2000,
+                type: type,
+                animate: {
+                    enter: 'animated fadeInDown',
+                    exit: 'animated fadeOutUp'
+                }
+                // element: 'body',
+                // position: null,
+                // allow_dismiss: true,
+                // newest_on_top: false,
+                // showProgressbar: false,
+                // placement: {
+                //     from: "top",
+                //     align: "right"
+                // },
+                // offset: 20,
+                // spacing: 10,
+                // z_index: 1031,
+                // delay: 5000,
+                // url_target: '_blank',
+                // mouse_over: null,
+                // onShow: null,
+                // onShown: null,
+                // onClose: null,
+                // onClosed: null,
+                // icon_type: 'class',
+                // template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                //     '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+                //     '<span data-notify="icon"></span> ' +
+                //     '<span data-notify="title">{1}</span> ' +
+                //     '<span data-notify="message">{2}</span>' +
+                //     '<div class="progress" data-notify="progressbar">' +
+                //     '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                //     '</div>' +
+                //     '<a href="{3}" target="{4}" data-notify="url"></a>' +
+                //     '</div>'
+            });
         }
+
 
     };
     app.init();

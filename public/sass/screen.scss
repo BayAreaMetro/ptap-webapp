@@ -12,260 +12,265 @@
 @import "_app-variables";
 @import "_overrides";
 @import "_parsley";
-
 //Landing
-#app-viewport{
-	section{
-		
-	}
-	.navbar-wrapper{
-		border-bottom: 2px solid $mainColor;
-		.icon-bar{
-			background-color: #000000;
-		}
-		.navbar-brand{
-			color: black;
-		}
-		.navbar-nav{
-			a{
-				@extend .navbar-brand;
-			}
-		}
-	}
+#app-viewport {
+    section {}
+    .navbar-wrapper {
+        border-bottom: 2px solid $mainColor;
+        background-color: $mainColor;
+        color: #ffffff;
+        .icon-bar {
+            background-color: #000000;
+        }
+        .navbar-brand {
+            color: #ffffff;
+        }
+        .navbar-nav {
+            a {
+                @extend .navbar-brand;
+            }
+        }
+    }
 }
-#form-box-1{
-	height: 600px;
-	overflow: hidden;
-	@include single-transition(all, 1s, ease-in-out, 0s);
-	&.notActive{
-		height:60px;
-	}
-	.box-wrapper{
-		border:{
-			top: 5px solid $form-border;
-			bottom: 1px solid lightgray;
-			left: 1px solid lightgray;
-			right: 1px solid lightgray;
-		}
-		height: 500px;
-		padding-right: 0;
-		@include single-transition(all, 1s, ease-in-out, 0s);
-		.form-close{
-			color: #ffffff;
-			button{
-				background-color: $form-border;
-				border-radius: 0;
-				font-size: 2em;
-				@include single-transition(all, 1s, ease-in-out, 0s);
-				&:hover{
-					background-color: lighten($form-border, 5%);
-					color: #252525;
-				}
-			}
-		}
-		.form-box-header{
-			text-align: center;
-			width: 80%;
-			margin:{
-				left: -100px;
-				top: 10px;
-			}
-			p{
-				font-size: 2em;
-				color: $form-headers;
-			}
-		}
-		.form-wrapper{
-			height: 400px;
-			overflow: scroll;
-		}
-		&.notActive{
-			height: 60px;
-			overflow: hidden;
-		}
-	}
-	.form-submit{
-		margin:{
-			top: 450px;
-		}
-		.form-check{
-			position: absolute;
-			margin-left: -50px;
-			.btn{
-				@include border-radius(50px);
-				@include single-box-shadow(10px, 10px, 10px, -6px, rgba(0,0,0,0.40));
-				@include single-transition(all, 1s, ease-in-out, 0s);
-				background-color: $success;
-				color:#ffffff;
-				font-size: 2em;
-				padding:{
-					top: 20px;
-					bottom: 20px;
-					left: 30px;
-					right: 30px
-				}
-				&:hover{
-					background-color: darken($success, 15%);
-					@include single-box-shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0.40));
-				}
-			}
-		}
-		&.notActive{
-			display: none;
-		}
-	}
+
+#form-box-1 {
+    height: 600px;
+    overflow: hidden;
+    @include single-transition(all, 1s, ease-in-out, 0s);
+    &.notActive {
+        height: 60px;
+    }
+    .box-wrapper {
+        border: {
+            top: 5px solid $form-border;
+            bottom: 1px solid lightgray;
+            left: 1px solid lightgray;
+            right: 1px solid lightgray;
+        }
+        height: 500px;
+        padding-right: 0;
+        @include single-transition(all, 1s, ease-in-out, 0s);
+        .form-close {
+            color: #ffffff;
+            button {
+                background-color: $form-border;
+                border-radius: 0;
+                font-size: 2em;
+                @include single-transition(all, 1s, ease-in-out, 0s);
+                &:hover {
+                    background-color: lighten($form-border, 5%);
+                    color: #252525;
+                }
+            }
+        }
+        .form-box-header {
+            text-align: center;
+            width: 80%;
+            margin: {
+                left: -100px;
+                top: 10px;
+            }
+            p {
+                font-size: 2em;
+                color: $form-headers;
+            }
+        }
+        .form-wrapper {
+            height: 400px;
+            overflow: scroll;
+        }
+        &.notActive {
+            height: 60px;
+            overflow: hidden;
+        }
+    }
+    .form-submit {
+        margin: {
+            top: 450px;
+        }
+        .form-check {
+            position: absolute;
+            margin-left: -50px;
+            .btn {
+                @include border-radius(50px);
+                @include single-box-shadow(10px, 10px, 10px, -6px, rgba(0, 0, 0, 0.40));
+                @include single-transition(all, 1s, ease-in-out, 0s);
+                background-color: $success;
+                color: #ffffff;
+                font-size: 2em;
+                padding: {
+                    top: 20px;
+                    bottom: 20px;
+                    left: 30px;
+                    right: 30px
+                }
+                &:hover {
+                    background-color: darken($success, 15%);
+                    @include single-box-shadow(0px, 0px, 0px, 0px, rgba(0, 0, 0, 0.40));
+                }
+            }
+        }
+        &.notActive {
+            display: none;
+        }
+    }
 }
-#form-box-2{
-	@extend #form-box-1
+
+#form-box-2 {
+    @extend #form-box-1
 }
-#form-box-3{
-	@extend #form-box-1
+
+#form-box-3 {
+    @extend #form-box-1
 }
-#form-box-4{
-	@extend #form-box-1
+
+#form-box-4 {
+    @extend #form-box-1
 }
-#form-box-5{
-	@extend #form-box-1
+
+#form-box-5 {
+    @extend #form-box-1
 }
-#app-tabs{
-	margin-bottom: 50px;
-	.wizard {
-    	margin: 20px auto;
-		background: #fff;
-	    &.nav-tabs {
-	        position: relative;
-	        margin: 40px auto;
-	        margin-bottom: 0;
-	        border-bottom-color: #e0e0e0;
-	    }
-	    & > div.wizard-inner {
-	        position: relative;
-	    }
-	    .nav-tabs {
-		    > li.active {
-			    > a{
-				    color: #555555;
-				    cursor: default;
-				    border: 0;
-				    border-bottom-color: transparent;
-				    &:hover, &:focus{
-						color: #555555;
-					    cursor: default;
-					    border: 0;
-					    border-bottom-color: transparent; 
-				    }
-			    }
-			    
-		    }
-	    }
-	    li.active span.round-tab {
-		    background: #fff;
-		    border: 2px solid $submit;
-		    
-		}
-		li.active span.round-tab i{
-		    color: #5bc0de;
-		}
-		.nav-tabs{ 
-			> li {
-		    	width: 15%;
-		    }
-		    a{
-			    width: 70px;
-			    height: 70px;
-			    margin: 20px auto;
-			    border-radius: 100%;
-			    padding: 0;
-			    &:hover{
-				    background: transparent;
-			    }
-		    }
-		}
-		li{
-			&:after {
-			    content: " ";
-			    position: absolute;
-			    left: 46%;
-			    opacity: 0;
-			    margin: 0 auto;
-			    bottom: 0px;
-			    border: 5px solid transparent;
-			    border-bottom-color: $submit;
-			    transition: 0.1s ease-in-out;
-			}
-		}
-		li{
-			&.active:after {
-			    content: " ";
-			    position: absolute;
-			    left: 46%;
-			    opacity: 1;
-			    margin: 0 auto;
-			    bottom: 0px;
-			    border: 10px solid transparent;
-			    border-bottom-color: $submit;
-			}	
-		}
-		.tab-pane {
-		    position: relative;
-		    padding-top: 50px;
-		}
-		h3 {
-		    margin-top: 0;
-		}
-	}
-	.connecting-line {
-	    height: 2px;
-	    background: #e0e0e0;
-	    position: absolute;
-	    width: 70%;
-	    margin: 0 auto;
-	    left: 0;
-	    right: 10%;
-	    top: 50%;
-	    z-index: 1;
-	}
-	span.round-tab {
-	    width: 70px;
-	    height: 70px;
-	    line-height: 70px;
-	    display: inline-block;
-	    border-radius: 100px;
-	    background: #fff;
-	    border: 2px solid #e0e0e0;
-	    z-index: 2;
-	    position: absolute;
-	    left: 0;
-	    text-align: center;
-	    font-size: 25px;
-	    i{
-		  color:#555555;  
-	    }
-	    &:hover{
-		    color: #333;
-			border: 2px solid #333;
-	    }
-	}
+
+#app-tabs {
+    margin-bottom: 50px;
+    .wizard {
+        margin: 20px auto;
+        background: #fff;
+        &.nav-tabs {
+            position: relative;
+            margin: 40px auto;
+            margin-bottom: 0;
+            border-bottom-color: #e0e0e0;
+        }
+        & > div.wizard-inner {
+            position: relative;
+        }
+        .nav-tabs {
+            > li.active {
+                > a {
+                    color: #555555;
+                    cursor: default;
+                    border: 0;
+                    border-bottom-color: transparent;
+                    &:hover,
+                    &:focus {
+                        color: #555555;
+                        cursor: default;
+                        border: 0;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+        li.active span.round-tab {
+            background: #fff;
+            border: 2px solid $submit;
+        }
+        li.active span.round-tab i {
+            color: red;
+        }
+        .nav-tabs {
+            > li {
+                width: 15%;
+            }
+            a {
+                width: 70px;
+                height: 70px;
+                margin: 20px auto;
+                border-radius: 100%;
+                padding: 0;
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+        li {
+            &:after {
+                content: " ";
+                position: absolute;
+                left: 46%;
+                opacity: 0;
+                margin: 0 auto;
+                bottom: 0px;
+                border: 5px solid transparent;
+                border-bottom-color: $submit;
+                transition: 0.1s ease-in-out;
+            }
+        }
+        li {
+            &.active:after {
+                content: " ";
+                position: absolute;
+                left: 46%;
+                opacity: 1;
+                margin: 0 auto;
+                bottom: 0px;
+                border: 10px solid transparent;
+                border-bottom-color: $submit;
+            }
+        }
+        .tab-pane {
+            position: relative;
+            padding-top: 50px;
+        }
+        h3 {
+            margin-top: 0;
+        }
+    }
+    .connecting-line {
+        height: 2px;
+        background: #e0e0e0;
+        position: absolute;
+        width: 70%;
+        margin: 0 auto;
+        left: 0;
+        right: 10%;
+        top: 50%;
+        z-index: 1;
+    }
+    span.round-tab {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        display: inline-block;
+        border-radius: 100px;
+        background: #fff;
+        border: 2px solid #e0e0e0;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        font-size: 25px;
+        i {
+            color: #555555;
+        }
+        &:hover {
+            color: #333;
+            border: 2px solid #333;
+        }
+    }
 }
+
 //Same but media!
-@media( max-width : 585px ) {
+@media( max-width: 585px) {
     .wizard {
         width: 90%;
         height: auto !important;
-        .nav-tabs{
-	        > li{
-		        a{
-			        width: 50px;
-			        height: 50px;
-			        line-height: 50px;
-		        }
-	        }
+        .nav-tabs {
+            > li {
+                a {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                }
+            }
         }
         li.active:after {
-	        content: " ";
-	        position: absolute;
-	        left: 35%;
-	    }
+            content: " ";
+            position: absolute;
+            left: 35%;
+        }
     }
     span.round-tab {
         font-size: 16px;
@@ -275,18 +280,53 @@
     }
 }
 
-#ptap-footer{
-	border-top: 2px solid $mainColor;
-	ul{
-		li{
-			@include inline-block;
-			a{
-				@extend .navbar-brand;
-				color: #000000;
-				&.hover{
-					cursor: pointer;
-				}
-			}
-		}
-	}
+#ptap-footer {
+    border-top: 3px solid red;
+    background: $mainColor;
+    color: #ffffff;
+    ul {
+        li {
+            @include inline-block;
+            a {
+                @extend .navbar-brand;
+                color: #ffffff;
+                &.hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.h4-heading {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 0 solid;
+    border-bottom-width: 1px;
+    color: $mainColor;
+    text-indent: -1px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.checkbox {
+    margin: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 0 solid;
+    border-width: 1px;
+    color: $form-headers;
+}
+
+.wizard-width {
+    width: 100px !important;
+}
+
+.disabled-input {
+    background-color: $mainColor !important;
+    color: white !important;
 }

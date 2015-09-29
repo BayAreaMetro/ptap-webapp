@@ -2,38 +2,10 @@
 
 <head>
     <% include ../partials/head %>
-        <style type="text/css">
-        .h4-heading {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-            margin: 4px;
-            padding: 12px;
-            margin-bottom: 10px;
-            border: 0 solid;
-            border-bottom-width: 1px;
-            color: #6334E3;
-            text-indent: -1px;
-            -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-        }
-        
-        .checkbox {
-            margin: 4px;
-            padding: 12px;
-            margin-bottom: 10px;
-            border: 0 solid;
-            border-width: 1px;
-            color: #959595;
-        }
-        
-        .wizard-width {
-            width: 100px !important;
-        }
-        </style>
+
 </head>
 
-<body>
+<body onload="noBack(); onpageshow="if (event.persisted) noBack();" onunload="">
     <div id="app-viewport">
         <% include ../partials/nav %>
             <section id="app-tabs" class="container">
@@ -42,56 +14,56 @@
                         <!-- <div class="connecting-line"></div> -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active wizard-width">
-                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Jurisdiction General Information">
                                     <span class="round-tab">
 	                                <i class="">1</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled wizard-width">
-                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Pavement Management System Information">
                                     <span class="round-tab">
 	                                <i class="">2</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled wizard-width ">
-                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Major Project Selection">
                                     <span class="round-tab">
 	                                <i class="">3</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled hidden wizard-width " id="li-3a">
-                                <a href="#step3a" data-toggle="tab" aria-controls="step3a" role="tab" title="Step 3a">
+                                <a href="#step3a" data-toggle="tab" aria-controls="step3a" role="tab" title="Pavement Management Service">
                                     <span class="round-tab">
 	                                <i class="">3A</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled hidden wizard-width " id="li-3b">
-                                <a href="#step3b" data-toggle="tab" aria-controls="step3b" role="tab" title="Step 3b">
+                                <a href="#step3b" data-toggle="tab" aria-controls="step3b" role="tab" title="Non Pavement Asset Management Project">
                                     <span class="round-tab">
 	                                <i class="">3B</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled hidden wizard-width " id="li-3c">
-                                <a href="#step3c" data-toggle="tab" aria-controls="step3c" role="tab" title="Step 3c">
+                                <a href="#step3c" data-toggle="tab" aria-controls="step3c" role="tab" title="Pavement Design Project">
                                     <span class="round-tab">
 	                                <i class="">3C</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled wizard-width ">
-                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
+                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Project Budget Summary">
                                     <span class="round-tab">
 	                                <i class="">4</i>
 	                            </span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled wizard-width ">
-                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab" title="Step 5">
+                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab" title="Sign and Submit">
                                     <span class="round-tab">
 	                                <i class="">5</i>
 	                            </span>
@@ -224,7 +196,7 @@
                                 </ul> -->
                         </div>
                         <div class="tab-pane" role="tabpanel" id="step5">
-                            <h3>Form 5</h3>
+                            <!-- <h3>Form 5</h3> -->
                             <% include ../partials/form-box-5 %>
                                 <!-- <ul class="list-inline pull-right">
                                     <li>
@@ -270,6 +242,7 @@
     <script src="includes/vendor/jquery.vaccordion.js"></script>
     <script src="includes/vendor/jquery-ui.js"></script>
     <script src="includes/vendor/jquery.maskedinput.js"></script>
+    <script src="includes/vendor/jquery.formatCurrency.js"></script>
     <script src="includes/vendor/uuid.js"></script>
     <script src="includes/vendor/parsley.js"></script>
     <script src="includes/vendor/moment.js"></script>
