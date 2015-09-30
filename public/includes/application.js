@@ -28,6 +28,8 @@
             app.checkboxes();
             app.masking();
 
+            app.notify("Notice", "<br>To Navigate through this application, please use the numbered buttons in the progress bar. Do not use your browser's back button!","danger");
+
         },
 
         findAndSubmit: function() {
@@ -329,6 +331,7 @@
 
             app.isValid = $(form).parsley().isValid();
             if (app.isValid === true) {
+                console.log($(form).serialize());
                 $.post(url, $(form).serialize());
             } else {
                 $(form).parsley().validate();
@@ -336,18 +339,6 @@
                 var title = 'We found some issues on this page!';
                 var type = 'danger';
 
-                // $.notify({
-                //     icon: 'glyphicon glyphicon-warning-sign',
-                //     title: 'We found some issues on this page!',
-                //     message: 'Please fix all errors highlighted in red',
-                //     animate: {
-                //         enter: 'animated fadeInDown',
-                //         exit: 'animated fadeOutUp'
-                //     }
-                // }, {
-                //     // settings
-                //     type: 'danger'
-                // });
 
                 app.notify(title, message, type);
             }
@@ -638,16 +629,16 @@
                 animate: {
                     enter: 'animated fadeInDown',
                     exit: 'animated fadeOutUp'
-                }
+                },
                 // element: 'body',
                 // position: null,
                 // allow_dismiss: true,
                 // newest_on_top: false,
                 // showProgressbar: false,
-                // placement: {
-                //     from: "top",
-                //     align: "right"
-                // },
+                placement: {
+                    from: "top",
+                    align: "center"
+                }
                 // offset: 20,
                 // spacing: 10,
                 // z_index: 1031,
