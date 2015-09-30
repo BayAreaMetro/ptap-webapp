@@ -256,7 +256,7 @@ exports.update5 = function(req, res, next) {
         email.setFrom('chohorst@mtc.ca.gov');
         email.setFromName('Christina Hohorst');
         email.replyto = "mziyam@mtc.ca.gov";
-        // email.html = 'Thank you for submitting your application. Please save this email or print a copy for your records!<br><br> If you have any questions of concerns, please contact Christina Hohorst at chohorst@mtc.ca.gov';
+        email.html = 'Thank you for your application. Below please find a summary of your application:';
 
         // add filter settings one at a time
         email.addFilter('templates', 'enable', 1);
