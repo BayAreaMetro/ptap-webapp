@@ -1,730 +1,144 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title></title>
-    <style type="text/css">
-    / body {
-        padding: 0;
-        margin: 0;
-    }
-    
-    html {
-        -webkit-text-size-adjust: none;
-        -ms-text-size-adjust: none;
-    }
-    
-    @media only screen and (max-device-width: 680px),
-    only screen and (max-width: 680px) {
-        *[class="table_width_100"] {
-            width: 96% !important;
-        }
-        *[class="border-right_mob"] {
-            border-right: 1px solid #dddddd;
-        }
-        *[class="mob_100"] {
-            width: 100% !important;
-        }
-        *[class="mob_center"] {
-            text-align: center !important;
-        }
-        *[class="mob_center_bl"] {
-            float: none !important;
-            display: block !important;
-            margin: 0px auto;
-        }
-        .iage_footer a {
-            text-decoration: none;
-            color: #929ca8;
-        }
-        img.mob_display_none {
-            width: 0px !important;
-            height: 0px !important;
-            display: none !important;
-        }
-        img.mob_width_50 {
-            width: 40% !important;
-            height: auto !important;
-        }
-    }
-    
-    .table_width_100 {
-        width: 680px;
-    }
-    </style>
+    <link href="http://ptap-production.elasticbeanstalk.com/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <div align="center" class="notification" id="mailsub">
-        <table border="0" cellpadding="0" cellspacing="0" style="min-width: 320px;" width="100%">
-            <tbody>
-                <tr>
-                    <td align="center" bgcolor="#eff3f8">
-                        <table border="0" cellpadding="0" cellspacing="0" class="table_width_100" style="max-width: 680px; min-width: 300px;" width="100%">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <!-- padding -->
-                                        <div style="height: 80px; line-height: 80px; font-size: 10px;">&nbsp;</div>
-                                    </td>
-                                </tr>
-                                <!--header -->
-                                <tr>
-                                    <td align="center" bgcolor="#ffffff">
-                                        <!-- padding -->
-                                        <div style="height: 30px; line-height: 30px; font-size: 10px;">&nbsp;</div>
-                                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="left">
-                                                        <!-- 
-
-                Item -->
-                                                        <div class="mob_center_bl" style="float: left; display: inline-block; width: 115px;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_center" style="border-collapse: collapse;" width="115">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="left" valign="middle">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 20px; line-height: 20px; font-size: 10px;">&nbsp;</div>
-                                                                            <table border="0" cellpadding="0" cellspacing="0" width="115">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td align="left" class="mob_center" valign="top">
-                                                                                            <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 13px;" target="_blank">
-                                                                                                <font color="#596167" face="Arial, Helvetica, sans-seri; font-size: 13px;" size="3"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%22115%22%2C%22height%22%3A%2219%22%2C%22alt_text%22%3A%22Metronic%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/logo.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Metronic" border="0" height="19" src="http://artloglab.com/metromail/images/logo.gif" style="display: block; width: 115px; height: 19px;" width="115" /></span></font>
-                                                                                            </a>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <!-- Item END-->
-                                                        <!--[if gte mso 10]>
-                    </td>
-                    <td align="right">
-                <![endif]-->
-                                                        <!-- 
-
-                Item -->
-                                                        <div class="mob_center_bl" style="float: right; display: inline-block; width: 88px;">
-                                                            <table align="right" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;" width="88">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="right" valign="middle">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 20px; line-height: 20px; font-size: 10px;">&nbsp;</div>
-                                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td align="right">
-                                                                                            <!--social -->
-                                                                                            <div class="mob_center_bl" style="width: 88px;">
-                                                                                                <table border="0" cellpadding="0" cellspacing="0">
-                                                                                                    <tbody>
-                                                                                                        <tr>
-                                                                                                            <td align="center" style="line-height: 19px;" width="30">
-                                                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%2210%22%2C%22height%22%3A%2219%22%2C%22alt_text%22%3A%22Facebook%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/facebook.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Facebook" border="0" height="19" src="http://artloglab.com/metromail/images/facebook.gif" style="display: block; width: 10px; height: 19px;" width="10" /></span></font>
-                                                                                                                </a>
-                                                                                                            </td>
-                                                                                                            <td align="center" style="line-height: 19px;" width="39">
-                                                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%2219%22%2C%22height%22%3A%2216%22%2C%22alt_text%22%3A%22Twitter%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/twitter.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Twitter" border="0" height="16" src="http://artloglab.com/metromail/images/twitter.gif" style="display: block; width: 19px; height: 16px;" width="19" /></span></font>
-                                                                                                                </a>
-                                                                                                            </td>
-                                                                                                            <td align="right" style="line-height: 19px;" width="29">
-                                                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%2219%22%2C%22height%22%3A%2219%22%2C%22alt_text%22%3A%22Dribbble%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/dribbble.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Dribbble" border="0" height="19" src="http://artloglab.com/metromail/images/dribbble.gif" style="display: block; width: 19px; height: 19px;" width="19" /></span></font>
-                                                                                                                </a>
-                                                                                                            </td>
-                                                                                                        </tr>
-                                                                                                    </tbody>
-                                                                                                </table>
-                                                                                            </div>
-                                                                                            <!--social END-->
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <!-- Item END-->
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- padding -->
-                                        <div style="height: 50px; line-height: 50px; font-size: 10px;">&nbsp;</div>
-                                    </td>
-                                </tr>
-                                <!--header END-->
-                                <!--content 1 -->
-                                <tr>
-                                    <td align="center" bgcolor="#fbfcfd">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="center">
-                                                        <!-- padding -->
-                                                        <div style="height: 60px; line-height: 60px; font-size: 10px;">&nbsp;</div>
-                                                        <div style="line-height: 44px;">
-                                                            <font color="#57697e" face="Arial, Helvetica, sans-serif" size="5" style="font-size: 34px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 34px; color: #57697e;">Thank you for your application! </span></font>
-                                                        </div>
-                                                        <!-- padding -->
-                                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center">
-                                                        <div style="line-height: 24px;">
-                                                            <p>
-                                                                <font color="#57697e" face="Arial, Helvetica, sans-serif" size="4" style="font-size: 15px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #57697e;"><%body%></span></font>
-                                                            </p>
-                                                        </div>
-                                                        <!-- padding -->
-                                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--content 1 END-->
-                                <!--content 2 -->
-                                <tr>
-                                    <td align="center" bgcolor="#ffffff" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #eff2f4;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="94%">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="center">
-                                                        <!-- padding -->
-                                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 14px;">
-                                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Contact Information</a> </strong></font>
-                                                                            </div>
-                                                                            <!-- padding -->
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">First Name: primary_firstname</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Last Name: primary_lastname</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Jurisdiction: jurisdiction</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Street Address: street_address</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">City: city</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Zip: zip</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">State: state</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Position: primary_position</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Phone: primary_phone</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Email: email</span></font>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Staff Attended Training: attended_training</span></font>
-                                                                            </div>
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Last Date Attended: last_user_meeting</span></font>
-                                                                            </div>
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Last Major Inspection: last_major_inspection</span></font>
-                                                                            </div>
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">PMS Cuonsultants: pms_consultants</span></font>
-                                                                            </div>
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Digital Map Format: digitalmap_format</span></font>
-                                                                            </div>
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Linked Basemap: linked_basemap</span></font>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 14px;">
-                                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Street Saver Contact</a> </strong></font>
-                                                                            </div>
-                                                                            <!-- padding -->
-                                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">First Name: streetsaver_firstname</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Last Name: streetsaver_lastname</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Jurisdiction: jurisdiction</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Position: streetsaver_position</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Phone: streetsaver_phone</span></font>
-                                                                            </div>
-                                                                            <div style="line-height: 21px;">
-                                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Email: streetsaver_email</span></font>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <!-- padding -->
-                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Pavement Management System</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Network Centerline Miles: network_centerlinemiles</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Percent of Network: network_totalpercentage</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Miles to be Surveyed: network_milesforsurvey</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Miles Remaining to be surveyed: network_milesremaining</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Additional Funds: network_additionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Percent completed with Additional Funds: network_percentadditionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Street Types: street_types</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Other Description: other_description</span></font>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                   
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Non Pavement Asset Management</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Description: option2_projectdescription</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Total Estimated Cost: option2_estimatedcost</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Additional Funds: option2_additionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Asset Types: option2_assettypes</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Other Description: option2_otherassetdescription</span></font>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <!-- padding -->
-                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 100%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Pavement Design Project</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Description: option3_projectdescription</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Anticipated Construction Date: option3_anticipatedconstructiondate</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Total Estimated Cost: option3_estimatedcost</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Additional Funds: option3_additionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Construction Fully Funded: option3_constructionfullyfunded</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Eligible for Federal Funds: option3_federalaideligible</span></font>
-                                                            </div>
-                                                         
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <!-- Project Summary -->
-                                <tr>
-                                    <td align="center">
-                                        <!-- padding -->
-                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                        <div style="line-height: 14px;">
-                                            <font color="#9E1119" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 18px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #9E1119;"><a href="#1" style="color: #9E1119; text-decoration: none;" target="_blank">Project Summary</a> </strong></font>
-                                        </div>
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Pavement Management System</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Grant Amount: pms_grantamount</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Local Contribution: pms_localcontribution</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Additional Funds: pms_additionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Total Project Cost: pms_totalprojectcost</span></font>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Non Pavement Asset Management</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Grant Amount: streetsaver_firstname</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Total Cost: npt_totalprojectcost</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Additional Funds: npt_additionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Local Contribution: npt_localcontribution</span></font>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <!-- padding -->
-                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Pavement Design Project</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Grant Amount: pdc_totalprojectcost</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Total Cost: pdc_totalprojectcost</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Additional Funds: pdc_additionalfunds</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Local Contribution: pdc_localcontribution</span></font>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <!-- End Project Summary -->
-                                <!-- Signature -->
-                                <tr>
-                                    <td align="center">
-                                        <!-- padding -->
-                                        <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                        
-                                        <div class="mob_100" style="float: left; display: inline-block; width: 50%;">
-                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" style="line-height: 14px; padding: 0 27px;">
-                                                            <!-- padding -->
-                                                            <div style="height: 40px; line-height: 40px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 14px;">
-                                                                <font color="#4db3a4" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><strong style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #4db3a4;"><a href="#1" style="color: #4db3a4; text-decoration: none;" target="_blank">Signature</a> </strong></font>
-                                                            </div>
-                                                            <!-- padding -->
-                                                            <!-- padding -->
-                                                            <div style="height: 18px; line-height: 18px; font-size: 10px;">&nbsp;</div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Full Name: publicworksdirector_fullname</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Title: publicworksdirector_title</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Contact Number: publicworksdirector_contactnumber</span></font>
-                                                            </div>
-                                                            <div style="line-height: 21px;">
-                                                                <font color="#98a7b9" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 14px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #98a7b9;">Application Date: applicationdate</span></font>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        
-                                    </td>
-                                </tr>
-                              
-                                <!-- End Signature -->
-                                <tr>
-                                    <td align="left" bgcolor="#ffffff" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #eff2f4;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="94%">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="center">
-                                                        <div class="mob_100" style="float: left; display: inline-block; width: 25%;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" style="line-height: 14px; padding: 0 24px;">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 30px; line-height: 30px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 14px;">
-                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%22125%22%2C%22height%22%3A29%2C%22alt_text%22%3A%22Evernote%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/evernote.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Evernote" border="0" class="mob_width_50" height="29" src="http://artloglab.com/metromail/images/evernote.gif" style="display: block; width: 125px; height: 29px;" width="125" /></span></font>
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="mob_100" style="float: left; display: inline-block; width: 25%;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" style="line-height: 14px; padding: 0 24px;">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 30px; line-height: 30px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 14px;">
-                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%22107%22%2C%22height%22%3A27%2C%22alt_text%22%3A%22Pinterest%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/pinterest.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Pinterest" border="0" class="mob_width_50" height="27" src="http://artloglab.com/metromail/images/pinterest.gif" style="display: block; width: 107px; height: 27px;" width="107" /></span></font>
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="mob_100" style="float: left; display: inline-block; width: 25%;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" style="line-height: 14px; padding: 0 24px;">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 30px; line-height: 30px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 14px;">
-                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%22103%22%2C%22height%22%3A31%2C%22alt_text%22%3A%22National%20Geographic%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/ng.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="National Geographic" border="0" class="mob_width_50" height="31" src="http://artloglab.com/metromail/images/ng.gif" style="display: block; width: 103px; height: 31px;" width="103" /></span></font>
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="mob_100" style="float: left; display: inline-block; width: 25%;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob_100" style="border-collapse: collapse;" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" style="line-height: 14px; padding: 0 24px;">
-                                                                            <!-- padding -->
-                                                                            <div style="height: 30px; line-height: 30px; font-size: 10px;">&nbsp;</div>
-                                                                            <div style="line-height: 14px;">
-                                                                                <a href="#" style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">
-                                                                                    <font color="#596167" face="Arial, Helvetica, sans-serif" size="2"><span class="sg-image" data-imagelibrary="%7B%22width%22%3A%22116%22%2C%22height%22%3A32%2C%22alt_text%22%3A%22Shopify%22%2C%22alignment%22%3A%22%22%2C%22border%22%3A0%2C%22src%22%3A%22http%3A//artloglab.com/metromail/images/shopify.gif%22%2C%22classes%22%3A%7B%22sg-image%22%3A1%7D%7D" style="float: none; display: inline-block; text-align: left;"><img alt="Shopify" border="0" class="mob_width_50" height="32" src="http://artloglab.com/metromail/images/shopify.gif" style="display: block; width: 116px; height: 32px;" width="116" /></span></font>
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <!-- padding -->
-                                                        <div style="height: 28px; line-height: 28px; font-size: 10px;">&nbsp;</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!--brands END-->
-                                <!--footer -->
-                                <tr>
-                                    <td align="center" bgcolor="#ffffff" class="iage_footer">
-                                        <!-- padding -->
-                                        <div style="height: 80px; line-height: 80px; font-size: 10px;">&nbsp;</div>
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tbody>
-                                                <tr>
-                                                    <td align="center">
-                                                        <font color="#96a5b5" face="Arial, Helvetica, sans-serif" size="3" style="font-size: 13px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #96a5b5;">2015 &copy; Metronic. ALL Rights Reserved. </span></font>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- padding -->
-                                        <div style="height: 30px; line-height: 30px; font-size: 10px;">&nbsp;</div>
-                                    </td>
-                                </tr>
-                                <!--footer END-->
-                                <tr>
-                                    <td>
-                                        <!-- padding -->
-                                        <div style="height: 80px; line-height: 80px; font-size: 10px;">&nbsp;</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!--[if gte mso 10]>
-</td></tr>
-</table>
-<![endif]-->
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top" style="background-color: #004677; color:white;">
+        <div class="container">
+            
+            <!--/.navbar-collapse -->
+            <div style="padding:10px;">
+                Pavement Technical Assistance Program
+                <br> 2017 Application
+            </div>
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container" style="margin-top:100px">
+        <p style="color: #004677; font-size: 20px"><%body%>, Thank you for your application. Below please find a summary of your application below:</p>
+        <!-- Example row of columns -->
+        <div class="row pad-s">
+            <div class="col-md-6">
+                <h4>Primary Contact</h4>
+                <br> Jurisdiction: primary_juridiction
+                <br>
+                <br>Title: primary_title
+                <br> First Name: primary_firstname
+                <br> Last Name: primary_lastname
+                <br> Job Title: primary_position
+                <br> Phone: primary_phone
+                <br> Email Address: primary_email
+                <br> Street Address: street_address
+                <br> Address 2: street_address2
+                <br> City: primary_city
+                <br> Zip: primary_zip
+            </div>
+            <div class="col-md-6">
+                <h4>Streetsaver Contact</h4>
+                <br>Title: streetsaver_title
+                <br> First Name: streetsaver_firstname
+                <br> Last Name: streetsaver_lastname
+                <br> Job Title: streetsaver_position
+                <br> Phone: streetsaver_phone
+                <br> Email Address: streetsaver_email
+            </div>
+        </div>
+        <div class="row pad-s">
+            <div class="col-md-6">
+                <br>Have Staff Attended Training: attended_training
+                <br>Last Meeting Attended: last_user_meeting
+                <br> Last Major MTC Inspection: last_major_inspection
+                <br> List of PMS Consultants: pms_consultants
+                <br> Digital Map of Jurisdiction: digitalmap_format
+                <br> Agency GIS Map Integrated: linked_basemap
+            </div>
+        </div>
+        <div class="row pad-s">
+            <div class="col-md-6">
+                <h4>Pavement Management Service</h4>
+                <br>Network Centerline Miles: network_centerlinemiles
+                <br>% Network to be Surveyed: network_totalpercentage
+                <br> Network Miles that will be Surveyed: network_milesforsurvey
+                <br> Network Miles Remaining to be Inspected: network_milesremaining
+                <br> Additional Funds: network_additionalfunds
+                <br> % Network completed with additional funds: network_percentadditionalfunds
+                <br> Arterials: arterials_check
+                <br> Collectors : collectors_check
+                <br> Residentials: residentials_check
+                <br> Other: othertype
+                <br> Other Description: other_description
+            </div>
+            <div class="col-md-6">
+                <h4>Pavement Management Service</h4>
+                <br>Project Description: option3_projectdescription
+                <br>Anticipated Construction Start Date: option3_anticipatedconstructiondate
+                <br>Total Estimated Cost: option3_estimatedcost
+                <br>Streets Eligible for Federal Aid: option3_federalaideligible
+                <br>Does Construction Phase have committed funding: option3_constructionfullyfunded
+            </div>
+        </div>
+        <div class="row pad-s">
+            <div class="col-md-6">
+                <h4>Non-Pavement Asset Management Project</h4>
+                <br>Project Description: option2_projectdescription
+                <br>Total Estimated Cost: option2_estimatedcost
+                <h5>Asset Types</h5>
+                <br> Signs: signs
+                <br> Storm Drains : stormdrains
+                <br> Curbs: curbs
+                <br> Gutters: gutters
+                <br> Sidewalks: sidewalks
+                <br> Traffic Signals : trafficsignals
+                <br> Residentials: residentials_check
+                <br> Street Lights: streetlights
+                <br> Other: otherasset
+                <br> Other Description: option2_otherassetdescription
+            </div>
+        </div>
+        <div class="row pad-s">
+            <h4>Project Budget Summary</h4>
+            <div class="col-md-4">
+                <h5>Pavement Management Service</h5>
+                <br>Project Grant Amount: pms_grantamount
+                <br>Local Contribution: pms_localcontribution
+                <br> Addtional Funds: pms_additionalfunds
+                <br> Total Cost to Jurisdiction : pms_totalprojectcost
+            </div>
+            <div class="col-md-4">
+                <h5>Non-Pavement Asset Management Projects</h5>
+                <br>Estimated Cost: npt_estimatedcost
+                <br>Projected Grant Amount: npt_grantamount
+                <br> Local Contribution: npt_localcontribution
+                <br> Additional Funds : npt_additionalfunds
+                <br> Total Cost to Jurisdiction : npt_totalprojectcost
+            </div>
+            <div class="col-md-4">
+                <h5>Pavement Design Projects</h5>
+                <br>Estimated Cost: pdc_estimatedcost
+                <br>Projected Grant Amount: pdc_grantamount
+                <br> Local Contirbution: pdc_localcontribution
+                <br> Additonal Funds : pdc_additionalfunds
+                <br> Total Cost to Jurisdiction : pdc_totalprojectcost
+            </div>
+        </div>
+        <div class="row pad-s">
+            <div class="col-md-4">
+                <h4>Signature</h4>
+                <br>Full Name: publicworksdirector_fullname
+                <br>Job Title: publicworksdirector_title
+                <br> Contact Number: publicworksdirector_contactnumber
+                <br> Application Date : applicationdate
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; <a href="http://www.mtc.ca.gov">Metropolitan Transportation Commission 2015</a></p>
+        </footer>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <center><strong>Metropolitan Transportation Commission <a href="http://mtc.ca.gov" target="_blank">PTAP</a></strong></center>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
 </body>
 
 </html>

@@ -222,6 +222,11 @@ exports.update5 = function(req, res, next) {
     var id = req.params.id; //format is localhost:3000/api/application/xxxx-xxxx-xxxxx
     console.log(id);
     console.log(req.body);
+    var publicworksdirector_contactnumber = req.body.publicworksdirector_contactnumber;
+    var publicworksdirector_fullname = req.body.publicworksdirector_fullname;
+    var publicworksdirector_title = req.body.publicworksdirector_title;
+    var applicationdate = new Date();
+
     var emailConfirmation = req.body.emailconfirmation;
     Application.findOneAndUpdate({
         uuid: id
@@ -248,24 +253,28 @@ exports.update5 = function(req, res, next) {
         var email = new sendgrid.Email();
         email.addTo(application.primary_email);
         email.subject = "P-TAP Application";
-        email.from = 'chohorst@mtc.ca.gov';
-        email.text = 'Hi there!';
-        email.html = 'Thank you for submitting your application. Please save this email or print a copy for your records!<br><br> If you have any questions of concerns, please contact Christina Hohorst at chohorst@mtc.ca.gov';
+        email.setFrom('chohorst@mtc.ca.gov');
+        email.setFromName('Christina Hohorst');
+        email.replyto = "mziyam@mtc.ca.gov";
+        // email.html = 'Thank you for submitting your application. Please save this email or print a copy for your records!<br><br> If you have any questions of concerns, please contact Christina Hohorst at chohorst@mtc.ca.gov';
 
         // add filter settings one at a time
         email.addFilter('templates', 'enable', 1);
         email.addFilter('templates', 'template_id', '2e7ce831-0891-47d8-bbd8-c63cf0e90755');
 
         email.setSubstitutions({
+            primary_title: [application.primary_title],
             primary_firstname: [application.primary_firstname],
             primary_lastname: [application.primary_lastname],
             primary_jurisdiction: [application.jurisdcition],
-            primary_streetaddress: [application.street_address],
+            street_address: [application.street_address],
+            street_address2: [application.street_address2],
             primary_city: [application.city],
             primary_zip: [application.zip],
             primary_position: [application.primary_position],
             primary_phone: [application.primary_phone],
             primary_email: [application.primary_email],
+            streetsaver_title: [application.streetsaver_title],
             streetsaver_firstname: [application.streetsaver_firstname],
             streetsaver_lastname: [application.streetsaver_lastname],
             streetsaver_position: [application.streetsaver_position],
@@ -276,12 +285,17 @@ exports.update5 = function(req, res, next) {
             last_major_inspection: [application.last_major_inspection],
             pms_consultants: [application.pms_consultants],
             digitalmap_format: [application.digitalmap_format],
+            linked_basemap: [application.linked_basemap],
             network_centerlinemiles: [application.network_centerlinemiles],
             network_totalpercentage: [application.network_totalpercentage],
             network_milesforsurvey: [application.network_milesforsurvey],
             network_milesremaining: [application.network_milesremaining],
             network_additionalfunds: [application.network_additionalfunds],
             network_percentadditionalfunds: [application.network_percentadditionalfunds],
+            arterials_check: [application.arterials],
+            collectors_check: [application.collectors],
+            residentials_check: [application.residentials],
+            othertype: [application.othertype],
             other_description: [application.other_description],
             option2_projectdescription: [application.option2_projectdescription],
             option2_estimatedcost: [application.option2_estimatedcost],
@@ -293,20 +307,32 @@ exports.update5 = function(req, res, next) {
             option3_additionalfunds: [application.option3_additionalfunds],
             option3_federalaideligible: [application.option3_federalaideligible],
             option3_constructionfullyfunded: [application.option3_constructionfullyfunded],
+            signs: [application.signs],
+            stormdrains: [application.stormdrains],
+            curbs: [application.curbs],
+            gutters: [application.gutters],
+            sidewalks: [application.sidewalks],
+            trafficsignals: [application.trafficsignals],
+            streetlights: [application.streetlights],
+            otherasset: [application.otherasset],
             pms_grantamount: [application.pms_grantamount],
             pms_localcontribution: [application.pms_localcontribution],
             pms_additionalfunds: [application.pms_additionalfunds],
             pms_totalprojectcost: [application.pms_totalprojectcost],
             npt_totalprojectcost: [application.npt_totalprojectcost],
+            npt_estimatedcost: [application.npt_estimatedcost],
             npt_additionalfunds: [application.npt_additionalfunds],
             npt_localcontribution: [application.npt_localcontribution],
+            npt_grantamount: [application.npt_grantamount],
             pdc_totalprojectcost: [application.pdc_totalprojectcost],
+            pdc_estimatedcost: [application.pdc_estimatedcost],
+            pdc_grantamount: [application.pdc_grantamount],
             pdc_additionalfunds: [application.pdc_additionalfunds],
             pdc_localcontribution: [application.pdc_localcontribution],
-            publicworksdirector_fullname: [application.publicworksdirector_fullname],
-            publicworksdirector_title: [application.publicworksdirector_title],
-            publicworksdirector_contactnumber: [application.publicworksdirector_contactnumber],
-            applicationdate: [application.applicationdate],
+            publicworksdirector_fullname: [publicworksdirector_fullname],
+            publicworksdirector_title: [publicworksdirector_title],
+            publicworksdirector_contactnumber: [publicworksdirector_contactnumber],
+            applicationdate: [applicationdate]
 
         });
 
