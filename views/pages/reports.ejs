@@ -6,7 +6,7 @@
 
 <body>
     <% include ../partials/nav %>
-    <!-- Datatable container -->
+        <!-- Datatable container -->
         <div class="container">
             <h3>P-TAP Applications</h3>
             <div class="row">
@@ -14,6 +14,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading"></div>
                         <div class="panel-body">
+                            <button class="btn btn-success btn-download"><i class="fa fa-download"> Download</i></button>
                             <table id="jsontable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
@@ -25,7 +26,7 @@
                                         <th>Network%</th>
                                         <th>Total Cost</th>
                                         <th>Date</th>
-                                      <!--   <th></th> -->
+                                        <!--   <th></th> -->
                                     </tr>
                                 </thead>
                             </table>
@@ -44,10 +45,10 @@
             </footer>
         </div>
         <!-- /.container -->
-        <script src="bower/jquery/dist/jquery.min.js"></script>
+        <script src="includes/vendor/jquery.js"></script>
         <script src="includes/vendor/bootstrap.js"></script>
-        <script src="bower/datatables/media/js/jquery.dataTables.js"></script>
-        <script src="bower/datatables/media/js/dataTables.bootstrap.js"></script>
+        <script src="includes/vendor/jquery.dataTables.js"></script>
+        <script src="includes/vendor/dataTables.bootstrap.js"></script>
         <script src="includes/reports.js"></script>
 </body>
 

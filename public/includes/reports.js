@@ -1,6 +1,7 @@
 var PTAP = {
     init: function() {
-        $(PTAP.loadReport);
+        PTAP.loadReport();
+        PTAP.downloadData();
     },
     loadReport: function() {
 
@@ -39,6 +40,17 @@ var PTAP = {
             //"order": [[3, "asc"]] row.field.name + ' ' + row.id
         });
 
+    },
+    downloadData: function() {
+        $('.btn-download').click(function(e) {
+            e.preventDefault();
+            $.get('/api/application/download', function(response) {
+                console.log(response);
+                if (response[0].file) {
+                    window.location.href = '/downloads/' + response[0].file;
+                }
+            });
+        });
     }
 
 };

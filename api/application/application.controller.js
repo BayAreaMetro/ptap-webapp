@@ -378,7 +378,10 @@ exports.download = function(req, res) {
         var currentDate = new Date();
         var file = 'data_' + currentDate.getHours() + '_' + currentDate.getMinutes() + '_' + currentDate.getSeconds() + '.xlsx';
         fs.writeFileSync(path.join(__dirname, '../../public') + '/downloads/' + file, xls, 'binary');
-        res.json(200, applications);
+        var response = [{
+            'file': file
+        }];
+        res.json(200, response);
     });
 };
 
