@@ -4,14 +4,6 @@
 
         init: function() {
 
-            //window.open("URL", "mywindow", "status=1,toolbar=0");
-
-            window.history.forward();
-
-            function noBack() {
-                window.history.forward();
-            }
-
             $('.closer ').click(app.toggleForm);
             // $('.phone-us').mask("(999) 999-9999");
             //Launch accordion
@@ -22,7 +14,7 @@
             app.additionalFunds();
             app.checkProjectOptions();
             app.radioButtonsCheck();
-            // app.loadtestvalues();
+            app.loadtestvalues();
             app.formTabs();
             app.projectTypeSelection();
             app.checkboxes();

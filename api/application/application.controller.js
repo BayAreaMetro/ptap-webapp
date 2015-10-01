@@ -253,6 +253,7 @@ exports.update5 = function(req, res, next) {
         var email = new sendgrid.Email();
         email.addTo(application.primary_email);
         email.addTo('mziyam@mtc.ca.gov');
+        email.addTo('mziyambi@mtc.ca.gov');
         email.addTo('chohorst@mtc.ca.gov');
         email.subject = "P-TAP Application";
         email.setFrom('chohorst@mtc.ca.gov');
@@ -268,7 +269,7 @@ exports.update5 = function(req, res, next) {
             primary_title: [application.primary_title],
             primary_firstname: [application.primary_firstname],
             primary_lastname: [application.primary_lastname],
-            primary_jurisdiction: [application.jurisdcition],
+            primary_jurisdiction: [application.jurisdiction],
             street_address: [application.street_address],
             street_address2: [application.street_address2],
             primary_city: [application.city],
