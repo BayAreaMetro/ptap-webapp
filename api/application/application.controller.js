@@ -252,14 +252,12 @@ exports.update5 = function(req, res, next) {
         //Send Confirmation email if user has selected option
         var email = new sendgrid.Email();
         email.addTo(application.primary_email);
-        email.addTo('mziyam@mtc.ca.gov');
-        email.addTo('mziyambi@mtc.ca.gov');
-        email.addTo('chohorst@mtc.ca.gov');
+        email.addBcc('mziyam@mtc.ca.gov');
         email.subject = "P-TAP Application";
         email.setFrom('chohorst@mtc.ca.gov');
         email.setFromName('Christina Hohorst');
         email.replyto = "mziyam@mtc.ca.gov";
-        email.html = 'Thank you for your application. Below please find a summary of your application:';
+        email.html = 'Thank you for your application. Below please find a summary for your records:';
 
         // add filter settings one at a time
         email.addFilter('templates', 'enable', 1);
@@ -269,7 +267,7 @@ exports.update5 = function(req, res, next) {
             primary_title: [application.primary_title],
             primary_firstname: [application.primary_firstname],
             primary_lastname: [application.primary_lastname],
-            primary_jurisdiction: [application.jurisdiction],
+            primary_jurisdiction: [application.jurisdcition],
             street_address: [application.street_address],
             street_address2: [application.street_address2],
             primary_city: [application.city],
