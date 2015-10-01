@@ -267,7 +267,7 @@ exports.update5 = function(req, res, next) {
             primary_title: [application.primary_title],
             primary_firstname: [application.primary_firstname],
             primary_lastname: [application.primary_lastname],
-            primary_jurisdiction: [application.jurisdcition],
+            primary_jurisdiction: [application.jurisdiction],
             street_address: [application.street_address],
             street_address2: [application.street_address2],
             primary_city: [application.city],
