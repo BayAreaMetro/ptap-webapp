@@ -256,7 +256,7 @@ exports.update5 = function(req, res, next) {
         email.subject = "P-TAP Application";
         email.setFrom('chohorst@mtc.ca.gov');
         email.setFromName('Christina Hohorst');
-        email.replyto = "mziyam@mtc.ca.gov";
+        email.replyto = "chohorst@mtc.ca.gov";
         email.html = 'Thank you for your application. Below please find a summary for your records:';
 
         // add filter settings one at a time
