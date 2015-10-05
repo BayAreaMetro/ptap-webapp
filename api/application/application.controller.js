@@ -63,7 +63,7 @@ exports.update2 = function(req, res, next) {
         uuid: id
     }, {
         $set: {
-            // last_user_meeting: req.body.last_user_meeting,
+            last_user_meeting: req.body.last_user_meeting,
             last_major_inspection: req.body.last_major_inspection,
             pms_consultants: req.body.pms_consultants,
             digitalmap_format: req.body.digitalmap_format,
@@ -265,6 +265,7 @@ exports.update5 = function(req, res, next) {
         email.addFilter('templates', 'template_id', '2e7ce831-0891-47d8-bbd8-c63cf0e90755');
 
         var newdate = moment(applicationdate).format('MMMM Do YYYY, h:mm:ss a');
+        console.log(newdate);
 
 
         email.setSubstitutions({
@@ -337,7 +338,7 @@ exports.update5 = function(req, res, next) {
             publicworksdirector_fullname: [publicworksdirector_fullname],
             publicworksdirector_title: [publicworksdirector_title],
             publicworksdirector_contactnumber: [publicworksdirector_contactnumber],
-            applicationdate: newdate
+            applicationdate: [newdate]
 
         });
 
