@@ -18,6 +18,7 @@ var sendgrid = require('sendgrid')('SG.1uXDk3lpThyTFWjC9h9_6Q.yl8NjyvBxCY71OXN07
 var json2xls = require('json2xls');
 var fs = require('fs');
 var path = require('path');
+var moment = require('moment');
 
 /**
  * Get list of applications
@@ -62,7 +63,7 @@ exports.update2 = function(req, res, next) {
         uuid: id
     }, {
         $set: {
-            last_user_meeting: req.body.last_user_meeting,
+            // last_user_meeting: req.body.last_user_meeting,
             last_major_inspection: req.body.last_major_inspection,
             pms_consultants: req.body.pms_consultants,
             digitalmap_format: req.body.digitalmap_format,
@@ -263,6 +264,9 @@ exports.update5 = function(req, res, next) {
         email.addFilter('templates', 'enable', 1);
         email.addFilter('templates', 'template_id', '2e7ce831-0891-47d8-bbd8-c63cf0e90755');
 
+        var newdate = moment(applicationdate).format('MMMM Do YYYY, h:mm:ss a');
+
+
         email.setSubstitutions({
             primary_title: [application.primary_title],
             primary_firstname: [application.primary_firstname],
@@ -321,19 +325,19 @@ exports.update5 = function(req, res, next) {
             pms_additionalfunds: [application.pms_additionalfunds],
             pms_totalprojectcost: [application.pms_totalprojectcost],
             npt_totalprojectcost: [application.npt_totalprojectcost],
-            npt_estimatedcost: [application.npt_estimatedcost],
+            npt_estimatedcost: [application.option2_estimatedcost],
             npt_additionalfunds: [application.npt_additionalfunds],
             npt_localcontribution: [application.npt_localcontribution],
             npt_grantamount: [application.npt_grantamount],
             pdc_totalprojectcost: [application.pdc_totalprojectcost],
-            pdc_estimatedcost: [application.pdc_estimatedcost],
+            pdc_estimatedcost: [application.option3_estimatedcost],
             pdc_grantamount: [application.pdc_grantamount],
             pdc_additionalfunds: [application.pdc_additionalfunds],
             pdc_localcontribution: [application.pdc_localcontribution],
             publicworksdirector_fullname: [publicworksdirector_fullname],
             publicworksdirector_title: [publicworksdirector_title],
             publicworksdirector_contactnumber: [publicworksdirector_contactnumber],
-            applicationdate: [applicationdate]
+            applicationdate: newdate
 
         });
 

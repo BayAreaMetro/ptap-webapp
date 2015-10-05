@@ -20,7 +20,7 @@
             app.checkboxes();
             app.masking();
 
-            app.notify("Notice", "<br>To Navigate through this application, please use the numbered buttons in the progress bar. Do not use your browser's back button!","danger");
+            app.notify("Notice", "<br>To Navigate through this application, please use the numbered buttons in the progress bar. Do not use your browser's back button!", "danger");
 
         },
 
@@ -422,12 +422,6 @@
             $("#primary_phone").val("5555555555");
             $("#primary_email").val("john@mtc.ca.gov");
 
-            // $("#streetsaver_firstname").val("John");
-            // $("#streetsaver_lastname").val("Smith");
-            // $("#streetsaver_position").val("None");
-            // $("#streetsaver_phone").val(55555555);
-            // $("#streetsaver_email").val("john@mtc.ca.gov");
-            // $("#last_user_meeting").val("None");
         },
         toggleForm: function() {
             $(this).closest('.form-hider').toggleClass('notActive');
@@ -455,11 +449,12 @@
                     console.log(nextClass);
 
                     //Check is next link is hidden. If it is, skip it
-                    if (nextClass === 'disabled hidden') {
+                    if (nextClass === 'disabled hidden wizard-width' || nextClass === 'wizard-width disabled hidden') {
                         $active = $active.next();
                         nextClass = $active.next().attr('class');
-                        if (nextClass === 'disabled hidden') {
+                        if (nextClass === 'disabled hidden wizard-width' || nextClass === 'wizard-width disabled hidden') {
                             $active = $active.next();
+                            nextClass = $active.next().attr('class');
                         }
                     }
                     $active.next().removeClass('disabled');
@@ -514,6 +509,26 @@
                             $('#li-3c').removeClass('hidden');
                             $('#step3c').removeClass('hidden');
                             $('#pdpSummary').removeClass('hidden');
+                    }
+                } else if (checked === false) {
+                    switch (project) {
+                        case '3a':
+                            console.log("3a");
+                            $('#li-3a').addClass('disabled').addClass('hidden');
+                            $('#step3a').addClass('hidden');
+                            $('#pmsSummary').addClass('hidden');
+                            break;
+                        case '3b':
+                            console.log("3b");
+                            $('#li-3b').addClass('disabled').addClass('hidden');
+                            $('#step3b').addClass('hidden');
+                            $('#npaSummary').addClass('hidden');
+                            break;
+                        case '3c':
+                            console.log('3c');
+                            $('#li-3c').addClass('disabled').addClass('hidden');
+                            $('#step3c').addClass('hidden');
+                            $('#pdpSummary').addClass('hidden');
                     }
                 }
 
