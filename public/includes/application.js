@@ -324,7 +324,9 @@
             app.isValid = $(form).parsley().isValid();
             if (app.isValid === true) {
                 console.log($(form).serialize());
+                $(form).find('input').removeAttr('disabled');
                 $.post(url, $(form).serialize());
+                $(form).find('input').attr('disabled');
             } else {
                 $(form).parsley().validate();
                 var message = 'Please fix all errors highlighted in red';
