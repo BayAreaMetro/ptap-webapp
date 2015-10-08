@@ -30,9 +30,13 @@ var PTAP = {
             }, {
                 "mData": "network_centerlinemiles"
             }, {
-                "mData": "network_totalpercentage"
+                "mData": "pms_grantamount"
             }, {
-                "mData": "pms_totalprojectcost"
+                "mData": "npt_grantamount"
+            },{
+                "mData": "pdc_grantamount"
+            },{
+                "mData": "publicworksdirector_fullname"
             }, {
                 "mData": "applicationdate"
             }]

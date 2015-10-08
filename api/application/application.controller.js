@@ -253,7 +253,7 @@ exports.update5 = function(req, res, next) {
         //Send Confirmation email if user has selected option
         var email = new sendgrid.Email();
         email.addTo(application.primary_email);
-        email.addBcc('mziyam@mtc.ca.gov');
+        email.addBcc('mziyambi@mtc.ca.gov');
         email.subject = "P-TAP Application";
         email.setFrom('chohorst@mtc.ca.gov');
         email.setFromName('Christina Hohorst');

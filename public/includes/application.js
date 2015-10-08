@@ -20,7 +20,7 @@
             app.checkboxes();
             app.masking();
 
-            app.notify("Notice", "<br>To Navigate through this application, please use the numbered buttons in the progress bar. Do not use your browser's back button!", "danger");
+            //app.notify("Notice", "<br>To Navigate through this application, please use the numbered buttons in the progress bar. Do not use your browser's back button!", "danger");
 
         },
 
